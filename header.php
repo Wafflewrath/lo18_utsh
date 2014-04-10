@@ -16,5 +16,6 @@
 		</div>
 		
 		<div class="image_en_tete col-lg-12"></div>
+		<!-- LOLLLLLL -->
 	</header>
 </body>
