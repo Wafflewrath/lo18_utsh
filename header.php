@@ -11,7 +11,6 @@
 	<script type="text/JavaScript" src="js/bootstrap.min.js"></script>
 </head>
 <body>
-	<?php $i=2; ?>
 	<header>
 		<div class="degrade col-lg-12">
 			<div class="logo"></div>
