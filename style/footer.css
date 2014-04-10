@@ -1,0 +1,20 @@
+.imgfoot{
+	background-image: url('./images/pixel.jpg');
+	background-repeat: repeat-y;
+	height: 100%;
+	position: relative;
+}
+
+footer{
+	height: 60px;
+}
+
+ul.mail{
+	list-style-type: none;
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+.tuile{
+	background-color: rgb(0, 165, 232);
+}
