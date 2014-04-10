@@ -1,6 +1,6 @@
 body {
 	width: 1280px;
-	margin: auto;
+	margin: auto !important;
 	}
 
 .image_en_tete {

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php include('header.php') ?>
 	<div class="content row">
 		<div class="col-lg-3 grptuile">
@@ -20,3 +21,8 @@
 		</div>
 	</div>
 <?php include('footer.php') ?>
+=======
+<!--#include file="header.php"-->
+
+<!--#include file="footer.php"-->
+>>>>>>> d4c4779e3057448bb7f22351f69bb4b85366ef35
