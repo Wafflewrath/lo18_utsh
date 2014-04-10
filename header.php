@@ -5,6 +5,8 @@
 	<link rel="stylesheet" type="text/css" href="./style/footer.css" />
 	<link rel="stylesheet" type="text/css" href="./style/body.css" />
 	<link rel="shortcut icon" href="./style/images/LogoMini.png">
+	<script type="text/JavaScript" src="js/jquery.js"></script>
+	<script type="text/JavaScript" src="js/bootstrap.min.js"></script>
 </head>
 <body>
 	<header>
