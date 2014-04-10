@@ -1,0 +1,26 @@
+body {
+	width: 1280px;
+	margin: auto;
+	}
+
+.image_en_tete {
+	position: relative;
+	background-image: url('images/gis_image_cropped.jpg');
+	width:100%;
+	height:250px;
+	background-repeat: no-repeat;
+	}
+	
+.logo {
+	position: relative;
+	background-image: url('images/logo.jpg');
+	width: 100%;
+	}
+	
+.degrade {	
+	position: relative;
+	height:200px;
+	background-image:-webkit-linear-gradient(left, rgb(0,165,232), rgb(250,250,245));
+	background-image:-moz-linear-gradient(left, rgb(0,165,232), rgb(250,250,245));
+	background-image:-ms-overflow-style-gradient(left, rgb(0,165,232), rgb(250,255,255));
+	}
