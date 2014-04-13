@@ -1,3 +1,39 @@
 .tuile{
 	background-color: rgb(0, 165, 232);
+	margin-top: 15px;
+	padding: 5px
+}
+.tuile:hover{
+	background-color: rgb(0, 229, 238);
+	margin-top: 15px;
+	padding: 5px
+}
+
+#newstitle{
+	text-align: center;
+}
+#newstitle{
+	margin-top:10px;
+	font-size: very-large;
+	font-weight: bold;
+}
+
+#forumstuile{
+	min-height:200px;
+}
+
+.tuiletitle{
+	text-align: center;
+	font-size: large;
+	font-weight: bold;
+	line-height: 40px;
+}
+
+.forumpost{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.forumsujet{
+	font-weight:bold;
 }
