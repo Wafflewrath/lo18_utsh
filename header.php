@@ -1,4 +1,16 @@
 <!--sessions etc... -->
+<?php 
+define('IN_PHPBB', true);
+$phpbb_root_path = './forum/'; // changer path par le nom du dossier de votre forum.
+$phpEx = substr(strrchr(__FILE__, '.'), 1);
+include($phpbb_root_path . 'common.' .$phpEx);
+$user->session_begin();
+?>
+<?php
+session_start();
+$_SESSION['return_page'] = $_SERVER['REQUEST_URI'];
+?>
+
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
