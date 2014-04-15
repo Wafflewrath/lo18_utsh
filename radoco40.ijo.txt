@@ -1,0 +1,65 @@
+﻿Merge branch 'master' of https://github.com/Wafflewrath/lo18_utsh
+
+Conflicts:
+	forum/cache/data_bots.php
+	forum/cache/data_global.php
+	forum/cache/data_hooks.php
+	forum/cache/sql_9dc91161799801b44926b824ccc5cf51.php
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 1 and 3 different commits each, respectively.
+#   (use "git pull" to merge the remote branch into yours)
+#
+# All conflicts fixed but you are still merging.
+#   (use "git commit" to conclude merge)
+#
+# Changes to be committed:
+#
+#	new file:   calendar-master/MIT-LICENSE.txt
+#	new file:   calendar-master/README.md
+#	new file:   calendar-master/examples/action.html
+#	new file:   calendar-master/examples/basic_usage.html
+#	new file:   calendar-master/examples/display_settings.html
+#	new file:   calendar-master/examples/example.jpg
+#	new file:   calendar-master/examples/index.html
+#	new file:   calendar-master/examples/language_settings.html
+#	new file:   calendar-master/examples/navigation_settings.html
+#	new file:   calendar-master/examples/set_legend.html
+#	new file:   calendar-master/examples/show_data.html
+#	new file:   calendar-master/examples/show_data.php
+#	new file:   calendar-master/index.php
+#	new file:   calendar-master/zabuto_calendar.css
+#	new file:   calendar-master/zabuto_calendar.jquery.json
+#	new file:   calendar-master/zabuto_calendar.js
+#	new file:   calendar-master/zabuto_calendar.min.css
+#	new file:   calendar-master/zabuto_calendar.min.js
+#	modified:   forum/cache/data_acl_options.php
+#	modified:   forum/cache/data_bots.php
+#	modified:   forum/cache/data_cfg_imageset_prosilver.php
+#	modified:   forum/cache/data_cfg_template_prosilver.php
+#	modified:   forum/cache/data_cfg_theme_prosilver.php
+#	new file:   forum/cache/data_global.php
+#	modified:   forum/cache/data_hooks.php
+#	modified:   forum/cache/sql_021151d1a377d62dbfaa89a4d1acc716.php
+#	modified:   forum/cache/sql_6af473e331190af791216ecee0575e98.php
+#	modified:   forum/cache/sql_9dc91161799801b44926b824ccc5cf51.php
+#	modified:   forum/cache/sql_b152bea2b86cc301f01da4d7125e73ba.php
+#	modified:   forum/cache/sql_ee3fce1bda0842e6726f5f2b98a1b2d3.php
+#	modified:   forum/cache/sql_efd26735c3bcbef398e23fb85e7ccd99.php
+#	modified:   header.php
+#	modified:   index.php
+#	new file:   js/zabuto_calendar.min.js
+#	new file:   jsonTest/json.json
+#	modified:   style/images/logo.png
+#	new file:   style/zabuto_calendar.min.css
+#
+
