@@ -51,7 +51,7 @@
 			<div class="tuile tuiletitle">Liens / Ressources</div>
 		</div>	
 	</div>
-<<<<<<< HEAD
+
 <?php
 	if(!$user->data['is_bot']) 
 	{ // Si l’utilisateur n’est pas un bot (Google, Yahoo, …)
@@ -70,7 +70,6 @@
 		}
 	}
 ?>
-=======
 
 	<script type="application/javascript">
 	    $(document).ready(function () {
@@ -85,5 +84,5 @@
 
 	    });
 	</script>
->>>>>>> 0d361e8437f1750131e3c4126e596a349dc8ff27
+
 <?php include('footer.php') ?>
