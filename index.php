@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php include('header.php') ?>
 	<div class="content row">
 	
@@ -31,7 +30,7 @@
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum nulla nisl, non mattis magna commodo vel. Maecenas a enim nec ante tincidunt convallis non vitae velit. Phasellus faucibus, lorem id accumsan facilisis, lectus lectus accumsan sapien, ut dapibus nunc risus id tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam vitae dapibus orci. Sed vel aliquam mi, eu mattis eros.
 				</div>
 			</div>
-			<div class="tuile tuiletitle">liens ressources</div>
+			<div class="tuile tuiletitle">Liens / Ressources</div>
 		</div>
 		
 	</div>
@@ -40,4 +39,3 @@
 <!--#include file="header.php"-->
 
 <!--#include file="footer.php"-->
->>>>>>> d4c4779e3057448bb7f22351f69bb4b85366ef35

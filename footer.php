@@ -1,12 +1,11 @@
-<footer class="row">
-	<div class="col-lg-4">
-		<div class="contact col-lg-6">Nous contacter :</div>
-		<div class="mail col-lg-6">
-			<ul class="mail">
-				<li>charles.lenay@hds.utc.fr</li>
-	        	<li>charles.lenay@hds.utc.fr</li>
-	        	<li>Charles.lenay@hds.utc.fr</li>
-	        </ul>
+<footer class="row footer">
+	<div class="col-lg-5">
+		<div class="contact col-lg-4 tuile_nohover">Nous contacter :</div>
+			<div class="mail col-lg-8">
+				<div class="tuile_contact">charles.lenay@hds.utc.fr</div>
+	        	<div class="tuile_contact">charles.lenay@hds.utc.fr</div>
+	        	<div class="tuile_contact">Charles.lenay@hds.utc.fr</div>
+	        </div>
 	    </div>
 	</div>
 	<div class="col-lg-1 imgfoot">

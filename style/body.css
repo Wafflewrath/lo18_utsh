@@ -1,12 +1,25 @@
+.content {
+	text-align:justify;
+}
+
 .tuile{
+	background-color: rgb(0, 165, 232);
+	margin-top: 15px;
+	padding: 5px;
+}
+.tuile:hover{
+	background-color: rgb(0, 229, 238);
+}
+.tuile_nohover{
 	background-color: rgb(0, 165, 232);
 	margin-top: 15px;
 	padding: 5px
 }
-.tuile:hover{
-	background-color: rgb(0, 229, 238);
-	margin-top: 15px;
-	padding: 5px
+
+/* gestion des overflow et des max_height */
+.max_250 {
+	overflow:hidden;
+	height:250px;
 }
 
 #newstitle{
@@ -19,7 +32,7 @@
 }
 
 #forumstuile{
-	min-height:200px;
+	min-height:400px;
 }
 
 .tuiletitle{
