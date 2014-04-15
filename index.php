@@ -34,11 +34,4 @@
 		</div>
 		
 	</div>
-<<<<<<< HEAD
-<?php include('footer.php') ?>
-=======
-<?php include('footer.php') ?>
-<!--#include file="header.php"-->
 
-<!--#include file="footer.php"-->
->>>>>>> 2de79ab6a1855e742b527e81dd15beb2b4b811c3
