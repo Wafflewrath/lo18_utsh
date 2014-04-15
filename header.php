@@ -30,11 +30,11 @@ $_SESSION['return_page'] = $_SERVER['REQUEST_URI'];
 			<div class="logo"></div>
 
 			<nav>
-				<a href="#"><div class="menuElementFirst"><p>accueil</p></div></a>
-				<a href="#"><div><p>QSN</p></div></a>
+				<a href="index.php"><div class="menuElementFirst"><p>accueil</p></div></a>
+				<a href="qui_sommes_nous.php"><div><p>QSN</p></div></a>
 				<a href="#"><div><p>réunions</p></div></a>
 				<a href="#"><div><p>actualités</p></div></a>
-				<a href="#"><div><p>forum</p></div></a>
+				<a href="forum.php"><div><p>forum</p></div></a>
 				<a href="#"><div><p>ressources</p></div></a>
 				<a href="#"><div><p>projets</p></div></a>
 			</nav>
