@@ -35,7 +35,3 @@
 		
 	</div>
 <?php include('footer.php') ?>
-=======
-<!--#include file="header.php"-->
-
-<!--#include file="footer.php"-->
