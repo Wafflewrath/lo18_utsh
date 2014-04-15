@@ -1,0 +1,18 @@
+[ 
+	{ 
+		"date":"2014-04-16", 
+		"badge":true, 
+		"title":"Réunion", 
+		"body":"<p class=\"lead\">Réunion<\/p><p>Atelier du 15/04/2014.<\/p>", 
+		"footer":"<button type=\"button\" class=\"btn btn-primary\" onclick=\"window.location.href='presentation.php';\">En savoir plus<\/button>", 
+		"classname":"purple-event" 
+	}, 
+	{ 
+		"date":"2014-04-22", 
+		"badge":true, 
+		"title":"Rendu de projet", 
+		"body":"<p class=\"lead\">Rendu<\/p><p>Rendre le cahier des charges<\/p>", 
+		"footer":"Compiègne", 
+		"classname":"purple-event" 
+	} 
+]
