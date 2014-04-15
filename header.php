@@ -14,8 +14,18 @@
 	<header>
 		<div class="degrade col-lg-12">
 			<div class="logo"></div>
+
+			<nav>
+				<a href="#"><div class="menuElementFirst"><p>accueil</p></div></a>
+				<a href="#"><div><p>QSN</p></div></a>
+				<a href="#"><div><p>réunions</p></div></a>
+				<a href="#"><div><p>actualités</p></div></a>
+				<a href="#"><div><p>forum</p></div></a>
+				<a href="#"><div><p>ressources</p></div></a>
+				<a href="#"><div><p>projets</p></div></a>
+			</nav>
 		</div>
-		
+
 		<div class="image_en_tete col-lg-12"></div>
 	</header>
 </body>
