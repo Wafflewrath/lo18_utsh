@@ -9,7 +9,7 @@
 			
 			<div class="tuile">
 				<div class="tuiletitle">Accès au projet et calendrier</div>
-				<img src="./style/images/calendrier-web-ergonomie.gif" />
+				<div id="my-calendar"></div>
 			</div>
 		</div>
 		
@@ -51,6 +51,7 @@
 			<div class="tuile tuiletitle">Liens / Ressources</div>
 		</div>	
 	</div>
+<<<<<<< HEAD
 <?php
 	if(!$user->data['is_bot']) 
 	{ // Si l’utilisateur n’est pas un bot (Google, Yahoo, …)
@@ -69,4 +70,20 @@
 		}
 	}
 ?>
+=======
+
+	<script type="application/javascript">
+	    $(document).ready(function () {
+	        $("#my-calendar").zabuto_calendar(
+	        					{
+	        						language: "fr",
+	        						today: true,
+	        						nav_icon: { prev: '<i class="fa fa-chevron-circle-left"></i>', next: '<i class="fa fa-chevron-circle-right"></i>' },
+	        						ajax: { url: "jsonTest/json.json", modal: true }
+	    						}
+	    	);
+
+	    });
+	</script>
+>>>>>>> 0d361e8437f1750131e3c4126e596a349dc8ff27
 <?php include('footer.php') ?>

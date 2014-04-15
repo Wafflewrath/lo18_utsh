@@ -18,9 +18,11 @@ $_SESSION['return_page'] = $_SERVER['REQUEST_URI'];
 	<link rel="stylesheet" type="text/css" href="./style/footer.css" />
 	<link rel="stylesheet" type="text/css" href="./style/body.css" />
 	<link rel="stylesheet" type="text/css" href="./style/header.css" />
+	<link rel="stylesheet" type="text/css" href="./style/zabuto_calendar.min.css" />
 	<link rel="shortcut icon" href="./style/images/LogoMini.png">
 	<script type="text/JavaScript" src="js/jquery.js"></script>
 	<script type="text/JavaScript" src="js/bootstrap.min.js"></script>
+	<script src="js/zabuto_calendar.min.js"></script>
 </head>
 <body>
 	<header>
