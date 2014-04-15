@@ -17,12 +17,11 @@ body {
 	background-repeat: no-repeat;
 	width: 100%;
 	height: 100%;
-	top:20px;
 	}
 	
 .degrade {	
 	position: relative;
-	height:200px;
+	height:100px;
 	background-image:-webkit-linear-gradient(left, rgb(0,165,232), rgb(250,250,245));
 	background-image:-moz-linear-gradient(left, rgb(0,165,232), rgb(250,250,245));
 	background-image:-ms-overflow-style-gradient(left, rgb(0,165,232), rgb(250,255,255));
