@@ -31,7 +31,6 @@
 				</div>
 			</div>
 			<div class="tuile tuiletitle">Liens / Ressources</div>
-		</div>
-		
+		</div>	
 	</div>
-
+<?php include('footer.php') ?>
