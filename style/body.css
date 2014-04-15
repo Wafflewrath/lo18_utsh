@@ -64,3 +64,20 @@
 .tuiletitle {
 	border-bottom: 1px solid black;
 }
+
+.login {
+	text-align: justify;
+	}
+	
+.login_login {
+	font-weight: bold;
+	display:table-cell;
+	text-align: justify;
+	width:100%;
+}
+
+.login_register {
+	font-weight: bold;
+	line-height: 250px;
+	text-align: justify;
+}

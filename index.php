@@ -51,6 +51,26 @@
 			<div class="tuile tuiletitle">Liens / Ressources</div>
 		</div>	
 	</div>
+<<<<<<< HEAD
+<?php
+	if(!$user->data['is_bot']) 
+	{ // Si l’utilisateur n’est pas un bot (Google, Yahoo, …)
+		if(!$user->data['is_registered'])
+		{ // Si l’utilisateur n’est pas encore logué
+			echo '<a href="'.$phpbb_root_path.'ucp.php?mode=login&redir=1">Connexion</a> |
+			 <a href="'.$phpbb_root_path.'ucp.php?mode=register">Inscription</a>';
+		}
+		else
+		{ // Autrement, si l’utilisateur est logué
+			// j’utilise ici les fonctions interne à phpBB3 pour interroger la base de donnée sur le nombre de nouveaux message.
+			$nb_new_msg =$db->sql_query("SELECT COUNT(msg_id) AS nb FROM phpbb_privmsgs_to WHERE user_id='".$user->data['user_id']."' AND pm_new=1 LIMIT 1");
+			$nb_new_msg =$db->sql_fetchrow($nb_new_msg);
+			echo '<a href="'.$phpbb_root_path.'ucp.php?mode=logout&redir=1&sid='.$user->session_id.'">Déconnexion [ '.$user->data['username'].' ]</a> |
+			 <a href="'.$phpbb_root_path.'ucp.php?i=pm&folder=inbox">Vous avez <strong>'.$nb_new_msg['nb'].'</strong> nouveau message</a>';
+		}
+	}
+?>
+=======
 
 	<script type="application/javascript">
 	    $(document).ready(function () {
@@ -65,4 +85,5 @@
 
 	    });
 	</script>
+>>>>>>> 0d361e8437f1750131e3c4126e596a349dc8ff27
 <?php include('footer.php') ?>
