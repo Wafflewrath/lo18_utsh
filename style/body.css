@@ -56,3 +56,11 @@
 .forumsujet{
 	font-weight:bold;
 }
+
+.lineHeader {
+	border-bottom: 1px solid black;
+}
+
+.tuiletitle {
+	border-bottom: 1px solid black;
+}
