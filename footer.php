@@ -1,6 +1,6 @@
 <footer class="row footer">
 	<div class="col-lg-5">
-		<div class="contact col-lg-4 tuile_nohover">Nous contacter :</div>
+		<div class="contact col-lg-4 tuile_contacttitle tuile_nohover">Nous contacter :</div>
 			<div class="mail col-lg-8">
 				<div class="tuile_contact">charles.lenay@hds.utc.fr</div>
 	        	<div class="tuile_contact">charles.lenay@hds.utc.fr</div>

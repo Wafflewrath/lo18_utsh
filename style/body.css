@@ -8,12 +8,14 @@
 	padding: 5px;
 }
 .tuile:hover{
-	background-color: rgb(0, 229, 238);
+	/*background-color: rgb(0, 229, 238);*/
+	background-color: rgb(255, 255, 60);
+	/*background-color: rgb(120, 225, 0);*/
 }
-.tuile_nohover{
+.tuile_nohover {
 	background-color: rgb(0, 165, 232);
 	margin-top: 15px;
-	padding: 5px
+	padding: 5px;
 }
 
 /* gestion des overflow et des max_height */

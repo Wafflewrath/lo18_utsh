@@ -19,6 +19,10 @@ ul.mail{
 	padding-left: 0px;
 }
 
+.contact.tuile_contacttitle{
+	margin-top: 0px;
+}
+
 .tuile_contact{
 	background-color: rgb(0, 165, 232);
 	margin-top: 0px;
@@ -26,7 +30,9 @@ ul.mail{
 	line-height:15px;
 }
 .tuile_contact:hover{
-	background-color: rgb(0, 229, 238);
+	/*background-color: rgb(0, 229, 238);*/
+	background-color: rgb(255, 255, 60);
+	/*background-color: rgb(120, 225, 0);*/
 }
 
 .contact {
