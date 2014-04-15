@@ -1,5 +1,10 @@
 <?php include('header.php') ?>
 	<div class="content row">
+		<ol class="breadcrumb">
+		  <li><a href="#">Accueil</a></li>
+		  <li class="active">Qui sommes nous</li>
+		</ol>
+
 		<div class="tuile_container col-lg-8">
 			<div class="row">
 				<div class="col-lg-6 grptuile">
