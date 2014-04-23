@@ -37,7 +37,7 @@
 						echo '</div>';
 					}
 				?>
-			<div id="forumstuile" class="tuile">
+			<div id="forumstuile" class="tuile" onclick="window.location.href='./forum';">
 				<div class="tuiletitle">Forums</div>
 				<div class="forumpost">
 				<div class="forumsujet">Sujet 1</div>
