@@ -1,0 +1,47 @@
+.footer {
+	margin-top:15px;
+}
+
+.imgfoot{
+	background-image: url('./images/pixel.jpg');
+	background-repeat: repeat-y;
+	height: 100%;
+	position: relative;
+}
+
+footer{
+	height: 60px;
+}
+
+ul.mail{
+	list-style-type: none;
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+.contact.tuile_contacttitle{
+	margin-top: 0px;
+}
+
+.tuile_contact{
+	background-color: rgb(0, 165, 232);
+	margin-top: 0px;
+	padding: 5px;
+	line-height:15px;
+}
+.tuile_contact:hover{
+	/*background-color: rgb(0, 229, 238);*/
+	background-color: rgb(255, 255, 60);
+	/*background-color: rgb(120, 225, 0);*/
+}
+
+.contact {
+	font-weight:bold;
+	background-color: rgb(0, 165, 232);
+	margin-top: 0px;
+	line-height:25px;
+}
+
+.contact, .mail{
+	text-align:center;
+}
