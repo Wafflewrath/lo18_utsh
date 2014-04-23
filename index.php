@@ -33,7 +33,7 @@
 					{
 						$javascript_to_add = "window.location.href='./login_register.php'";
 						echo '<div class="tuile tuiletitle" onclick="'.$javascript_to_add.'">';
-						echo 'Connexion / Inscription';
+						echo 'Connexion / Demande d\'adhésion';
 						echo '</div>';
 					}
 				?>
