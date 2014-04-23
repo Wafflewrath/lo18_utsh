@@ -33,7 +33,7 @@ $_SESSION['return_page'] = $_SERVER['REQUEST_URI'];
 				<a href="index.php"><div class="menuElementFirst"><p>accueil</p></div></a>
 				<a href="#"><div><p>actualités</p></div></a>
 				<a href="presentation.php"><div><p>UTSH</p></div></a>
-				<a href="forum"><div><p>forum</p></div></a>
+				<a href="./forum"><div><p>forum</p></div></a>
 				<a href="#"><div><p>ressources</p></div></a>
 				<a href="#"><div><p>projets</p></div></a>
 				<a href="#"><div><p>réunions</p></div></a>
