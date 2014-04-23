@@ -92,3 +92,27 @@
 	margin-top: 30px;
 	margin-left: 150px;
 }
+
+.news_actualite {
+	height: 120px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.news_title {
+	font-weight: bold;
+	font-size: large;
+}
+
+.news_date {
+	color: gray;
+	font-style: italic;
+}
+
+.news_author {
+
+}
+
+.news_resume {
+
+}
