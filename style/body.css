@@ -102,13 +102,13 @@
 	border-bottom: 1px solid black;
 }
 
-.news_actualite {
+.news_actualite, .ressources {
 	height: 120px;
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
 }
 
-.news_title {
+.news_title, .res_title {
 	font-weight: bold;
 	font-size: large;
 }
@@ -124,6 +124,10 @@
 
 .news_resume {
 
+}
+
+.link_to_download {
+	
 }
 
 .en_savoir_plus {
