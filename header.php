@@ -27,7 +27,7 @@ $_SESSION['return_page'] = $_SERVER['REQUEST_URI'];
 <body>
 	<header>
 		<div class="degrade col-lg-12">
-			<div class="logo"></div>
+			<div class="logo" onclick="window.location.href='index.php';"></div>
 
 			<nav>
 				<a href="index.php"><div class="menuElementFirst"><p>accueil</p></div></a>

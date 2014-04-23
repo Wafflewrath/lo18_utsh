@@ -14,7 +14,41 @@
 		</div>
 		
 		<div class="col-lg-5 grptuile">
-			<div class="tuile"><h1 id="newstitle">News</h1></div>
+			<div class="tuile">
+				<h1 id="newstitle">News</h1>
+
+				<div class="a_news">
+					<div class="news_title">
+						Compte rendu de réunion
+					</div>
+					<div class="news_date">
+						23/04/2014
+					</div>
+					<div class="news_resume">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum nulla nisl, non mattis magna commodo vel. Maecenas a enim nec ante tincidunt convallis non vitae velit...
+						<a href="a_news_template.php" class="en_savoir_plus">
+							lire la suite
+						</a>
+					</div>
+
+				</div>
+
+				<div class="a_news">
+					<div class="news_title">
+						Compte rendu de réunion
+					</div>
+					<div class="news_date">
+						23/04/2014
+					</div>
+					<div class="news_resume">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum nulla nisl, non mattis magna commodo vel. Maecenas a enim nec ante tincidunt convallis non vitae velit...
+						<a href="a_news_template.php" class="en_savoir_plus">
+							lire la suite
+						</a>
+					</div>
+
+				</div>
+			</div>
 		</div>
 		
 		<div class="col-lg-4 grptuile">
