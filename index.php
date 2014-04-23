@@ -1,9 +1,9 @@
 <?php include('header.php') ?>
 <?php include('include.php') ?>
-<?php 
+<?php /*
 $DB = new Database;
 $res = $DB->select('SELECT * FROM db', 'mysql');
-var_dump($res[1]);
+var_dump($res[1]); */
 ?>
 
 	<div class="content row">
