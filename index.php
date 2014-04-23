@@ -2,7 +2,7 @@
 	<div class="content row">
 	
 		<div class="col-lg-3 grptuile">
-			<div class="tuile" onclick="window.location.href='qui_sommes_nous.php';">
+			<div class="tuile" onclick="window.location.href='presentation.php';">
 				<div class="tuiletitle">Qui sommes-nous?</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum nulla nisl, non mattis magna commodo vel. Maecenas a enim nec ante tincidunt convallis non vitae velit. Phasellus faucibus, lorem id accumsan facilisis, lectus lectus accumsan sapien, ut dapibus nunc risus id tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam vitae dapibus orci. Sed vel aliquam mi, eu mattis eros.</p>
 			</div>
