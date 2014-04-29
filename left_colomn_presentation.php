@@ -1,6 +1,9 @@
 <div class="col-lg-4 grptuile">
 	<div class="tuile tuiletitle">Connexion</div>
 	<div class="tuile">
+		<div class="tuiletitle">Présentation</div>
+	</div>
+	<div class="tuile">
 		<div class="tuiletitle">--Vidéo--</div>
 	</div>
 	<div class="tuile">
