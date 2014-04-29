@@ -1,10 +1,4 @@
 <?php include('header.php') ?>
-<?php include('include.php') ?>
-<?php /*
-$DB = new Database;
-$res = $DB->select('SELECT * FROM db', 'mysql');
-var_dump($res[1]); */
-?>
 
 	<div class="content row">
 	
@@ -20,10 +14,17 @@ var_dump($res[1]); */
 			</div>
 		</div>
 		
+		
 		<div class="col-lg-5 grptuile">
 			<div class="tuile">
 				<h1 id="newstitle">News</h1>
-
+				
+				<?php 
+					$news = new News_adapter();
+					$news->displayNews();
+				?>
+				
+				<!--
 				<div class="a_news">
 					<div class="news_title">
 						Compte rendu de réunion
@@ -33,7 +34,7 @@ var_dump($res[1]); */
 					</div>
 					<div class="news_resume">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum nulla nisl, non mattis magna commodo vel. Maecenas a enim nec ante tincidunt convallis non vitae velit...
-						<a href="a_news_template.php" class="en_savoir_plus">
+						<a href="a_news_template.php?" class="en_savoir_plus">
 							lire la suite
 						</a>
 					</div>
@@ -55,6 +56,7 @@ var_dump($res[1]); */
 					</div>
 
 				</div>
+				-->
 			</div>
 		</div>
 		

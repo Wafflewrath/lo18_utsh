@@ -52,11 +52,15 @@ class Database
 		$this->initDatabase($dbname);
 		
 		$result = $this->Database->query($request);
+		// var_dump($request);
+		
+		if (!$result)
+			return false;
 		
 		$result_array = array();
-		while($row = $result->fetch(PDO::FETCH_BOTH))
+		while($row = $result->fetch(PDO::FETCH_ASSOC))
 		{
-			$result_array = $row;
+			$result_array[] = $row;
 		}
 		
 		return $result_array;
