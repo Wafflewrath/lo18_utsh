@@ -103,7 +103,7 @@
 }
 
 .news_actualite, .ressources {
-	height: 120px;
+	/*height: 120px;*/
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
 }
@@ -137,4 +137,13 @@
 
 .download_charte {
 	margin-top: 20px;
+}
+
+form .form {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.createnews_link {
+	color: red;
 }

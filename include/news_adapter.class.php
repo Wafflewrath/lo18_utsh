@@ -1,5 +1,6 @@
 <?php include('news/news_display.class.php'); ?>
 <?php include('news/news_template.class.php'); ?>
+<?php include('news/news_creator.class.php'); ?>
 
 <?php
 class News_adapter
@@ -12,12 +13,20 @@ class News_adapter
 
 	function __construct()
 	{	
-		$newsId = $_GET['newsid'];
+		if (isset($_GET['newsid']))
+			$newsId = $_GET['newsid'];
 		if ($newsId != "")
 		{
 			// construction de l'objet News_template
 			$newsId = intval($newsId);
 			$this->news_class = new News_template($newsId);
+		}
+		elseif (isset($_POST['news_title']) && isset($_POST['news_content']) && isset($_POST['news_resume']))
+		{
+			$newsContent = htmlspecialchars($_POST['news_content'], ENT_QUOTES);
+			$newsTitle = htmlspecialchars($_POST['news_title'], ENT_QUOTES);
+			$newsResume = htmlspecialchars($_POST['news_resume'], ENT_QUOTES);
+			$this->news_class = new News_creator($newsTitle, $newsContent, $newsResume);
 		}
 		else
 		{
