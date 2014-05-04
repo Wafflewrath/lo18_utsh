@@ -25,6 +25,22 @@
 	padding: 5px;
 }
 
+.tuilecontainer {
+	background-color: rgb(0, 165, 232);
+	/*background-color: rgb(241, 165, 58);*/
+	/*background-color: rgb(181, 217, 239);*/
+	margin-top: 15px;
+	padding: 5px;
+}
+
+.tuilecalendar {
+	background-color: rgb(0, 165, 232);
+	/*background-color: rgb(241, 165, 58);*/
+	/*background-color: rgb(181, 217, 239);*/
+	margin-top: 15px;
+	padding: 5px;
+}
+
 /* gestion des overflow et des max_height */
 .max_250 {
 	overflow:hidden;
@@ -42,6 +58,7 @@
 	font-weight: bold;
 }
 
+
 #forumstuile{
 	min-height:400px;
 }
@@ -51,6 +68,11 @@
 	font-size: large;
 	font-weight: bold;
 	line-height: 40px;
+	border-bottom: 1px solid black;
+}
+
+.tuiletitle.alone {
+	border-bottom: none;
 }
 
 .forumpost{
@@ -58,15 +80,17 @@
 	margin-bottom: 10px;
 }
 
+.forumpost:hover {
+	/*background-color: rgb(0, 229, 238);*/
+	background-color: rgb(255, 255, 60);
+	/*background-color: rgb(120, 225, 0);*/
+}
+
 .forumsujet{
 	font-weight:bold;
 }
 
 .lineHeader {
-	border-bottom: 1px solid black;
-}
-
-.tuiletitle {
 	border-bottom: 1px solid black;
 }
 
@@ -100,6 +124,12 @@
 	padding-top: 10px;
 	padding-bottom: 15px;
 	border-bottom: 1px solid black;
+}
+
+.a_news:hover {
+	/*background-color: rgb(0, 229, 238);*/
+	background-color: rgb(255, 255, 60);
+	/*background-color: rgb(120, 225, 0);*/
 }
 
 .news_actualite, .ressources {

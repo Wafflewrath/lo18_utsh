@@ -8,7 +8,7 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum nulla nisl, non mattis magna commodo vel. Maecenas a enim nec ante tincidunt convallis non vitae velit. Phasellus faucibus, lorem id accumsan facilisis, lectus lectus accumsan sapien, ut dapibus nunc risus id tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam vitae dapibus orci. Sed vel aliquam mi, eu mattis eros.</p>
 			</div>
 			
-			<div class="tuile">
+			<div class="tuilecalendar">
 				<div class="tuiletitle">Accès au projet et calendrier</div>
 				<div id="my-calendar"></div>
 			</div>
@@ -16,7 +16,7 @@
 		
 		
 		<div class="col-lg-5 grptuile">
-			<div class="tuile">
+			<div class="tuilecontainer">
 				<h1 id="newstitle">News</h1>
 				<?php 
 					$news = new News_adapter();
@@ -34,19 +34,19 @@
 						$nb_new_msg =$db->sql_query("SELECT COUNT(msg_id) AS nb FROM phpbb_privmsgs_to WHERE user_id='".$user->data['user_id']."' AND pm_new=1 LIMIT 1");
 						$nb_new_msg =$db->sql_fetchrow($nb_new_msg);
 						$javascript_to_add = "window.location.href='".$phpbb_root_path."ucp.php?mode=logout&redir=1&sid=".$user->session_id."'";
-						echo '<div class="tuile tuiletitle" onclick="'.$javascript_to_add.'">';
+						echo '<div class="tuile tuiletitle alone" onclick="'.$javascript_to_add.'">';
 						echo 'Déconnexion';
 						echo '</div>';
 					}
 					else
 					{
 						$javascript_to_add = "window.location.href='./login_register.php'";
-						echo '<div class="tuile tuiletitle" onclick="'.$javascript_to_add.'">';
+						echo '<div class="tuile tuiletitle alone" onclick="'.$javascript_to_add.'">';
 						echo 'Connexion / Demande d\'adhésion';
 						echo '</div>';
 					}
 				?>
-			<div id="forumstuile" class="tuile" onclick="window.location.href='./forum';">
+			<div id="forumstuile" class="tuilecontainer" onclick="window.location.href='./forum';">
 				<div class="tuiletitle">Forums</div>
 				<div class="forumpost">
 				<div class="forumsujet">Sujet 1</div>
