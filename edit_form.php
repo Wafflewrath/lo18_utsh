@@ -3,38 +3,48 @@
 <body>
 
 	<?php
-		if (isset($_POST['news_title']))
+		// si l'utilisateur est admin, on affiche la page, sinon on le redirige
+		if ($Privilege_manager->execif_Admin("") == true)
 		{
-			$news = new News_adapter();
-			// redirect('./index.php');
+			
+			if (isset($_POST['news_title']))
+			{
+				$news = new News_adapter();
+				redirect($_SERVER['REQUEST_URI']."/../index.php");
+			}
+			else
+			{
+	
+			echo '
+			<div class="tuile_container col-lg-8">
+					<div class="lineHeader">
+						<h2>Ecrire une News</h2>
+					</div>
+					<br />
+					<div class="news_actualite"> 
+						<form action="edit_form.php" method="post">
+							<div class="news_title form">
+								<input type="text" placeholder="Entrez votre Titre" name="news_title">
+							</div>
+							<div class="news_resume form">
+								<textarea name="news_resume" rows="6" cols="150" placeholder="Résumé de la news (affiché sur la page d\'accueil)"></textarea>
+							</div>
+							<div class="news_resume form">
+								<textarea name="news_content" rows="13" cols="150" placeholder="Contenu de la news"></textarea>
+							</div>
+							<input type="submit" value="Créer la News">
+						</form>
+					</div>
+					<br/>
+			</div>
+			';
+	
+	
+			}
 		}
 		else
 		{
-	?>
-
-	<div class="tuile_container col-lg-8">
-			<div class="lineHeader">
-				<h2>Ecrire une News</h2>
-			</div>
-			<br />
-			<div class="news_actualite"> 
-				<form action="edit_form.php" method="post">
-					<div class="news_title form">
-						<input type="text" value="Entrez votre Titre" name="news_title">
-					</div>
-					<div class="news_resume form">
-						<textarea name="news_resume" rows="6" cols="150">Résumé de la news (affiché sur la page d'accueil</textarea>
-					</div>
-					<div class="news_resume form">
-						<textarea name="news_content" rows="13" cols="150">Contenu de la news</textarea>
-					</div>
-					<input type="submit" value="Créer la News">
-				</form>
-			</div>
-			<br/>
-	</div>
-	
-	<?php
+			redirect($_SERVER['REQUEST_URI']."/../index.php");
 		}
 	?>
 

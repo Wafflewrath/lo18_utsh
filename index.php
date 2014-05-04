@@ -21,8 +21,9 @@
 				<?php 
 					$news = new News_adapter();
 					$news->displayNews();
+					
+					$Privilege_manager->execif_Admin("echo '<a href=\"edit_form.php\" class=\"createnews_link\">Créer une news</a>';")
 				?>
-				<a href="edit_form.php" class="createnews_link">Créer une news</a>
 			</div>
 		</div>
 		
