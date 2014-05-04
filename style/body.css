@@ -132,9 +132,8 @@
 	/*background-color: rgb(120, 225, 0);*/
 }
 
-.news_actualite, .ressources {
+.news_actualite, .ressources, .a_ressource {
 	/*height: 120px;*/
-	border-top: 1px solid black;
 	border-bottom: 1px solid black;
 }
 
@@ -143,7 +142,7 @@
 	font-size: large;
 }
 
-.news_date {
+.news_date, .res_date {
 	color: gray;
 	font-style: italic;
 }
@@ -176,4 +175,12 @@ form .form {
 
 .createnews_link {
 	color: red;
+}
+
+.ressource_type {
+	
+}
+
+.ressource_link {
+
 }
