@@ -1,7 +1,7 @@
 <div class="col-lg-4 grptuile">
 	<div class="tuile tuiletitle alone">Connexion</div>
-	<div class="tuile">
-		<div class="tuiletitle alone">Présentation</div>
+	<div class="tuile" onclick="window.location.href='presentation.php';">
+		<div class="tuiletitle alone" >Présentation</div>
 	</div>
 	<div class="tuile">
 		<div class="tuiletitle alone">--Vidéo--</div>
