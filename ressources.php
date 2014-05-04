@@ -1,5 +1,6 @@
 <?php include('header.php') ?>
 <?php include('include/ressources/Ressources_display.php') ?>
+<?php include('include/ressources/Ressource_type_display.php') ?>
 	<div class="content row">
 		<ol class="breadcrumb">
 		  <li><a href="index.php">Accueil</a></li>
@@ -15,28 +16,49 @@
 				<p>Vous trouverez ici l'ensemble des ressources liés au GIS, vous pouvez les trier ou les filtrer.</p>
 			</div>
 			
-			<div class="ressourcesfiltre">
-				<p>Trier par : <select><option>date</option></select></p>
-			</div>
-			
-			<div class="a_ressource"> 
-				<div class="res_title">
-					Compte rendu de réunion 17 mai
-				</div>
-				<div class="res_date">
-					23/04/2014 14h15
-				</div>
-				<div class="ressource_type">
-					compte rendu
-				</div>
-				<div class="ressource_link">
-					<a href="#">lien</a>
-				</div>
+			<div class="ressourcesfiltre col-lg-3">
+				<p>Trier par : 
+					<form action="ressources.php" method="post">
+						<select name="filtre">
+							<option value="datecreation">date</option>
+							<option value="type">type</option>
+							<option value="titre">alphabetique</option>
+						</select> 
+						<input type="submit" value="Trier">
+					</form>
+				</p>
 			</div>
 
+			<div class="ressourcesfiltre col-lg-3">
+				<p>filtrer par : 
+					<form action="ressources.php" method="post">
+						<select name="filtre">
+							<?php 
+								$res = new Ressources_type_display();
+								$res->displayRessourcesTypesInList();
+							?>
+						</select> 
+						<input type="submit" value="Filtrer">
+					</form>
+				</p>
+			</div>
+			
 			<?php 
-				$res = new Ressources_display();
+				if($_POST['filtre'] != null) {
+					echo '<div class="infofiltre col-lg-12">Vous filtrez actuellement selon : ' . $_POST['filtre'] . '</div>';
+				}
+			?>
+
+			<?php 
+			if ($_POST['filtre'] != null) {
+				$res = new Ressources_display($_POST['filtre']);
 				$res->displayRessources();
+			}
+			else {
+				$res = new Ressources_display("datecreation");
+				$res->displayRessources();
+			}
+			
 			?>
 
 			

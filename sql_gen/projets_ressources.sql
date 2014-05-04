@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Dim 04 Mai 2014 à 17:30
+-- Généré le: Dim 04 Mai 2014 à 17:46
 -- Version du serveur: 5.5.24-log
 -- Version de PHP: 5.3.13
 
@@ -23,37 +23,35 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `ressources`
+-- Structure de la table `projets_ressources`
 --
 
-CREATE TABLE IF NOT EXISTS `ressources` (
+CREATE TABLE IF NOT EXISTS `projets_ressources` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `titre` varchar(40) NOT NULL,
-  `datecreation` datetime NOT NULL,
-  `type` int(11) NOT NULL,
-  `etat` int(11) NOT NULL,
+  `projet` int(11) NOT NULL,
+  `ressource` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `type` (`type`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Gère les ressources' AUTO_INCREMENT=4 ;
+  KEY `projet` (`projet`),
+  KEY `ressource` (`ressource`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
--- Contenu de la table `ressources`
+-- Contenu de la table `projets_ressources`
 --
 
-INSERT INTO `ressources` (`id`, `titre`, `datecreation`, `type`, `etat`) VALUES
-(1, 'first ressource', '2014-05-04 16:05:57', 1, 1),
-(2, 'second plus tard', '2014-05-04 18:24:02', 1, 1),
-(3, 'alcolique', '2014-05-04 18:47:00', 3, 1);
+INSERT INTO `projets_ressources` (`id`, `projet`, `ressource`) VALUES
+(1, 1, 1);
 
 --
 -- Contraintes pour les tables exportées
 --
 
 --
--- Contraintes pour la table `ressources`
+-- Contraintes pour la table `projets_ressources`
 --
-ALTER TABLE `ressources`
-  ADD CONSTRAINT `ressources_ibfk_1` FOREIGN KEY (`type`) REFERENCES `type_ressources` (`id`);
+ALTER TABLE `projets_ressources`
+  ADD CONSTRAINT `projets_ressources_ibfk_2` FOREIGN KEY (`ressource`) REFERENCES `ressources` (`id`),
+  ADD CONSTRAINT `projets_ressources_ibfk_1` FOREIGN KEY (`projet`) REFERENCES `projets` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
