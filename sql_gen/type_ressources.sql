@@ -23,37 +23,24 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `ressources`
+-- Structure de la table `type_ressources`
 --
 
-CREATE TABLE IF NOT EXISTS `ressources` (
+CREATE TABLE IF NOT EXISTS `type_ressources` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `titre` varchar(40) NOT NULL,
-  `datecreation` datetime NOT NULL,
-  `type` int(11) NOT NULL,
-  `etat` int(11) NOT NULL,
+  `nom_ressource` varchar(50) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `type` (`type`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Gère les ressources' AUTO_INCREMENT=4 ;
+  KEY `id` (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
--- Contenu de la table `ressources`
+-- Contenu de la table `type_ressources`
 --
 
-INSERT INTO `ressources` (`id`, `titre`, `datecreation`, `type`, `etat`) VALUES
-(1, 'first ressource', '2014-05-04 16:05:57', 1, 1),
-(2, 'second plus tard', '2014-05-04 18:24:02', 1, 1),
-(3, 'alcolique', '2014-05-04 18:47:00', 3, 1);
-
---
--- Contraintes pour les tables exportées
---
-
---
--- Contraintes pour la table `ressources`
---
-ALTER TABLE `ressources`
-  ADD CONSTRAINT `ressources_ibfk_1` FOREIGN KEY (`type`) REFERENCES `type_ressources` (`id`);
+INSERT INTO `type_ressources` (`id`, `nom_ressource`) VALUES
+(1, 'compte rendus'),
+(2, 'Document officiel'),
+(3, 'Dossier');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

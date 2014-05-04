@@ -18,11 +18,17 @@ class Ressources_display
 	
 	private $ressourceEtat_valide = 1;
 
-	function __construct()
+	function __construct($filtre)
 	{
 		$DB_temp = new Database;
-		$query = "SELECT id, titre, datecreation, type FROM ressources WHERE etat = " . $this->ressourceEtat_valide. " ORDER BY id DESC LIMIT 0, 30;";
-		
+
+		if ($filtre == "datecreation" || $filtre == "type" || $filtre == "titre") {
+			$query = "SELECT ressources.id, titre, datecreation, nom_ressource FROM ressources INNER JOIN type_ressources ON ressources.type = type_ressources.id WHERE etat = " . $this->ressourceEtat_valide. " ORDER BY " . $filtre . " DESC LIMIT 0, 30;";
+		}
+		else {
+			$query = "SELECT ressources.id, titre, datecreation, nom_ressource FROM ressources INNER JOIN type_ressources ON ressources.type = type_ressources.id WHERE etat = " . $this->ressourceEtat_valide. " AND nom_ressource = '" . $filtre . "' ORDER BY datecreation DESC LIMIT 0, 30;";
+		}
+
 		$raw_data = $DB_temp->select($query);
 		
 		if ($raw_data !== false)
@@ -33,7 +39,7 @@ class Ressources_display
 				$this->id[$i] = $raw_data[$i]['id'];
 				$this->title[$i] = $raw_data[$i]['titre'];
 				$this->datecreation[$i] = $raw_data[$i]['datecreation'];
-				$this->type[$i] = $raw_data[$i]['type'];
+				$this->type[$i] = $raw_data[$i]['nom_ressource'];
 			}
 		}
 		else
@@ -68,7 +74,7 @@ class Ressources_display
 	{
 		for ($ressources_index = 0; $ressources_index < $this->nombre_ressources_affiche; $ressources_index ++)
 		{
-			echo '<div class="a_ressource">';
+			echo '<div class="a_ressource col-lg-12">';
 				$this->printTitle($ressources_index);
 				$this->printDate($ressources_index);
 				$this->printType($ressources_index);

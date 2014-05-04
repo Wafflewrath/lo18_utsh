@@ -18,6 +18,7 @@ $Privilege_manager = new Privilege($user->data['user_id']);
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>UTSH</title>
 	<link rel="stylesheet" type="text/css" href="./style/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="./style/footer.css" />
 	<link rel="stylesheet" type="text/css" href="./style/body.css" />
