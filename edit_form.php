@@ -19,9 +19,15 @@
 				redirect($_SERVER['REQUEST_URI']."/../index.php");
 				die();
 			}
-			elseif (isset($_GET['newsedit']) && !isset($_POST['newsedit_id']))
+			elseif (isset($_GET['newsedit']))
 			{
 				$news = new News_adapter();
+			}
+			elseif (isset($_GET['newsdelete']))
+			{
+				$news = new News_adapter();
+				header('Location: index.php?ck=0.1'); //cache killer pour obfuscation du sid
+				die();
 			}
 			else
 			{

@@ -27,7 +27,6 @@
 		}
 		else
 		{
-			// echo $_SERVER['REQUEST_URI'];
 			header('Location: index.php?ck=0.1'); //cache killer pour obfuscation du sid
 			die();
 		}

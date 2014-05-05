@@ -1,6 +1,7 @@
 <?php include('news/news_display.class.php'); ?>
 <?php include('news/news_template.class.php'); ?>
 <?php include('news/news_creator.class.php'); ?>
+<?php include('news/news_destructor.class.php'); ?>
 <?php include('news/news_editor.class.php'); ?>
 
 <?php
@@ -42,6 +43,11 @@ class News_adapter
 			$newsId = intval($_GET['newsedit']);
 			$this->news_class = new News_template($newsId);
 			$this->news_class->displayEditForm();
+		}
+		elseif (isset($_GET['newsdelete']))
+		{
+			$newsId = intval($_GET['newsdelete']);
+			$this->news_class = new News_destructor($newsId);
 		}
 		else
 		{

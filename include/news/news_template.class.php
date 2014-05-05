@@ -48,8 +48,14 @@ class News_template
 	
 	public function displayNewsTemplate()
 	{
-		$this->printTitleAndDate($news_index);
-		$this->printContenu($news_index);
+		$this->printTitleAndDate();
+		$this->printContenu();
+		
+		global $user;
+		$editCommand = "echo \"<a href='edit_form.php?newsedit=".$this->id."' class='en_savoir_plus'>Editer la News</a>\";";
+		$editCommand .= " echo \" - <a href='edit_form.php?newsdelete=".$this->id."' class='en_savoir_plus'>Supprimer la News</a>\";";
+		$Privilege_manager = new Privilege($user->data['user_id']);
+		$Privilege_manager->execif_Admin($editCommand);
 	}
 	
 	
