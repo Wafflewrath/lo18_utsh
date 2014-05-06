@@ -54,14 +54,20 @@ class News_display
 	private function printContenuResume($index)
 	{
 		echo "<div class='news_resume'>" . $this->contenu_resume[$index] . "</div>";
-		echo "<a href='a_news_template.php?newsid=".$this->id[$index]."' class='en_savoir_plus'>lire la suite</a>";
+		echo "<a href='a_news_template.php?newsid=".$this->id[$index]."' class='en_savoir_plus'>Lire la suite</a>";
+		
+		global $user;
+		$editCommand = "echo \" - <a href='edit_form.php?newsedit=".$this->id[$index]."' class='en_savoir_plus'>Editer la News</a>\";";
+		$editCommand .= " echo \" - <a href='edit_form.php?newsdelete=".$this->id[$index]."' class='en_savoir_plus'>Supprimer la News</a>\";";
+		$Privilege_manager = new Privilege($user->data['user_id']);
+		$Privilege_manager->execif_Admin($editCommand);
 	}
 	
 	public function displayNewsAccueil()
 	{
 		for ($news_index = 0; $news_index < $this->nombre_news_affiche; $news_index ++)
 		{
-			echo '<div class="a_news">';
+			echo '<div class="a_news" onclick="window.location.href=\'a_news_template.php?newsid='.$this->id[$news_index].'\'">';
 				$this->printTitle($news_index);
 				$this->printContenuResume($news_index);
 			echo '</div>';

@@ -1,46 +1,68 @@
 <?php include('header.php') ?>
+<?php include('include/ressources/Ressources_display.class.php') ?>
+<?php include('include/ressources/Ressource_type_display.class.php') ?>
 	<div class="content row">
 		<ol class="breadcrumb">
 		  <li><a href="index.php">Accueil</a></li>
 		  <li class="active">Ressources</li>
 		</ol>
 
-		<div class="tuile_container">
-			<div class="row">
-				<div class="col-lg-6 grptuile">
-					<div class="tuile max_250" onclick="window.location.href='comptes_rendus.php';">
-						<div class="tuiletitle">Comptes rendus</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum nulla nisl, non mattis magna commodo vel. Maecenas a enim nec ante tincidunt convallis non vitae velit. Phasellus faucibus, lorem id accumsan facilisis, lectus lectus accumsan sapien, ut dapibus nunc risus id tortor. Interdum et malesuada fames ac ante TEXTE DE PRESENTATION ipsum primis in faucibus. Nam vitae dapibus orci. Sed vel aliquam mi, eu mattis eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum nulla nisl, non mattis magna commodo vel. Maecenas a enim nec ante tincidunt convallis non vitae velit. Phasellus faucibus, lorem id accumsan facilisis, lectus lectus accumsan sapien, ut dapibus nunc risus id tortor.
-						</p>
-					</div>
-				</div>
-				<div class="col-lg-6 grptuile">
-					<div class="tuile max_250">
-						<div class="tuiletitle">Documents officiels</div>
-						<p>
-						Phasellus faucibus, lorem id accumsan facilisis, lectus lectus accumsan sapien, ut dapibus nunc risus id tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. TEXTE PRESENTATION CHARTE Nam vitae dapibus orci. Sed vel aliquam mi, eu mattis eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum nulla nisl, non mattis magna commodo vel. Maecenas a enim nec ante tincidunt convallis non vitae velit. Phasellus faucibus, lorem id accumsan facilisis, lectus lectus accumsan sapien, ut dapibus nunc risus id tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam vitae dapibus orci. Sed vel aliquam mi, eu mattis eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						</p>
-					</div>
-				</div>
+		<div class="tuile_container col-lg-12">
+			<div class="lineHeader">
+				<h2>Ressources</h2>
 			</div>
-			<div class="row">
-				<div class="col-lg-6 grptuile">
-					<div class="tuile max_250">
-						<div class="tuiletitle">Photos</div>
-						<p>
-						Phasellus faucibus, lorem id accumsan facilisis, lectus lectus accumsan sapien, ut dapibus nunc risus id tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. TEXTE PRESENTATION CHARTE Nam vitae dapibus orci. Sed vel aliquam mi, eu mattis eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum nulla nisl, non mattis magna commodo vel. Maecenas a enim nec ante tincidunt convallis non vitae velit. Phasellus faucibus, lorem id accumsan facilisis, lectus lectus accumsan sapien, ut dapibus nunc risus id tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam vitae dapibus orci. Sed vel aliquam mi, eu mattis eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						</p>
-					</div>
-				</div>
-				<div class="col-lg-6 grptuile">
-					<div class="tuile max_250">
-						<div class="tuiletitle">4 ème partie</div>
-						<p>
-						Phasellus faucibus, lorem id accumsan facilisis, lectus lectus accumsan sapien, ut dapibus nunc risus id tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. TEXTE PRESENTATION CHARTE Nam vitae dapibus orci. Sed vel aliquam mi, eu mattis eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum nulla nisl, non mattis magna commodo vel. Maecenas a enim nec ante tincidunt convallis non vitae velit. Phasellus faucibus, lorem id accumsan facilisis, lectus lectus accumsan sapien, ut dapibus nunc risus id tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam vitae dapibus orci. Sed vel aliquam mi, eu mattis eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						</p>
-					</div>
-				</div>
+			
+			<div class="aide"> 
+				<p>Vous trouverez ici l'ensemble des ressources liés au GIS, vous pouvez les trier ou les filtrer.</p>
 			</div>
+			
+			<div class="ressourcesfiltre col-lg-3">
+				<p>Trier par : 
+					<form action="ressources.php" method="post">
+						<select name="filtre">
+							<option value="datecreation">date</option>
+							<option value="type">type</option>
+							<option value="titre">alphabetique</option>
+						</select> 
+						<input type="submit" value="Trier">
+					</form>
+				</p>
+			</div>
+
+			<div class="ressourcesfiltre col-lg-3">
+				<p>filtrer par : 
+					<form action="ressources.php" method="post">
+						<select name="filtre">
+							<?php 
+								$res = new Ressources_type_display();
+								$res->displayRessourcesTypesInList();
+							?>
+						</select> 
+						<input type="submit" value="Filtrer">
+					</form>
+				</p>
+			</div>
+			
+			<?php 
+				if($_POST['filtre'] != null) {
+					echo '<div class="infofiltre col-lg-12">Vous filtrez actuellement selon : ' . $_POST['filtre'] . '</div>';
+				}
+			?>
+
+			<?php 
+			if ($_POST['filtre'] != null) {
+				$res = new Ressources_display($_POST['filtre']);
+				$res->displayRessources();
+			}
+			else {
+				$res = new Ressources_display("datecreation");
+				$res->displayRessources();
+			}
+			
+			?>
+
+			
+			
 		</div>
 		
 	</div>	

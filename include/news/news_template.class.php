@@ -48,29 +48,43 @@ class News_template
 	
 	public function displayNewsTemplate()
 	{
-		$this->printTitleAndDate($news_index);
-		$this->printContenu($news_index);
+		$this->printTitleAndDate();
+		$this->printContenu();
+		
+		global $user;
+		$editCommand = "echo \"<a href='edit_form.php?newsedit=".$this->id."' class='en_savoir_plus'>Editer la News</a>\";";
+		$editCommand .= " echo \" - <a href='edit_form.php?newsdelete=".$this->id."' class='en_savoir_plus'>Supprimer la News</a>\";";
+		$Privilege_manager = new Privilege($user->data['user_id']);
+		$Privilege_manager->execif_Admin($editCommand);
 	}
 	
-
-	/*
-	<div class="tuile_container col-lg-8">
+	
+	public function displayEditForm()
+	{
+		echo '
+		<div class="tuile_container col-lg-8">
 			<div class="lineHeader">
-				<h2>Compte rendu de réunion</h2>
-			</div>
-			<div class="news_date">
-				23/04/2014 14h15
+				<h2>Edition d\'une News</h2>
 			</div>
 			<br />
-		
-			<div class="news_resume">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum nulla nisl, non mattis magna commodo vel. Maecenas a enim nec ante tincidunt convallis non vitae velit. Phasellus faucibus, lorem id accumsan facilisis, lectus lectus accumsan sapien, ut dapibus nunc risus id tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum nulla nisl, non mattis magna commodo vel. Maecenas a enim nec ante tincidunt convallis non vitae velit. Phasellus faucibus, lorem id accumsan facilisis, lectus lectus accumsan sapien, ut dapibus nunc risus id tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum nulla nisl, non mattis magna commodo vel. Maecenas a enim nec ante tincidunt convallis non vitae velit. Phasellus faucibus, lorem id accumsan facilisis, lectus lectus accumsan sapien, ut dapibus nunc risus id tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+			<div class="news_actualite"> 
+				<form action="edit_form.php" method="post">
+					<div class="news_title form">
+						<input type="text" value="'.$this->title.'" name="news_title">
+					</div>
+					<div class="news_resume form">
+						<textarea name="news_resume" rows="6" cols="150">'.$this->contenu_resume.'</textarea>
+					</div>
+					<div class="news_resume form">
+						<textarea name="news_content" rows="13" cols="150">'.$this->contenu.'</textarea>
+					</div>
+					<input type="hidden" value="'.$this->id.'" name="newsedit_id">
+					<input type="submit" value="Editer la News">
+				</form>
 			</div>
-			
-			
-			
-		</div> */	
+			<br/>
+		</div>
+		';
+	}
 }
 ?>

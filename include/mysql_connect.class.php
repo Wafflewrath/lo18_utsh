@@ -41,7 +41,7 @@ class Database
 	
 	private function execute($request, $dbname = 'admin')
 	{
-		initDatabase($dbname);
+		$this->initDatabase($dbname);
 		
 		$result = $this->Database->exec($request);
 		return $result;
@@ -68,17 +68,17 @@ class Database
 	
 	public function insert($request, $dbname = 'admin')
 	{
-		return execute($request, $dbname = 'admin');
+		return $this->execute($request, $dbname = 'admin');
 	}
 	
 	public function update($request, $dbname = 'admin')
 	{
-		return execute($request, $dbname = 'admin');
+		return $this->execute($request, $dbname = 'admin');
 	}
 	
 	public function delete($request, $dbname = 'admin')
 	{
-		return execute($request, $dbname = 'admin');
+		return $this->execute($request, $dbname = 'admin');
 	}
 	
 	public function scopeIdentity()
