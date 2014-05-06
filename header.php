@@ -11,6 +11,7 @@ session_start();
 $_SESSION['return_page'] = $_SERVER['REQUEST_URI'];
 ?>
 <?php include('include.php') ?>
+
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />

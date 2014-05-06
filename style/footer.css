@@ -44,4 +44,7 @@ ul.mail{
 
 .contact, .mail{
 	text-align:center;
+
+.tuile{
+	background-color: rgb(0, 165, 232);
 }
