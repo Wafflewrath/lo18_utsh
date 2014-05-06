@@ -1,6 +1,6 @@
 <?php include('header.php') ?>
-<?php include('include/ressources/Ressources_display.php') ?>
-<?php include('include/ressources/Ressource_type_display.php') ?>
+<?php include('include/ressources/Ressources_display.class.php') ?>
+<?php include('include/ressources/Ressource_type_display.class.php') ?>
 	<div class="content row">
 		<ol class="breadcrumb">
 		  <li><a href="index.php">Accueil</a></li>
