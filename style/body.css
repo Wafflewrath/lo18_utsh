@@ -1,3 +1,7 @@
+body {
+	color: black;
+}
+
 .breadcrumb {
 	margin-bottom: -10px;
 }
@@ -7,6 +11,7 @@
 }
 
 .tuile{
+	/*background-color: rgb(0, 165, 255)*/
 	background-color: rgb(0, 165, 232);
 	/*background-color: rgb(241, 165, 58);*/
 	/*background-color: rgb(181, 217, 239);*/
@@ -54,7 +59,7 @@
 #newstitle{
 	padding-bottom: 10px;
 	margin-top:10px;
-	font-size: very-large;
+	font-size: 30px;
 	font-weight: bold;
 }
 
@@ -134,22 +139,22 @@
 	/*background-color: rgb(120, 225, 0);*/
 }
 
-.news_actualite, .ressources, .a_ressource {
+.news_actualite, .ressources, .a_ressource, .a_project {
 	/*height: 120px;*/
 	border-bottom: 1px solid black;
 }
 
-.a_ressource {
+.a_ressource, .a_project {
 	padding-bottom: 10px;
 	padding-top: 10px;
 }
 
-.news_title, .res_title {
+.news_title, .res_title, .proj_title {
 	font-weight: bold;
 	font-size: large;
 }
 
-.news_date, .res_date {
+.news_date, .res_date, .proj_date {
 	color: gray;
 	font-style: italic;
 }
@@ -196,4 +201,12 @@ form .form {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	border-bottom: 1px solid black;
+}
+
+.proj_text {
+	text-align: justify;
+}
+
+.a_project {
+	cursor: pointer;
 }
