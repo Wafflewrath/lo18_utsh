@@ -1,3 +1,7 @@
+body {
+	color: black;
+}
+
 .breadcrumb {
 	margin-bottom: -10px;
 }
@@ -7,9 +11,11 @@
 }
 
 .tuile{
+	/*background-color: rgb(0, 165, 255)*/
 	background-color: rgb(0, 165, 232);
 	/*background-color: rgb(241, 165, 58);*/
 	/*background-color: rgb(181, 217, 239);*/
+	border-radius: 10px;
 	margin-top: 15px;
 	padding: 5px;
 	cursor: pointer;
@@ -31,6 +37,7 @@
 	/*background-color: rgb(181, 217, 239);*/
 	margin-top: 15px;
 	padding: 5px;
+	border-radius: 10px;
 }
 
 .tuilecalendar {
@@ -39,6 +46,17 @@
 	/*background-color: rgb(181, 217, 239);*/
 	margin-top: 15px;
 	padding: 5px;
+
+	border-radius: 10px;
+}
+
+.desactivate {
+	background-color: rgb(150,150,150);
+}
+
+.tuile.desactivate:hover {
+	background-color: rgb(150,150,150);
+	cursor: auto;
 }
 
 /* gestion des overflow et des max_height */
@@ -54,13 +72,14 @@
 #newstitle{
 	padding-bottom: 10px;
 	margin-top:10px;
-	font-size: very-large;
+	font-size: 30px;
 	font-weight: bold;
 }
 
 
 #forumstuile{
 	/*min-height:400px;*/
+	border-radius: 10px;
 }
 
 .tuiletitle{
@@ -84,6 +103,8 @@
 .forumpost:hover {
 	/*background-color: rgb(0, 229, 238);*/
 	background-color: rgb(255, 255, 60);
+
+	border-radius: 5px;
 	/*background-color: rgb(120, 225, 0);*/
 }
 
@@ -131,25 +152,26 @@
 .a_news:hover {
 	/*background-color: rgb(0, 229, 238);*/
 	background-color: rgb(255, 255, 60);
+	border-radius: 5px;
 	/*background-color: rgb(120, 225, 0);*/
 }
 
-.news_actualite, .ressources, .a_ressource {
+.news_actualite, .ressources, .a_ressource, .a_project {
 	/*height: 120px;*/
 	border-bottom: 1px solid black;
 }
 
-.a_ressource {
+.a_ressource, .a_project {
 	padding-bottom: 10px;
 	padding-top: 10px;
 }
 
-.news_title, .res_title {
+.news_title, .res_title, .proj_title {
 	font-weight: bold;
 	font-size: large;
 }
 
-.news_date, .res_date {
+.news_date, .res_date, .proj_date {
 	color: gray;
 	font-style: italic;
 }
@@ -196,4 +218,12 @@ form .form {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	border-bottom: 1px solid black;
+}
+
+.proj_text {
+	text-align: justify;
+}
+
+.a_project {
+	cursor: pointer;
 }

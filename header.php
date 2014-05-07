@@ -1,18 +1,21 @@
 <!--sessions etc... -->
 <?php 
-define('IN_PHPBB', true);
-$phpbb_root_path = './forum/'; // changer path par le nom du dossier de votre forum.
-$phpEx = substr(strrchr(__FILE__, '.'), 1);
-include($phpbb_root_path . 'common.' .$phpEx);
-$user->session_begin();
+	define('IN_PHPBB', true);
+	$phpbb_root_path = './forum/'; // changer path par le nom du dossier de votre forum.
+	$phpEx = substr(strrchr(__FILE__, '.'), 1);
+	include($phpbb_root_path . 'common.' .$phpEx);
+	$user->session_begin();
 ?>
+
 <?php
-session_start();
-$_SESSION['return_page'] = $_SERVER['REQUEST_URI'];
+	session_start();
+	$_SESSION['return_page'] = $_SERVER['REQUEST_URI'];
 ?>
+
 <?php include('include.php') ?>
+
 <?php // Classe à utiliser pour les executions et affichages selon les droits sur le site
-$Privilege_manager = new Privilege($user->data['user_id']);
+	$Privilege_manager = new Privilege($user->data['user_id']);
 ?>
 
 <html>
@@ -40,7 +43,7 @@ $Privilege_manager = new Privilege($user->data['user_id']);
 				<a href="presentation.php"><div><p>UTSH</p></div></a>
 				<a href="./forum"><div><p>forum</p></div></a>
 				<a href="ressources.php"><div><p>ressources</p></div></a>
-				<a href="#"><div><p>projets</p></div></a>
+				<a href="projets.php"><div><p>projets</p></div></a>
 			</nav>
 		</div>
 

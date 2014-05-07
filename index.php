@@ -8,9 +8,9 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum nulla nisl, non mattis magna commodo vel. Maecenas a enim nec ante tincidunt convallis non vitae velit. Phasellus faucibus, lorem id accumsan facilisis, lectus lectus accumsan sapien, ut dapibus nunc risus id tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam vitae dapibus orci. Sed vel aliquam mi, eu mattis eros.</p>
 			</div>
 			
-			<div class="tuilecalendar">
-				<div class="tuiletitle">Accès au projet et calendrier</div>
-				<div id="my-calendar"></div>
+			<div class=<?php echo '"tuilecalendar'; if(! $user->data['is_registered']){ echo " desactivate"; } echo '"'; ?> >
+					<div class="tuiletitle">Accès au projet et calendrier</div>
+					<div id="my-calendar"></div>
 			</div>
 		</div>
 		
@@ -57,7 +57,7 @@
 					}
 				?>
 			</div>
-			<div class="tuile tuiletitle alone" onclick="window.location.href='ressources.php';">Liens / Ressources</div>
+			<div class=<?php echo '"tuile tuiletitle alone'; if(! $user->data['is_registered']){ echo ' desactivate"'; } else { echo 'onclick="window.location.href=\'ressources.php\';';} ?>>Liens / Ressources</div>
 		</div>	
 	</div>
 
