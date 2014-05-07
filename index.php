@@ -47,8 +47,8 @@
 						echo '</div>';
 					}
 				?>
-			<div id="forumstuile" class="tuilecontainer">
-				<div class="tuiletitle"  onclick="window.location.href='./forum';">Forums</div>
+			<div id="forumstuile" class=<?php echo '"tuilecontainer'; if(!$user->data['is_registered']){ echo ' desactivate"'; } else {echo '"';} ?> >
+				<div class="tuiletitle forumtitle"<?php if($user->data['is_registered']){ echo ' onclick="window.location.href='."'./forum'".';"';} ?>>Forums</div>
 				<?php
 					if($user->data['is_registered'])
 					{

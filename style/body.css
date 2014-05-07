@@ -100,6 +100,12 @@ body {
 	cursor: pointer;
 }
 
+.forumtitle:hover{
+	background-color: rgb(255, 255, 60);
+	cursor: pointer;
+	border-radius: 5px;
+}
+
 .forumpost:hover {
 	/*background-color: rgb(0, 229, 238);*/
 	background-color: rgb(255, 255, 60);
