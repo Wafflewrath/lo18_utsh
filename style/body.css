@@ -50,15 +50,6 @@ body {
 	border-radius: 10px;
 }
 
-.desactivate {
-	background-color: rgb(150,150,150);
-}
-
-.tuile.desactivate:hover {
-	background-color: rgb(150,150,150);
-	cursor: auto;
-}
-
 /* gestion des overflow et des max_height */
 .max_250 {
 	overflow:hidden;
@@ -150,6 +141,7 @@ body {
 }
 
 .a_news {
+	padding: 5px;
 	padding-top: 10px;
 	padding-bottom: 15px;
 	border-bottom: 1px solid black;
@@ -233,4 +225,13 @@ form .form {
 
 .a_project {
 	cursor: pointer;
+}
+
+.desactivate {
+	background-color: rgb(150,150,150);
+}
+
+.desactivate:hover {
+	background-color: rgb(150,150,150);
+	cursor: auto;
 }

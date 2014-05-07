@@ -44,14 +44,14 @@ class Forum_articles
 	
 	private function getArticle($id)
 	{
-		$max=50;
+		$max=200;
 		$i=$max;
 		if(strlen($this->postArticle[$id])>$i)
 			while($this->postArticle[$id][$i]!=' ')
 				$i++;
 		$ret=substr($this->postArticle[$id], 0, $i);
 		if($i>$max)
-			if($this->postArticle[$id][$i]!='.')
+			if($this->postArticle[$id][$i-1]=='.')
 				$ret=$ret."..";
 			else
 				$ret=$ret."...";
@@ -66,7 +66,7 @@ class Forum_articles
 	private function display($id)
 	{
 			$path="'./forum/viewtopic.php?f=".$this->forumId[$id]."&t=".$this->topicId[$id]."#p".$this->postId[$id]."'";
-			echo '<div class="forumpost" onclick="window.location.href='.$path.';"><div class="forumsujet">'.$this->getPostSubject($id).'</div><div class="forumdate">'.$this->getDate($id).'</div>'.$this->getArticle($id).'</div>';
+			echo '<div class="forumpost" onclick="window.location.href='.$path.';"><div class="row"><div class="forumsujet col-lg-6">'.$this->getPostSubject($id).'</div><div class="forumdate col-lg-6">'.$this->getDate($id).'</div></div>'.$this->getArticle($id).'</div>';
 	}
 	
 	function displayAll()
