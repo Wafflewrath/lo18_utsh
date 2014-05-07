@@ -26,13 +26,14 @@ class Projects_template
 
 		
 		$query = "SELECT projets.nom, projets.datecreation, projets.texte, projets.url, ressources.titre 
-				FROM projets INNER JOIN projets_ressources 
-							ON projets.id = projets_ressources.projet 
-							INNER JOIN ressources 
-							ON projets_ressources.ressource = ressources.id 
+				FROM projets 
+				INNER JOIN projets_ressources 
+				ON projets.id = projets_ressources.projet 
+				INNER JOIN ressources 
+				ON projets_ressources.ressource = ressources.id 
 				WHERE projets.id=1 
-					AND projets.etat=1 
-					AND ressources.etat=1 
+				AND projets.etat=1 
+				AND ressources.etat=1 
 				ORDER BY nom DESC LIMIT 0, 30;";
 		
 
