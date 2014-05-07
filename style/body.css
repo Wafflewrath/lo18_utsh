@@ -46,7 +46,7 @@ body {
 	/*background-color: rgb(181, 217, 239);*/
 	margin-top: 15px;
 	padding: 5px;
-	
+
 	border-radius: 10px;
 }
 
@@ -94,6 +94,8 @@ body {
 .forumpost:hover {
 	/*background-color: rgb(0, 229, 238);*/
 	background-color: rgb(255, 255, 60);
+
+	border-radius: 5px;
 	/*background-color: rgb(120, 225, 0);*/
 }
 
@@ -141,6 +143,7 @@ body {
 .a_news:hover {
 	/*background-color: rgb(0, 229, 238);*/
 	background-color: rgb(255, 255, 60);
+	border-radius: 5px;
 	/*background-color: rgb(120, 225, 0);*/
 }
 
