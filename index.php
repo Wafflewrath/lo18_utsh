@@ -47,16 +47,15 @@
 						echo '</div>';
 					}
 				?>
-			<div id="forumstuile" class="tuilecontainer" onclick="window.location.href='./forum';">
-				<div class="tuiletitle">Forums</div>
-				<div class="forumpost">
-				<div class="forumsujet">Sujet 1</div>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum nulla nisl, non mattis magna commodo vel. Maecenas a enim nec ante tincidunt convallis non vitae velit. Phasellus faucibus, lorem id accumsan facilisis, lectus lectus accumsan sapien, ut dapibus nunc risus id tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam vitae dapibus orci. Sed vel aliquam mi, eu mattis eros.
-				</div>
-				<div class="forumpost">
-				<div class="forumsujet">Sujet 1</div>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum nulla nisl, non mattis magna commodo vel. Maecenas a enim nec ante tincidunt convallis non vitae velit. Phasellus faucibus, lorem id accumsan facilisis, lectus lectus accumsan sapien, ut dapibus nunc risus id tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam vitae dapibus orci. Sed vel aliquam mi, eu mattis eros.
-				</div>
+			<div id="forumstuile" class="tuilecontainer">
+				<div class="tuiletitle"  onclick="window.location.href='./forum';">Forums</div>
+				<?php
+					if($user->data['is_registered'])
+					{
+						$forum = new Forum_articles(2);
+						$forum->displayAll();
+					}
+				?>
 			</div>
 			<div class="tuile tuiletitle alone" onclick="window.location.href='ressources.php';">Liens / Ressources</div>
 		</div>	
