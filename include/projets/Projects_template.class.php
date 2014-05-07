@@ -25,7 +25,15 @@ class Projects_template
 		$DB_temp = new Database;
 
 		
-		$query = "SELECT projets.nom, projets.datecreation, projets.texte, projets.url, ressources.titre FROM projets INNER JOIN projets_ressources ON projets.id = projets_ressources.projet INNER JOIN ressources ON projets_ressources.ressource = ressources.id WHERE projets.id=1 AND projets.etat=1 AND ressources.etat=1 ORDER BY nom DESC LIMIT 0, 30;";
+		$query = "SELECT projets.nom, projets.datecreation, projets.texte, projets.url, ressources.titre 
+				FROM projets INNER JOIN projets_ressources 
+							ON projets.id = projets_ressources.projet 
+							INNER JOIN ressources 
+							ON projets_ressources.ressource = ressources.id 
+				WHERE projets.id=1 
+					AND projets.etat=1 
+					AND ressources.etat=1 
+				ORDER BY nom DESC LIMIT 0, 30;";
 		
 
 		$raw_data = $DB_temp->select($query);
@@ -38,7 +46,7 @@ class Projects_template
 			$this->datecreation[0] = $raw_data[0]['datecreation'];
 			$this->texte[0] = $raw_data[0]['texte'];
 			$this->url[0] = $raw_data[0]['url'];
-			$this->ressource[0] = $raw_data[0]['ressources.titre'];
+			$this->ressource[0] = $raw_data[0]['titre'];
 			
 		}
 		else
@@ -81,6 +89,7 @@ class Projects_template
 			$this->printDate(0);
 			$this->printUrl(0);
 			$this->printText(0);
+			$this->printRessource(0);
 		echo '</div>';
 		
 	}
