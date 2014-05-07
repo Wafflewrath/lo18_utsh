@@ -39,7 +39,7 @@ class Forum_articles
 
 	private function getDate($id)
 	{
-		return DATE("d/m/Y H:i:s", $this->postTime[$id]);
+		return DATE("H:i:s d/m/Y", $this->postTime[$id]);
 	}
 	
 	private function getArticle($id)
