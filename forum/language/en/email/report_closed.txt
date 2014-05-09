@@ -1,8 +1,8 @@
-Subject: Report closed - "{POST_SUBJECT}"
+Subject: Rapport fermé - « {POST_SUBJECT} »
 
-Hello {USERNAME},
+Bonjour {USERNAME},
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
+Vous recevez cette notification car le rapport que vous avez rempli sur le message « {POST_SUBJECT} » dans « {TOPIC_TITLE} » sur « {SITENAME} » a été vérifié par un modérateur ou un administrateur. Le rapport a alors été fermé. Si vous souhaitez avoir plus d’informations à ce sujet, veuillez contacter {CLOSER_NAME} par message privé.
 
 
 {EMAIL_SIG}

@@ -1,11 +1,11 @@
 <?php
 /**
 *
-* viewtopic [English]
+* viewtopic [French]
 *
 * @package language
 * @version $Id$
-* @copyright (c) 2005 phpBB Group
+* @copyright (c) 2005 phpBB Group, (c) Maël Soucaze
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 */
@@ -36,81 +36,81 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'ATTACHMENT'						=> 'Attachment',
-	'ATTACHMENT_FUNCTIONALITY_DISABLED'	=> 'The attachments feature has been disabled.',
+	'ATTACHMENT'						=> 'Pièce jointe ',
+	'ATTACHMENT_FUNCTIONALITY_DISABLED'	=> 'La fonctionnalité des pièces jointes est désactivée.',
 
-	'BOOKMARK_ADDED'		=> 'Bookmarked topic successfully.',
-	'BOOKMARK_ERR'			=> 'Bookmarking the topic failed. Please try again.',
-	'BOOKMARK_REMOVED'		=> 'Removed bookmarked topic successfully.',
-	'BOOKMARK_TOPIC'		=> 'Bookmark topic',
-	'BOOKMARK_TOPIC_REMOVE'	=> 'Remove from bookmarks',
-	'BUMPED_BY'				=> 'Last bumped by %1$s on %2$s.',
-	'BUMP_TOPIC'			=> 'Bump topic',
+	'BOOKMARK_ADDED'		=> 'Le sujet a été ajouté aux signets.',
+	'BOOKMARK_ERR'			=> 'Le signetage du sujet a échoué. Veuillez réessayer ultérieurement.',
+	'BOOKMARK_REMOVED'		=> 'Le sujet a été supprimé des signets.',
+	'BOOKMARK_TOPIC'		=> 'Ajouter ce sujet aux signets',
+	'BOOKMARK_TOPIC_REMOVE'	=> 'Supprimer des signets',
+	'BUMPED_BY'				=> 'Dernière remontée par %1$s le %2$s.',
+	'BUMP_TOPIC'			=> 'Remonter le sujet',
 
-	'CODE'					=> 'Code',
-	'COLLAPSE_QR'			=> 'Hide Quick Reply',
+	'CODE'					=> 'Code ',
+	'COLLAPSE_QR'			=> 'Masquer la réponse rapide',
 
-	'DELETE_TOPIC'			=> 'Delete topic',
-	'DOWNLOAD_NOTICE'		=> 'You do not have the required permissions to view the files attached to this post.',
+	'DELETE_TOPIC'			=> 'Supprimer le sujet',
+	'DOWNLOAD_NOTICE'		=> 'Vous n’êtes pas autorisé(e) à consulter les fichiers insérés à ce message.',
 
-	'EDITED_TIMES_TOTAL'	=> 'Last edited by %1$s on %2$s, edited %3$d times in total.',
-	'EDITED_TIME_TOTAL'		=> 'Last edited by %1$s on %2$s, edited %3$d time in total.',
-	'EMAIL_TOPIC'			=> 'E-mail friend',
-	'ERROR_NO_ATTACHMENT'	=> 'The selected attachment does not exist anymore.',
+	'EDITED_TIMES_TOTAL'	=> 'Dernière édition par %1$s le %2$s, édité %3$d fois.',
+	'EDITED_TIME_TOTAL'		=> 'Dernière édition par %1$s le %2$s, édité %3$d fois.',
+	'EMAIL_TOPIC'			=> 'Envoyer par courriel à un ami',
+	'ERROR_NO_ATTACHMENT'	=> 'La pièce jointe que vous avez sélectionnée n’existe plus.',
 
-	'FILE_NOT_FOUND_404'	=> 'The file <strong>%s</strong> does not exist.',
-	'FORK_TOPIC'			=> 'Copy topic',
-	'FULL_EDITOR'			=> 'Full Editor',
+	'FILE_NOT_FOUND_404'	=> 'Le fichier <strong>%s</strong> n’existe pas.',
+	'FORK_TOPIC'			=> 'Copier le sujet',
+	'FULL_EDITOR'			=> 'Éditeur avancé',
 	
-	'LINKAGE_FORBIDDEN'		=> 'You are not authorised to view, download or link from/to this site.',
-	'LOGIN_NOTIFY_TOPIC'	=> 'You have been notified about this topic, please login to view it.',
-	'LOGIN_VIEWTOPIC'		=> 'The board requires you to be registered and logged in to view this topic.',
+	'LINKAGE_FORBIDDEN'		=> 'Vous n’êtes pas autorisé(e) à consulter, télécharger ou insérer un lien vers ce site.',
+	'LOGIN_NOTIFY_TOPIC'	=> 'Vous avez reçu une notification concernant un message de ce sujet. Veuillez vous connecter afin de consulter ce dernier.',
+	'LOGIN_VIEWTOPIC'		=> 'Vous devez être inscrit(e) et connecté(e) afin de consulter ce sujet.',
 
-	'MAKE_ANNOUNCE'				=> 'Change to “Announcement”',
-	'MAKE_GLOBAL'				=> 'Change to “Global”',
-	'MAKE_NORMAL'				=> 'Change to “Standard Topic”',
-	'MAKE_STICKY'				=> 'Change to “Sticky”',
-	'MAX_OPTIONS_SELECT'		=> 'You may select up to <strong>%d</strong> options',
-	'MAX_OPTION_SELECT'			=> 'You may select <strong>1</strong> option',
-	'MISSING_INLINE_ATTACHMENT'	=> 'The attachment <strong>%s</strong> is no longer available',
-	'MOVE_TOPIC'				=> 'Move topic',
+	'MAKE_ANNOUNCE'				=> 'Modifier en « annonce »',
+	'MAKE_GLOBAL'				=> 'Modifier en « annonce globale »',
+	'MAKE_NORMAL'				=> 'Modifier en « sujet standard »',
+	'MAKE_STICKY'				=> 'Modifier en « note »',
+	'MAX_OPTIONS_SELECT'		=> 'Vous pouvez sélectionner jusqu’à <strong>%d</strong> options',
+	'MAX_OPTION_SELECT'			=> 'Vous pouvez sélectionner <strong>1</strong> option',
+	'MISSING_INLINE_ATTACHMENT'	=> 'La pièce jointe <strong>%s</strong> n’est plus disponible',
+	'MOVE_TOPIC'				=> 'Déplacer le sujet',
 
-	'NO_ATTACHMENT_SELECTED'=> 'You haven’t selected an attachment to download or view.',
-	'NO_NEWER_TOPICS'		=> 'There are no newer topics in this forum.',
-	'NO_OLDER_TOPICS'		=> 'There are no older topics in this forum.',
-	'NO_UNREAD_POSTS'		=> 'There are no new unread posts for this topic.',
-	'NO_VOTE_OPTION'		=> 'You must specify an option when voting.',
-	'NO_VOTES'				=> 'No votes',
+	'NO_ATTACHMENT_SELECTED'=> 'Vous n’avez sélectionné aucune pièce jointe à télécharger ou à consulter.',
+	'NO_NEWER_TOPICS'		=> 'Il n’y a aucun nouveau sujet dans ce forum.',
+	'NO_OLDER_TOPICS'		=> 'Il n’y a aucun ancien sujet dans ce forum.',
+	'NO_UNREAD_POSTS'		=> 'Il n’y a aucun message non lu dans ce sujet.',
+	'NO_VOTE_OPTION'		=> 'Vous devez spécifier une option lors du vote.',
+	'NO_VOTES'				=> 'Aucun vote',
 
-	'POLL_ENDED_AT'			=> 'Poll ended at %s',
-	'POLL_RUN_TILL'			=> 'Poll runs till %s',
-	'POLL_VOTED_OPTION'		=> 'You voted for this option',
-	'PRINT_TOPIC'			=> 'Print view',
+	'POLL_ENDED_AT'			=> 'Le sondage s’est clôturé le %s',
+	'POLL_RUN_TILL'			=> 'Le sondage est ouvert jusqu’au %s',
+	'POLL_VOTED_OPTION'		=> 'Vous avez voté pour cette option',
+	'PRINT_TOPIC'			=> 'Aperçu avant impression',
 
-	'QUICK_MOD'				=> 'Quick-mod tools',
-	'QUICKREPLY'			=> 'Quick Reply',
-	'QUOTE'					=> 'Quote',
+	'QUICK_MOD'				=> 'Outils de modération rapide ',
+	'QUICKREPLY'			=> 'Réponse rapide',
+	'QUOTE'					=> 'Citer ',
 
-	'REPLY_TO_TOPIC'		=> 'Reply to topic',
-	'RETURN_POST'			=> '%sReturn to the post%s',
+	'REPLY_TO_TOPIC'		=> 'Répondre au sujet',
+	'RETURN_POST'			=> '%sRetour au message%s',
 
-	'SHOW_QR'				=> 'Quick Reply',
-	'SUBMIT_VOTE'			=> 'Submit vote',
+	'SHOW_QR'				=> 'Réponse rapide',
+	'SUBMIT_VOTE'			=> 'Voter',
 
-	'TOTAL_VOTES'			=> 'Total votes',
+	'TOTAL_VOTES'			=> 'Nombre total de votes ',
 
-	'UNLOCK_TOPIC'			=> 'Unlock topic',
+	'UNLOCK_TOPIC'			=> 'Déverrouiller le sujet',
 
-	'VIEW_INFO'				=> 'Post details',
-	'VIEW_NEXT_TOPIC'		=> 'Next topic',
-	'VIEW_PREVIOUS_TOPIC'	=> 'Previous topic',
-	'VIEW_RESULTS'			=> 'View results',
-	'VIEW_TOPIC_POST'		=> '1 post',
-	'VIEW_TOPIC_POSTS'		=> '%d posts',
-	'VIEW_UNREAD_POST'		=> 'First unread post',
-	'VISIT_WEBSITE'			=> 'WWW',
-	'VOTE_SUBMITTED'		=> 'Your vote has been cast.',
-	'VOTE_CONVERTED'		=> 'Changing votes is not supported for converted polls.',
+	'VIEW_INFO'				=> 'Informations sur le message',
+	'VIEW_NEXT_TOPIC'		=> 'Sujet suivant',
+	'VIEW_PREVIOUS_TOPIC'	=> 'Sujet précédent',
+	'VIEW_RESULTS'			=> 'Consulter les résultats',
+	'VIEW_TOPIC_POST'		=> '1 message',
+	'VIEW_TOPIC_POSTS'		=> '%d message(s)',
+	'VIEW_UNREAD_POST'		=> 'Premier message non lu',
+	'VISIT_WEBSITE'			=> 'Site internet ',
+	'VOTE_SUBMITTED'		=> 'Votre vote a bien été comptabilisé.',
+	'VOTE_CONVERTED'		=> 'Il est impossible de modifier les votes d’un sondage qui a été converti.',
 
 ));
 

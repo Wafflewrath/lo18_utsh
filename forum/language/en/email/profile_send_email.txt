@@ -1,13 +1,13 @@
 
-Hello {TO_USERNAME},
+Bonjour {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Ce qui suit est un courriel qui vous a été envoyé par {FROM_USERNAME} par l’intermédiaire de votre compte sur « {SITENAME} ». Si ce message est un pourriel ou qu’il contient des commentaires que vous trouvez déplacés, veuillez contacter le webmestre du forum à l’adresse suivante :
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Incluez ce courriel en entier (particulièrement les en-têtes). Veuillez noter que l’adresse de réponse à ce courriel a été réglée avec celle de {FROM_USERNAME}.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Le message qui vous a été envoyé est le suivant :
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}

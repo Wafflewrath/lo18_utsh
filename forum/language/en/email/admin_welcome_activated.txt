@@ -1,9 +1,9 @@
-Subject: Account activated
+Subject: Compte activé
 
-Hello {USERNAME},
+Bonjour {USERNAME},
 
-Your account on "{SITENAME}" has been activated by an administrator, you may login now.
+Votre compte sur « {SITENAME} » a été activé par un administrateur, vous pouvez à présent vous connecter.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Votre mot de passe a été stocké en toute sécurité dans notre base de données et ne pourra pas être retrouvé. Dans le cas où vous l’oubliez, vous pourrez le réinitialiser en utilisant l’adresse de courrier électronique associée à votre compte.
 
 {EMAIL_SIG}

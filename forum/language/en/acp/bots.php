@@ -1,11 +1,11 @@
 <?php
 /**
 *
-* acp_bots [English]
+* acp_bots [French]
 *
 * @package language
 * @version $Id$
-* @copyright (c) 2005 phpBB Group
+* @copyright (c) 2005 phpBB Group, (c) Maël Soucaze
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 */
@@ -37,37 +37,37 @@ if (empty($lang) || !is_array($lang))
 
 // Bot settings
 $lang = array_merge($lang, array(
-	'BOTS'				=> 'Manage bots',
-	'BOTS_EXPLAIN'		=> '“Bots”, “spiders” or “crawlers” are automated agents most commonly used by search engines to update their databases. Since they rarely make proper use of sessions they can distort visitor counts, increase load and sometimes fail to index sites correctly. Here you can define a special type of user to overcome these problems.',
-	'BOT_ACTIVATE'		=> 'Activate',
-	'BOT_ACTIVE'		=> 'Bot active',
-	'BOT_ADD'			=> 'Add bot',
-	'BOT_ADDED'			=> 'New bot successfully added.',
-	'BOT_AGENT'			=> 'Agent match',
-	'BOT_AGENT_EXPLAIN'	=> 'A string matching the bots browser agent, partial matches are allowed.',
-	'BOT_DEACTIVATE'	=> 'Deactivate',
-	'BOT_DELETED'		=> 'Bot deleted successfully.',
-	'BOT_EDIT'			=> 'Edit bots',
-	'BOT_EDIT_EXPLAIN'	=> 'Here you can add or edit an existing bot entry. You may define an agent string and/or one or more IP addresses (or range of addresses) to match. Be careful when defining matching agent strings or addresses. You may also specify a style and language that the bot will view the board using. This may allow you to reduce bandwidth use by setting a simple style for bots. Remember to set appropriate permissions for the special Bot usergroup.',
-	'BOT_LANG'			=> 'Bot language',
-	'BOT_LANG_EXPLAIN'	=> 'The language presented to the bot as it browses.',
-	'BOT_LAST_VISIT'	=> 'Last visit',
-	'BOT_IP'			=> 'Bot IP address',
-	'BOT_IP_EXPLAIN'	=> 'Partial matches are allowed, separate addresses with a comma.',
-	'BOT_NAME'			=> 'Bot name',
-	'BOT_NAME_EXPLAIN'	=> 'Used only for your own information.',
-	'BOT_NAME_TAKEN'	=> 'The name is already in use on your board and can’t be used for the Bot.',
-	'BOT_NEVER'			=> 'Never',
-	'BOT_STYLE'			=> 'Bot style',
-	'BOT_STYLE_EXPLAIN'	=> 'The style used for the board by the bot.',
-	'BOT_UPDATED'		=> 'Existing bot updated successfully.',
+	'BOTS'				=> 'Gérer les robots',
+	'BOTS_EXPLAIN'		=> 'Les « robots » sont des agents automatisés qui sont, dans la plupart des cas, utilisés par les moteurs de recherches afin d’alimenter leurs bases de données. Étant donné qu’ils n’utilisent que très rarement les sessions de manière correcte, il est fréquent qu’ils augmentent la charge des serveurs et qu’ils n’indexent pas correctement certaines pages. Vous pouvez définir ici un type spécial d’utilisateurs qui vous permettra de résoudre ces problèmes.',
+	'BOT_ACTIVATE'		=> 'Activer',
+	'BOT_ACTIVE'		=> 'Activer le robot ',
+	'BOT_ADD'			=> 'Ajouter un robot',
+	'BOT_ADDED'			=> 'Le nouveau robot a été ajouté.',
+	'BOT_AGENT'			=> 'Agent correspondant ',
+	'BOT_AGENT_EXPLAIN'	=> 'Une chaîne correspondante à l’agent du robot. Les correspondances partielles sont autorisées.',
+	'BOT_DEACTIVATE'	=> 'Désactiver',
+	'BOT_DELETED'		=> 'Le robot a été supprimé.',
+	'BOT_EDIT'			=> 'Éditer les robots',
+	'BOT_EDIT_EXPLAIN'	=> 'Vous pouvez ajouter ou éditer ici les robots. Vous devrez définir une chaîne correspondante à l’agent et/ou une ou plusieurs adresses IP correspondantes au robot. Remplissez ces réglages avec précaution. Vous pouvez également spécifier le style et la langue que le robot utilisera lors de sa navigation sur le forum. Cela vous permet d’indiquer un style léger qui aura pour conséquence de réduire de façon significative la bande passante consommée. N’oubliez pas d’également configurer les permissions correspondantes au groupe d’utilisateurs que sont les robots.',
+	'BOT_LANG'			=> 'Langue du robot ',
+	'BOT_LANG_EXPLAIN'	=> 'La langue qui sera utilisée par le robot lors de sa navigation sur le forum.',
+	'BOT_LAST_VISIT'	=> 'Dernière visite',
+	'BOT_IP'			=> 'Adresse IP du robot ',
+	'BOT_IP_EXPLAIN'	=> 'Les saisies partielles sont autorisées. Vous devez séparer chaque adresse par une virgule.',
+	'BOT_NAME'			=> 'Nom du robot ',
+	'BOT_NAME_EXPLAIN'	=> 'N’est utilisé qu’à titre informatif.',
+	'BOT_NAME_TAKEN'	=> 'Le nom du robot que vous avez saisi existe déjà. Veuillez en spécifier un autre.',
+	'BOT_NEVER'			=> 'Jamais',
+	'BOT_STYLE'			=> 'Style du robot ',
+	'BOT_STYLE_EXPLAIN'	=> 'Le style qui sera utilisé par le robot lors de sa navigation sur le forum.',
+	'BOT_UPDATED'		=> 'Le robot a été mis à jour.',
 
-	'ERR_BOT_AGENT_MATCHES_UA'	=> 'The bot agent you supplied is similar to the one you are currently using. Please adjust the agent for this bot.',
-	'ERR_BOT_NO_IP'				=> 'The IP addresses you supplied were invalid or the hostname could not be resolved.',
-	'ERR_BOT_NO_MATCHES'		=> 'You must supply at least one of an agent or IP for this bot match.',
+	'ERR_BOT_AGENT_MATCHES_UA'	=> 'L’agent que vous avez spécifié concernant ce robot est identique à celui que vous utilisez actuellement. Veuillez en spécifier un autre.',
+	'ERR_BOT_NO_IP'				=> 'Les adresses IP que vous avez spécifiées sont incorrectes ou le nom d’hôte est indisponible.',
+	'ERR_BOT_NO_MATCHES'		=> 'Vous devez spécifier un agent ou une adresse IP concernant la correspondance de ce robot.',
 
-	'NO_BOT'		=> 'Found no bot with the specified ID.',
-	'NO_BOT_GROUP'	=> 'Unable to find special bot group.',
+	'NO_BOT'		=> 'Aucun robot correspondant à l’identification spécifiée n’a été trouvé.',
+	'NO_BOT_GROUP'	=> 'Le groupe d’utilisateurs des robots est introuvable.',
 ));
 
 ?>

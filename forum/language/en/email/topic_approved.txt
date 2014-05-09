@@ -1,10 +1,11 @@
-Subject: Topic approved - "{TOPIC_TITLE}"
+Subject: Sujet approuvé - « {TOPIC_TITLE} »
 
-Hello {USERNAME},
+Bonjour {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
+Vous recevez cette notification car votre sujet « {TOPIC_TITLE} » sur « {SITENAME} » a été approuvé par un modérateur ou un administrateur.
 
-If you want to view the topic, click the following link:
+Si vous souhaitez consulter le sujet, veuillez cliquer sur le lien suivant :
+
 {U_VIEW_TOPIC}
 
 

@@ -1,8 +1,8 @@
-Subject: Report deleted - "{PM_SUBJECT}"
+Subject: Rapport supprimé - « {PM_SUBJECT} »
 
-Hello {USERNAME},
+Bonjour {USERNAME},
 
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" was deleted by a moderator or administrator.
+Vous recevez cette notification car le rapport que vous avez envoyé concernant le message privé « {PM_SUBJECT} » sur « {SITENAME} » a été supprimé par un modérateur ou un administrateur.
 
 
 {EMAIL_SIG}

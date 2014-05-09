@@ -136,7 +136,7 @@ $template->assign_vars(array(
 );
 
 // Output page
-page_header('../header.php');
+page_header($user->lang['INDEX']);
 
 $template->set_filenames(array(
 	'body' => 'index_body.html')

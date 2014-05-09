@@ -1,11 +1,11 @@
 <?php
 /**
 *
-* viewforum [English]
+* viewforum [French]
 *
 * @package language
 * @version $Id$
-* @copyright (c) 2005 phpBB Group
+* @copyright (c) 2005 phpBB Group, (c) Maël Soucaze
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 */
@@ -36,36 +36,36 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'ACTIVE_TOPICS'			=> 'Active topics',
-	'ANNOUNCEMENTS'			=> 'Announcements',
+	'ACTIVE_TOPICS'			=> 'Sujets actifs',
+	'ANNOUNCEMENTS'			=> 'Annonce(s)',
 
-	'FORUM_PERMISSIONS'		=> 'Forum permissions',
+	'FORUM_PERMISSIONS'		=> 'Permissions du forum',
 
-	'ICON_ANNOUNCEMENT'		=> 'Announcement',
-	'ICON_STICKY'			=> 'Sticky',
+	'ICON_ANNOUNCEMENT'		=> 'Annonce',
+	'ICON_STICKY'			=> 'Note',
 
-	'LOGIN_NOTIFY_FORUM'	=> 'You have been notified about this forum, please login to view it.',
+	'LOGIN_NOTIFY_FORUM'	=> 'Vous avez reçu une notification concernant un message de ce forum. Veuillez vous connecter afin de pouvoir le consulter.',
 
-	'MARK_TOPICS_READ'		=> 'Mark topics read',
+	'MARK_TOPICS_READ'		=> 'Marquer les sujets comme lus',
 
-	'NEW_POSTS_HOT'			=> 'New posts [ Popular ]',	// Not used anymore
-	'NEW_POSTS_LOCKED'		=> 'New posts [ Locked ]',	// Not used anymore
-	'NO_NEW_POSTS_HOT'		=> 'No new posts [ Popular ]',	// Not used anymore
-	'NO_NEW_POSTS_LOCKED'	=> 'No new posts [ Locked ]',	// Not used anymore
-	'NO_READ_ACCESS'		=> 'You do not have the required permissions to read topics within this forum.',
-	'NO_UNREAD_POSTS_HOT'		=> 'No unread posts [ Popular ]',
-	'NO_UNREAD_POSTS_LOCKED'	=> 'No unread posts [ Locked ]',
+	'NEW_POSTS_HOT'			=> 'Nouveaux messages [ Populaires ]',	// Not used anymore
+	'NEW_POSTS_LOCKED'		=> 'Nouveaux messages [ Verrouillés ]',	// Not used anymore
+	'NO_NEW_POSTS_HOT'		=> 'Aucun nouveau message [ Populaire ]',	// Not used anymore
+	'NO_NEW_POSTS_LOCKED'	=> 'Aucun nouveau message [ Verrouillé ]',	// Not used anymore
+	'NO_READ_ACCESS'		=> 'Vous n’êtes pas autorisé(e) à consulter les sujets de ce forum.',
+	'NO_UNREAD_POSTS_HOT'		=> 'Aucun message non lu [ Populaire ]',
+	'NO_UNREAD_POSTS_LOCKED'	=> 'Aucun message non lu [ Verrouillé ]',
 
-	'POST_FORUM_LOCKED'		=> 'Forum is locked',
+	'POST_FORUM_LOCKED'		=> 'Le forum est verrouillé',
 
-	'TOPICS_MARKED'			=> 'The topics for this forum have now been marked read.',
+	'TOPICS_MARKED'			=> 'Les sujets de ce forum ont été marqués comme lus.',
 
-	'UNREAD_POSTS_HOT'		=> 'Unread posts [ Popular ]',
-	'UNREAD_POSTS_LOCKED'	=> 'Unread posts [ Locked ]',
+	'UNREAD_POSTS_HOT'		=> 'Messages non lus [ Populaires ]',
+	'UNREAD_POSTS_LOCKED'	=> 'Messages non lus [ Verrouillés ]',
 
-	'VIEW_FORUM'			=> 'View forum',
-	'VIEW_FORUM_TOPIC'		=> '1 topic',
-	'VIEW_FORUM_TOPICS'		=> '%d topics',
+	'VIEW_FORUM'			=> 'Consulter le forum',
+	'VIEW_FORUM_TOPIC'		=> '1 sujet',
+	'VIEW_FORUM_TOPICS'		=> '%d sujet(s)',
 ));
 
 ?>

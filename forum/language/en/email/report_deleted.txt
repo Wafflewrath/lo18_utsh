@@ -1,8 +1,8 @@
-Subject: Report deleted - "{POST_SUBJECT}"
+Subject: Rapport supprimé - « {POST_SUBJECT} »
 
-Hello {USERNAME},
+Bonjour {USERNAME},
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
+Vous recevez cette notification car le rapport du message « {POST_SUBJECT} » dans « {TOPIC_TITLE} » sur « {SITENAME} » a été supprimé par un modérateur ou un administrateur.
 
 
 {EMAIL_SIG}

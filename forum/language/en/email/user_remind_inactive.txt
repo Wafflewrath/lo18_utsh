@@ -1,11 +1,11 @@
-Subject: Inactive account reminder
+Subject: Compte inactif
 
-Hello {USERNAME},
+Bonjour {USERNAME},
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
+Cette notification est un rappel car votre compte sur « {SITENAME} », créé le {REGISTER_DATE}, demeure inactif. Si vous souhaitez activer ce compte, veuillez vous rendre sur le lien suivant :
 
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+Nous vous remercions de votre inscription sur « {SITENAME} » et attendons avec impatience votre participation.
 
 {EMAIL_SIG}

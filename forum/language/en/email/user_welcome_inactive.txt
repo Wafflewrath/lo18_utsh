@@ -1,21 +1,21 @@
-Subject: Welcome to "{SITENAME}"
+Subject: Bienvenue sur « {SITENAME} »
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Veuillez conserver ce courriel dans vos archives. Les informations concernant votre compte sont les suivantes :
 
 ----------------------------
-Username: {USERNAME}
+Nom d’utilisateur : {USERNAME}
 
-Board URL: {U_BOARD}
+Lien du forum : {U_BOARD}
 ----------------------------
 
-Please visit the following link in order to activate your account:
+Veuillez vous rendre sur le lien suivant afin d’activer votre compte :
 
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Votre mot de passe a été stocké en toute sécurité dans notre base de données et ne pourra pas être retrouvé. Dans le cas où vous l’oubliez, vous pourrez le réinitialiser en utilisant l’adresse de courrier électronique associée à votre compte.
 
-Thank you for registering.
+Nous vous remercions de votre inscription.
 
 {EMAIL_SIG}

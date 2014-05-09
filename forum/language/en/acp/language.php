@@ -1,11 +1,11 @@
 <?php
 /**
 *
-* acp_language [English]
+* acp_language [French]
 *
 * @package language
 * @version $Id$
-* @copyright (c) 2005 phpBB Group
+* @copyright (c) 2005 phpBB Group, (c) Maël Soucaze
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 */
@@ -36,68 +36,68 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'ACP_FILES'						=> 'Admin language files',
-	'ACP_LANGUAGE_PACKS_EXPLAIN'	=> 'Here you are able to install/remove language packs. The default language pack is marked with an asterisk (*).',
+	'ACP_FILES'						=> 'Fichiers de langue de l’administration',
+	'ACP_LANGUAGE_PACKS_EXPLAIN'	=> 'Vous pouvez installer, modifier et supprimer ici des archives de langue. L’archive de langue par défaut est signalée par un astérisque (*).',
 
-	'EMAIL_FILES'			=> 'E-mail templates',
+	'EMAIL_FILES'			=> 'Modèles de courriel',
 
-	'FILE_CONTENTS'				=> 'File contents',
-	'FILE_FROM_STORAGE'			=> 'File from storage folder',
+	'FILE_CONTENTS'				=> 'Contenu du fichier',
+	'FILE_FROM_STORAGE'			=> 'Fichier du répertoire de stockage',
 
-	'HELP_FILES'				=> 'Help files',
+	'HELP_FILES'				=> 'Fichiers d’aide',
 
-	'INSTALLED_LANGUAGE_PACKS'	=> 'Installed language packs',
-	'INVALID_LANGUAGE_PACK'		=> 'The selected language pack seems to be not valid. Please verify the language pack and upload it again if necessary.',
-	'INVALID_UPLOAD_METHOD'		=> 'The selected upload method is not valid, please choose a different method.',
+	'INSTALLED_LANGUAGE_PACKS'	=> 'Archive(s) de langue installée(s)',
+	'INVALID_LANGUAGE_PACK'		=> 'L’archive de langue que vous avez sélectionnée semble incorrecte. Veuillez vérifier l’archive de langue et la transférer de nouveau si nécessaire.',
+	'INVALID_UPLOAD_METHOD'		=> 'La méthode de transfert que vous avez sélectionnée est incorrecte. Veuillez sélectionner une nouvelle méthode.',
 
-	'LANGUAGE_DETAILS_UPDATED'			=> 'Language details successfully updated.',
-	'LANGUAGE_ENTRIES'					=> 'Language entries',
-	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Here you are able to change existing language pack entries or not already translated ones.<br /><strong>Note:</strong> Once you changed a language file, the changes will be stored within a separate folder for you to download. The changes will not be seen by your users until you replace the original language files at your webspace (by uploading them).',
-	'LANGUAGE_FILES'					=> 'Language files',
-	'LANGUAGE_KEY'						=> 'Language key',
-	'LANGUAGE_PACK_ALREADY_INSTALLED'	=> 'This language pack is already installed.',
-	'LANGUAGE_PACK_DELETED'				=> 'The language pack <strong>%s</strong> has been removed successfully. All users using this language have been reset to the boards default language.',
-	'LANGUAGE_PACK_DETAILS'				=> 'Language pack details',
-	'LANGUAGE_PACK_INSTALLED'			=> 'The language pack <strong>%s</strong> has been successfully installed.',
-	'LANGUAGE_PACK_CPF_UPDATE'			=> 'The custom profile fields’ language strings were copied from the default language. Please change them if necessary.',
+	'LANGUAGE_DETAILS_UPDATED'			=> 'Les informations sur la langue ont été mises à jour.',
+	'LANGUAGE_ENTRIES'					=> 'Clés de langue',
+	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Vous pouvez modifier ici les clés de langue existantes ou traduire celles qui ne le sont pas.<br /><strong>Note :</strong> une fois que vous avez modifié un fichier de langue, ce dernier sera stocké dans un répertoire séparé afin que vous puissiez le télécharger. Les modifications ne seront visibles aux utilisateurs qu’après avoir écrasé les fichiers de langue déjà présents sur votre espace internet.',
+	'LANGUAGE_FILES'					=> 'Fichiers de langue',
+	'LANGUAGE_KEY'						=> 'Clé de langue',
+	'LANGUAGE_PACK_ALREADY_INSTALLED'	=> 'Cette archive de langue est déjà installée.',
+	'LANGUAGE_PACK_DELETED'				=> 'L’archive de langue <strong>%s</strong> a été supprimée. Tous les utilisateurs qui utilisaient cette langue utilisent à présent la langue par défaut du forum.',
+	'LANGUAGE_PACK_DETAILS'				=> 'Informations sur l’archive de langue',
+	'LANGUAGE_PACK_INSTALLED'			=> 'L’archive de langue <strong>%s</strong> a été installée.',
+	'LANGUAGE_PACK_CPF_UPDATE'			=> 'Les chaînes de langue des champs de profil personnalisés ont été copiées à partir de la langue par défaut. Veuillez les modifier si cela est nécessaire.',
 	'LANGUAGE_PACK_ISO'					=> 'ISO',
-	'LANGUAGE_PACK_LOCALNAME'			=> 'Local name',
-	'LANGUAGE_PACK_NAME'				=> 'Name',
-	'LANGUAGE_PACK_NOT_EXIST'			=> 'The selected language pack does not exist.',
-	'LANGUAGE_PACK_USED_BY'				=> 'Used by (including robots)',
-	'LANGUAGE_VARIABLE'					=> 'Language variable',
-	'LANG_AUTHOR'						=> 'Language pack author',
-	'LANG_ENGLISH_NAME'					=> 'English name',
-	'LANG_ISO_CODE'						=> 'ISO code',
-	'LANG_LOCAL_NAME'					=> 'Local name',
+	'LANGUAGE_PACK_LOCALNAME'			=> 'Nom local',
+	'LANGUAGE_PACK_NAME'				=> 'Nom',
+	'LANGUAGE_PACK_NOT_EXIST'			=> 'L’archive de langue que vous avez sélectionnée n’existe pas.',
+	'LANGUAGE_PACK_USED_BY'				=> 'Utilisée par (en incluant les robots)',
+	'LANGUAGE_VARIABLE'					=> 'Variable de langue',
+	'LANG_AUTHOR'						=> 'Auteur de l’archive de langue ',
+	'LANG_ENGLISH_NAME'					=> 'Nom en anglais ',
+	'LANG_ISO_CODE'						=> 'Code ISO ',
+	'LANG_LOCAL_NAME'					=> 'Nom local ',
 
-	'MISSING_LANGUAGE_FILE'		=> 'Missing language file: <strong style="color:red">%s</strong>',
-	'MISSING_LANG_VARIABLES'	=> 'Missing language variables',
-	'MODS_FILES'				=> 'MODs language files',
+	'MISSING_LANGUAGE_FILE'		=> 'Fichier de langue manquant : <strong style="color:red">%s</strong>',
+	'MISSING_LANG_VARIABLES'	=> 'Variables de langue manquantes',
+	'MODS_FILES'				=> 'Fichiers de langue des MODs',
 
-	'NO_FILE_SELECTED'				=> 'You haven’t specified a language file.',
-	'NO_LANG_ID'					=> 'You haven’t specified a language pack.',
-	'NO_REMOVE_DEFAULT_LANG'		=> 'You are not able to remove the default language pack.<br />If you want to remove this language pack, change your boards default language first.',
-	'NO_UNINSTALLED_LANGUAGE_PACKS'	=> 'No uninstalled language packs',
+	'NO_FILE_SELECTED'				=> 'Vous n’avez spécifié aucun fichier de langue.',
+	'NO_LANG_ID'					=> 'Vous n’avez spécifié aucune archive de langue.',
+	'NO_REMOVE_DEFAULT_LANG'		=> 'Vous ne pouvez pas supprimer l’archive de langue par défaut.<br />Si vous souhaitez supprimer cette archive de langue, veuillez tout d’abord modifier la langue par défaut de votre forum.',
+	'NO_UNINSTALLED_LANGUAGE_PACKS'	=> 'Aucune archive de langue n’est non installée',
 
-	'REMOVE_FROM_STORAGE_FOLDER'		=> 'Remove from storage folder',
+	'REMOVE_FROM_STORAGE_FOLDER'		=> 'Supprimer du répertoire de stockage',
 
-	'SELECT_DOWNLOAD_FORMAT'	=> 'Select download format',
-	'SUBMIT_AND_DOWNLOAD'		=> 'Submit and download file',
-	'SUBMIT_AND_UPLOAD'			=> 'Submit and upload file',
+	'SELECT_DOWNLOAD_FORMAT'	=> 'Sélectionner le format de téléchargement',
+	'SUBMIT_AND_DOWNLOAD'		=> 'Envoyer et télécharger le fichier',
+	'SUBMIT_AND_UPLOAD'			=> 'Envoyer et transférer le fichier',
 
-	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the %s language folder',
-	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the <strong>%s</strong> language pack',
+	'THOSE_MISSING_LANG_FILES'			=> 'Les fichiers de langue suivants sont manquants du répertoire de langue %s',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'Les variables de langue suivantes sont manquantes de l’archive de langue <strong>%s</strong>.',
 
-	'UNINSTALLED_LANGUAGE_PACKS'	=> 'Uninstalled language packs',
+	'UNINSTALLED_LANGUAGE_PACKS'	=> 'Archives de langue non installées',
 
-	'UNABLE_TO_WRITE_FILE'		=> 'The file could not be written to %s.',
-	'UPLOAD_COMPLETED'			=> 'The upload was completed successfully.',
-	'UPLOAD_FAILED'				=> 'The upload failed for unknown reasons. You may need to replace the relevant file manually.',
-	'UPLOAD_METHOD'				=> 'Upload method',
-	'UPLOAD_SETTINGS'			=> 'Upload settings',
+	'UNABLE_TO_WRITE_FILE'		=> 'Le fichier n’a pas pu être écrit sur %s.',
+	'UPLOAD_COMPLETED'			=> 'Le transfert a été effectué.',
+	'UPLOAD_FAILED'				=> 'Le transfert a échoué pour une raison inconnue. Vous devriez essayer de remplacer manuellement le fichier en cause si nécessaire.',
+	'UPLOAD_METHOD'				=> 'Méthode de transfert ',
+	'UPLOAD_SETTINGS'			=> 'Réglages du transfert',
 
-	'WRONG_LANGUAGE_FILE'		=> 'Selected language file is invalid.',
+	'WRONG_LANGUAGE_FILE'		=> 'Le fichier de langue que vous avez sélectionné est incorrect.',
 ));
 
 ?>

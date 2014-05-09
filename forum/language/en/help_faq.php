@@ -1,11 +1,11 @@
 <?php
 /**
 *
-* help_faq [English]
+* help_faq [French]
 *
 * @package language
 * @version $Id$
-* @copyright (c) 2005 phpBB Group
+* @copyright (c) 2005 phpBB Group, (c) Maël Soucaze
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 */
@@ -32,175 +32,175 @@ if (!defined('IN_PHPBB'))
 $help = array(
 	array(
 		0 => '--',
-		1 => 'Login and Registration Issues'
+		1 => 'Problèmes de connexion et d’inscription'
 	),
 	array(
-		0 => 'Why can’t I login?',
-		1 => 'There are several reasons why this could occur. First, ensure your username and password are correct. If they are, contact the board owner to make sure you haven’t been banned. It is also possible the website owner has a configuration error on their end, and they would need to fix it.'
+		0 => 'Pourquoi ne puis-je pas me connecter ?',
+		1 => 'Il y a plusieurs raisons qui peuvent en être la cause. Premièrement, assurez-vous que votre nom d’utilisateur et votre mot de passe soient corrects. S’ils le sont, contactez le propriétaire du forum afin de vous assurer de ne pas avoir été banni. Il est également possible que le propriétaire du site internet ait une erreur de configuration de son côté et qu’il soit nécessaire de la corriger.'
 	),
 	array(
-		0 => 'Why do I need to register at all?',
-		1 => 'You may not have to, it is up to the administrator of the board as to whether you need to register in order to post messages. However; registration will give you access to additional features not available to guest users such as definable avatar images, private messaging, emailing of fellow users, usergroup subscription, etc. It only takes a few moments to register so it is recommended you do so.'
+		0 => 'Pourquoi ai-je besoin de m’inscrire, après tout ?',
+		1 => 'Vous pouvez ne pas le faire, il appartient à l’administrateur du forum d’exiger ou non que vous soyez inscrit afin de pouvoir publier des messages. Cependant, l’inscription vous donnera accès à des fonctionnalités supplémentaires qui ne sont pas disponibles aux visiteurs, comme les avatars personnalisés, la messagerie privée, l’envoi de courriels aux autres utilisateurs, l’adhésion à un groupe d’utilisateurs, etc. Ceci ne vous prend qu’un court instant et nous vous recommandons par conséquent de le faire.'
 	),
 	array(
-		0 => 'Why do I get logged off automatically?',
-		1 => 'If you do not check the <em>Log me in automatically</em> box when you login, the board will only keep you logged in for a preset time. This prevents misuse of your account by anyone else. To stay logged in, check the box during login. This is not recommended if you access the board from a shared computer, e.g. library, internet cafe, university computer lab, etc. If you do not see this checkbox, it means the board administrator has disabled this feature.'
+		0 => 'Pourquoi suis-je déconnecté automatiquement ?',
+		1 => 'Si vous ne cochez pas la case <em>Me connecter automatiquement</em> lors de votre connexion, vous ne resterez connecté au forum que pour une période prédéfinie. Ceci permet d’éviter que votre compte soit utilisé par quelqu’un d’autre. Pour rester connecté, veuillez cocher la case correspondante lors de votre connexion. Ceci n’est pas recommandé si vous accédez au forum par l’intermédiaire d’un ordinateur public, comme par exemple dans une librairie, un cybercafé, une université, etc. Si vous n’arrivez pas à trouver cette case à cocher, il est probable qu’un administrateur ait désactivé cette fonctionnalité.'
 	),
 	array(
-		0 => 'How do I prevent my username appearing in the online user listings?',
-		1 => 'Within your User Control Panel, under “Board preferences”, you will find the option <em>Hide your online status</em>. Enable this option with <samp>Yes</samp> and you will only appear to the administrators, moderators and yourself. You will be counted as a hidden user.'
+		0 => 'Comment puis-je empêcher l’affichage de mon nom d’utilisateur dans la liste des utilisateurs en ligne ?',
+		1 => 'Dans le panneau de contrôle de l’utilisateur, en-dessous des « Préférences du forum », vous trouverez l’option <em>Masquer votre statut en ligne</em>. Activez cette option en cochant <samp>Oui</samp> afin de n’être visible qu’aux administrateurs, aux modérateurs et à vous-même. Vous serez compté(e) comme étant un utilisateur invisible.'
 	),
 	array(
-		0 => 'I’ve lost my password!',
-		1 => 'Don’t panic! While your password cannot be retrieved, it can easily be reset. Visit the login page and click <em>I’ve forgotten my password</em>. Follow the instructions and you should be able to log in again shortly.'
+		0 => 'J’ai perdu mon mot de passe !',
+		1 => 'Pas de panique ! Bien que votre mot de passe ne puisse pas être récupéré, il peut facilement être réinitialisé. Rendez-vous sur la page de connexion et cliquez sur <em>J’ai perdu mon mot de passe</em>. Suivez les instructions et vous devriez être en mesure de pouvoir vous connecter de nouveau dans peu de temps.'
 	),
 	array(
-		0 => 'I registered but cannot login!',
-		1 => 'First, check your username and password. If they are correct, then one of two things may have happened. If COPPA support is enabled and you specified being under 13 years old during registration, you will have to follow the instructions you received. Some boards will also require new registrations to be activated, either by yourself or by an administrator before you can logon; this information was present during registration. If you were sent an e-mail, follow the instructions. If you did not receive an e-mail, you may have provided an incorrect e-mail address or the e-mail may have been picked up by a spam filer. If you are sure the e-mail address you provided is correct, try contacting an administrator.'
+		0 => 'Je suis inscrit mais ne peux pas me connecter !',
+		1 => 'Premièrement, vérifiez votre nom d’utilisateur et votre mot de passe. S’ils sont corrects, alors une des deux choses suivantes a pu s’être produite. Si le support de la COPPA est activé et que vous avez spécifié avoir en dessous de 13 ans pendant l’inscription, vous devrez suivre les instructions que vous avez reçues. Certains forums exigeront également que les nouvelles inscriptions doivent être activées, soit par vous-même ou soit par un administrateur, avant que vous puissiez ouvrir une session ; cette information était présente lors de votre inscription. Si vous aviez reçu un courriel, consultez les instructions. Si vous ne recevez pas de courriel, vous avez probablement spécifié une mauvaise adresse de courrier électronique ou le courriel a été filtré en tant que pourriel. Si vous êtes certain(e) que l’adresse de courrier électronique que vous avez spécifiée était correcte, essayez de contacter un administrateur.'
 	),
 	array(
-		0 => 'I registered in the past but cannot login any more?!',
-		1 => 'It is possible an administrator has deactivated or deleted your account for some reason. Also, many boards periodically remove users who have not posted for a long time to reduce the size of the database. If this has happened, try registering again and being more involved in discussions.'
+		0 => 'Je m’étais déjà inscrit par le passé mais je ne peux à présent plus me connecter ?!',
+		1 => 'Il est possible qu’un administrateur ait désactivé ou supprimé votre compte pour une quelconque raison. De plus, beaucoup de forums suppriment périodiquement les utilisateurs qui n’ont rien publiés depuis un certain temps afin de réduire la taille de leur base de données. Si tel était le cas, inscrivez-vous à nouveau et essayez de participer plus activement aux discussions sur le forum.'
 	),
 	array(
-		0 => 'What is COPPA?',
-		1 => 'COPPA, or the Child Online Privacy and Protection Act of 1998, is a law in the United States requiring websites which can potentially collect information from minors under the age of 13 to have written parental consent or some other method of legal guardian acknowledgment, allowing the collection of personally identifiable information from a minor under the age of 13. If you are unsure if this applies to you as someone trying to register or to the website you are trying to register on, contact legal counsel for assistance. Please note that the phpBB Group cannot provide legal advice and is not a point of contact for legal concerns of any kind, except as outlined below.',
+		0 => 'Qu’est-ce que la COPPA ?',
+		1 => 'La COPPA (Child Online Privacy and Protection Act) est une loi des États-Unis d’Amérique qui demande aux sites internet collectant potentiellement des informations sur les mineurs âgés de moins de 13 ans un consentement écrit des parents ou des tuteurs légaux des mineurs concernés. Si vous ne savez pas si cette loi s’applique également aux mineurs âgés de moins de 13 ans inscrits sur votre forum, nous vous conseillons de contacter un conseiller juridique ou un avocat qui pourront vous fournir ce type de renseignement. Veuillez noter que le phpBB Group ne peut pas vous fournir d’assistance légale et n’est donc pas l’organisme à contacter, excepté pour ce qui est décrit ci-dessous.',
 	),
 	array(
-		0 => 'Why can’t I register?',
-		1 => 'It is possible the website owner has banned your IP address or disallowed the username you are attempting to register. The website owner could have also disabled registration to prevent new visitors from signing up. Contact a board administrator for assistance.',
+		0 => 'Pourquoi ne puis-je pas m’inscrire ?',
+		1 => 'Il est possible que le propriétaire du site internet ait banni votre adresse IP ou interdit le nom d’utilisateur que vous souhaitez utiliser. Le propriétaire du forum peut également avoir décidé de désactiver les inscriptions afin d’empêcher tous les nouveaux visiteurs de s’inscrire. Pour plus d’informations, veuillez contacter un administrateur du forum.',
 	),
 	array(
-		0 => 'What does the “Delete all board cookies” do?',
-		1 => '“Delete all board cookies” deletes the cookies created by phpBB which keep you authenticated and logged into the board. It also provides functions such as read tracking if they have been enabled by the board owner. If you are having login or logout problems, deleting board cookies may help.',
-	),
-	array(
-		0 => '--',
-		1 => 'User Preferences and settings'
-	),
-	array(
-		0 => 'How do I change my settings?',
-		1 => 'If you are a registered user, all your settings are stored in the board database. To alter them, visit your User Control Panel; a link can usually be found at the top of board pages. This system will allow you to change all your settings and preferences.'
-	),
-	array(
-		0 => 'The times are not correct!',
-		1 => 'It is possible the time displayed is from a timezone different from the one you are in. If this is the case, visit your User Control Panel and change your timezone to match your particular area, e.g. London, Paris, New York, Sydney, etc. Please note that changing the timezone, like most settings, can only be done by registered users. If you are not registered, this is a good time to do so.'
-	),
-	array(
-		0 => 'I changed the timezone and the time is still wrong!',
-		1 => 'If you are sure you have set the timezone and Summer Time/DST correctly and the time is still incorrect, then the time stored on the server clock is incorrect. Please notify an administrator to correct the problem.'
-	),
-	array(
-		0 => 'My language is not in the list!',
-		1 => 'Either the administrator has not installed your language or nobody has translated this board into your language. Try asking the board administrator if they can install the language pack you need. If the language pack does not exist, feel free to create a new translation. More information can be found at the phpBB website (see link at the bottom of board pages).'
-	),
-	array(
-		0 => 'How do I show an image along with my username?',
-		1 => 'There are two images which may appear along with a username when viewing posts. One of them may be an image associated with your rank, generally in the form of stars, blocks or dots, indicating how many posts you have made or your status on the board. Another, usually a larger image, is known as an avatar and is generally unique or personal to each user. It is up to the board administrator to enable avatars and to choose the way in which avatars can be made available. If you are unable to use avatars, contact a board administrator and ask them for their reasons.'
-	),
-	array(
-		0 => 'What is my rank and how do I change it?',
-		1 => 'Ranks, which appear below your username, indicate the number of posts you have made or identify certain users, e.g. moderators and administrators. In general, you cannot directly change the wording of any board ranks as they are set by the board administrator. Please do not abuse the board by posting unnecessarily just to increase your rank. Most boards will not tolerate this and the moderator or administrator will simply lower your post count.'
-	),
-	array(
-		0 => 'When I click the e-mail link for a user it asks me to login?',
-		1 => 'Only registered users can send e-mail to other users via the built-in e-mail form, and only if the administrator has enabled this feature. This is to prevent malicious use of the e-mail system by anonymous users.'
+		0 => 'À quoi sert « Supprimer tous les cookies du forum » ?',
+		1 => 'L’option « Supprimer tous les cookies du forum » vous permet d’effacer tous les cookies générés par phpBB3 qui conservent votre authentification et votre connexion au forum. Les cookies permettent également d’enregistrer le statut des messages, s’ils sont lus ou non lus, si cette fonctionnalité a été activée par le propriétaire du forum. Si vous rencontrez des problèmes récurrents de connexion et de déconnexion au forum, essayez de supprimer les cookies.',
 	),
 	array(
 		0 => '--',
-		1 => 'Posting Issues'
+		1 => 'Préférences et réglages des utilisateurs'
 	),
 	array(
-		0 => 'How do I post a topic in a forum?',
-		1 => 'To post a new topic in a forum, click the relevant button on either the forum or topic screens. You may need to register before you can post a message. A list of your permissions in each forum is available at the bottom of the forum and topic screens. Example: You can post new topics, You can vote in polls, etc.'
+		0 => 'Comment puis-je modifier mes réglages ?',
+		1 => 'Si vous êtes un utilisateur inscrit, tous vos réglages sont stockés dans la base de données du forum. Si vous souhaitez les modifier, rendez-vous sur votre panneau de contrôle de l’utilisateur ; ce lien se situe généralement en haut des pages du forum. Ce système vous permettra de modifier tous vos réglages et toutes vos préférences.'
 	),
 	array(
-		0 => 'How do I edit or delete a post?',
-		1 => 'Unless you are a board administrator or moderator, you can only edit or delete your own posts. You can edit a post by clicking the edit button for the relevant post, sometimes for only a limited time after the post was made. If someone has already replied to the post, you will find a small piece of text output below the post when you return to the topic which lists the number of times you edited it along with the date and time. This will only appear if someone has made a reply; it will not appear if a moderator or administrator edited the post, though they may leave a note as to why they’ve edited the post at their own discretion. Please note that normal users cannot delete a post once someone has replied.'
+		0 => 'L’heure n’est pas correcte !',
+		1 => 'Il est possible que l’heure affichée soit réglée sur un fuseau horaire différent de celui dans lequel vous êtes. Si tel était le cas, rendez-vous sur votre panneau de contrôle de l’utilisateur et modifiez le fuseau horaire afin de trouver votre zone adéquate, par exemple Londres, Paris, New York, Sydney, etc. Veuillez noter que la modification du fuseau horaire, comme la plupart des réglages, n’est accessible qu’aux utilisateurs inscrits. Si vous n’êtes pas inscrit, c’est l’occasion idéale de le faire.'
 	),
 	array(
-		0 => 'How do I add a signature to my post?',
-		1 => 'To add a signature to a post you must first create one via your User Control Panel. Once created, you can check the <em>Attach a signature</em> box on the posting form to add your signature. You can also add a signature by default to all your posts by checking the appropriate radio button in your profile. If you do so, you can still prevent a signature being added to individual posts by un-checking the add signature box within the posting form.'
+		0 => 'J’ai modifié le fuseau horaire mais l’heure n’est toujours pas correcte !',
+		1 => 'Si vous êtes certain(e) d’avoir correctement réglé le fuseau horaire et l’heure d’été mais que l’heure n’est toujours pas correcte, il est probable que l’heure de l’horloge du serveur soit erronée. Veuillez contacter un administrateur afin de lui communiquer ce problème.'
 	),
 	array(
-		0 => 'How do I create a poll?',
-		1 => 'When posting a new topic or editing the first post of a topic, click the “Poll creation” tab below the main posting form; if you cannot see this, you do not have appropriate permissions to create polls. Enter a title and at least two options in the appropriate fields, making sure each option is on a separate line in the textarea. You can also set the number of options users may select during voting under “Options per user”, a time limit in days for the poll (0 for infinite duration) and lastly the option to allow users to amend their votes.'
+		0 => 'Ma langue n’apparaît pas dans la liste !',
+		1 => 'Soit l’administrateur n’a pas installé votre langue sur le forum, soit personne n’a encore traduit le logiciel dans votre langue. Essayez de demander à un administrateur du forum s’il est possible qu’il puisse installer l’archive de langue que vous souhaitez. Si l’archive de langue désirée n’existe pas, vous êtes libre de vous porter volontaire et commencer une nouvelle traduction. Pour plus d’informations, veuillez vous rendre sur le site officiel (accessible depuis un des liens situés en bas de toutes les pages du forum).'
 	),
 	array(
-		0 => 'Why can’t I add more poll options?',
-		1 => 'The limit for poll options is set by the board administrator. If you feel you need to add more options to your poll than the allowed amount, contact the board administrator.'
+		0 => 'Comment puis-je afficher une image associée à mon nom d’utilisateur ?',
+		1 => 'Deux types d’images, visibles lors de la consultation de messages, peuvent être associés à votre nom d’utilisateur. L’un d’entre eux peut être une image associée à votre rang, généralement en forme d’étoiles, de carrés ou de ronds, qui indiquent le nombre de messages à votre actif ou votre statut sur le forum. L’autre type, habituellement une image plus imposante, est connue sous le nom d’avatar et est généralement unique et personnelle à chaque utilisateur. C’est à l’administrateur du forum d’activer ou non les avatars et de décider de la manière dont ils sont mis à disposition. Si vous ne pouvez pas utiliser les avatars, contactez l’administrateur du forum et demandez-lui pour quelles raisons a t-il souhaité désactiver cette fonctionnalité.'
 	),
 	array(
-		0 => 'How do I edit or delete a poll?',
-		1 => 'As with posts, polls can only be edited by the original poster, a moderator or an administrator. To edit a poll, click to edit the first post in the topic; this always has the poll associated with it. If no one has cast a vote, users can delete the poll or edit any poll option. However, if members have already placed votes, only moderators or administrators can edit or delete it. This prevents the poll’s options from being changed mid-way through a poll.'
+		0 => 'Quel est mon rang et comment puis-je le modifier ?',
+		1 => 'Les rangs, qui apparaissent en dessous de votre nom d’utilisateur, indiquent le nombre de messages que vous avez à votre actif ou identifient certains utilisateurs spéciaux, comme les modérateurs et les administrateurs. Dans la plupart des cas, seul un administrateur du forum peut modifier le texte des rangs du forum. Merci de ne pas abuser de ce système en publiant inutilement des messages afin d’augmenter votre rang sur le forum. Beaucoup de forums ne toléreront pas ceci et un modérateur ou un administrateur abaissera votre compteur de messages.'
 	),
 	array(
-		0 => 'Why can’t I access a forum?',
-		1 => 'Some forums may be limited to certain users or groups. To view, read, post or perform another action you may need special permissions. Contact a moderator or board administrator to grant you access.'
-	),
-	array(
-		0 => 'Why can’t I add attachments?',
-		1 => 'Attachment permissions are granted on a per forum, per group, or per user basis. The board administrator may not have allowed attachments to be added for the specific forum you are posting in, or perhaps only certain groups can post attachments. Contact the board administrator if you are unsure about why you are unable to add attachments.'
-	),
-	array(
-		0 => 'Why did I receive a warning?',
-		1 => 'Each board administrator has their own set of rules for their site. If you have broken a rule, you may be issued a warning. Please note that this is the board administrator’s decision, and the phpBB Group has nothing to do with the warnings on the given site. Contact the board administrator if you are unsure about why you were issued a warning.'
-	),
-	array(
-		0 => 'How can I report posts to a moderator?',
-		1 => 'If the board administrator has allowed it, you should see a button for reporting posts next to the post you wish to report. Clicking this will walk you through the steps necessary to report the post.'
-	),
-	array(
-		0 => 'What is the “Save” button for in topic posting?',
-		1 => 'This allows you to save passages to be completed and submitted at a later date. To reload a saved passage, visit the User Control Panel.'
-	),
-	array(
-		0 => 'Why does my post need to be approved?',
-		1 => 'The board administrator may have decided that posts in the forum you are posting to require review before submission. It is also possible that the administrator has placed you in a group of users whose posts require review before submission. Please contact the board administrator for further details.'
-	),
-	array(
-		0 => 'How do I bump my topic?',
-		1 => 'By clicking the “Bump topic” link when you are viewing it, you can “bump” the topic to the top of the forum on the first page. However, if you do not see this, then topic bumping may be disabled or the time allowance between bumps has not yet been reached. It is also possible to bump the topic simply by replying to it, however, be sure to follow the board rules when doing so.'
+		0 => 'Lorsque je clique sur le lien de courriel d’un utilisateur, il m’est demandé de me connecter ?',
+		1 => 'Si l’administrateur a activé cette fonctionnalité, seuls les utilisateurs inscrits peuvent envoyer des courriels aux autres utilisateurs par l’intermédiaire d’un formulaire. Ceci permet d’empêcher une utilisation malveillante du système de messagerie électronique par des utilisateurs anonymes ou des robots.'
 	),
 	array(
 		0 => '--',
-		1 => 'Formatting and Topic Types'
+		1 => 'Problèmes de publication'
 	),
 	array(
-		0 => 'What is BBCode?',
-		1 => 'BBCode is a special implementation of HTML, offering great formatting control on particular objects in a post. The use of BBCode is granted by the administrator, but it can also be disabled on a per post basis from the posting form. BBCode itself is similar in style to HTML, but tags are enclosed in square brackets [ and ] rather than &lt; and &gt;. For more information on BBCode see the guide which can be accessed from the posting page.'
+		0 => 'Comment puis-je publier un sujet dans un forum ?',
+		1 => 'Pour publier un nouveau sujet dans un forum, cliquez sur le bouton adéquat situé sur l’écran du forum ou du sujet. Il se peut que vous ayez besoin d’être inscrit avant de pouvoir rédiger un message. Sur chaque forum, une liste de vos permissions est affichée en bas de l’écran du forum ou du sujet. Par exemple : vous pouvez publier de nouveaux sujets, vous pouvez voter dans les sondages, etc.'
 	),
 	array(
-		0 => 'Can I use HTML?',
-		1 => 'No. It is not possible to post HTML on this board and have it rendered as HTML. Most formatting which can be carried out using HTML can be applied using BBCode instead.'
+		0 => 'Comment puis-je éditer ou supprimer un message ?',
+		1 => 'À moins que vous ne soyez un administrateur ou un modérateur du forum, vous ne pouvez éditer ou supprimer que vos propres messages. Vous pouvez éditer un de vos messages en cliquant le bouton adéquat, parfois dans une limite de temps après que le message initial ait été publié. Si quelqu’un a déjà répondu au message, un petit texte situé en dessous du message énumèrera le nombre de fois que vous l’avez édité, contenant la date et l’heure de l’édition. Ce petit texte n’apparaîtra pas s’il s’agit d’une édition effectuée par un modérateur ou un administrateur, bien qu’ils puissent prendre l’initiative de rédiger une note discrète exprimant la raison de leur édition. Veuillez noter que les utilisateurs normaux ne peuvent pas supprimer leur propre message si une réponse a été publiée.'
 	),
 	array(
-		0 => 'What are Smilies?',
-		1 => 'Smilies, or Emoticons, are small images which can be used to express a feeling using a short code, e.g. :) denotes happy, while :( denotes sad. The full list of emoticons can be seen in the posting form. Try not to overuse smilies, however, as they can quickly render a post unreadable and a moderator may edit them out or remove the post altogether. The board administrator may also have set a limit to the number of smilies you may use within a post.'
+		0 => 'Comment puis-je ajouter une signature à un message ?',
+		1 => 'Pour ajouter une signature à un message, vous devez tout d’abord en créer une par l’intermédiaire de votre panneau de contrôle de l’utilisateur. Une fois créée, vous pouvez cocher la case <em>Insérer une signature</em> sur le formulaire de rédaction afin d’insérer votre signature. Vous pouvez également ajouter une signature qui sera insérée à tous vos messages en cochant la case appropriée dans votre profil. Si vous choisissez cette dernière option, il ne vous sera plus utile de spécifier sur chaque message votre souhait d’insérer votre signature.'
 	),
 	array(
-		0 => 'Can I post images?',
-		1 => 'Yes, images can be shown in your posts. If the administrator has allowed attachments, you may be able to upload the image to the board. Otherwise, you must link to an image stored on a publicly accessible web server, e.g. http://www.example.com/my-picture.gif. You cannot link to pictures stored on your own PC (unless it is a publicly accessible server) nor images stored behind authentication mechanisms, e.g. hotmail or yahoo mailboxes, password protected sites, etc. To display the image use the BBCode [img] tag.'
+		0 => 'Comment puis-je créer un sondage ?',
+		1 => 'Lorsque vous rédigez un nouveau sujet ou éditez le premier message d’un sujet, cliquez sur l’onglet « Création d’un sondage », situé en-dessous du formulaire principal de rédaction ; si cet onglet n’est pas disponible, il est probable que vous n’ayez pas les permissions appropriées afin de créer des sondages. Saisissez le titre du sondage en incluant au moins deux options dans les champs adéquats, chaque option devant être insérée sur une nouvelle ligne. Vous pouvez régler le nombre d’options que les utilisateurs peuvent insérer en sélectionnant, lors du vote, le réglage des « Options par utilisateur ». Vous pouvez également spécifier une limite de temps en jours, puis enfin autoriser ou non les utilisateurs à modifier leurs votes.'
 	),
 	array(
-		0 => 'What are global announcements?',
-		1 => 'Global announcements contain important information and you should read them whenever possible. They will appear at the top of every forum and within your User Control Panel. Global announcement permissions are granted by the board administrator.'
+		0 => 'Pourquoi ne puis-je pas ajouter plus d’options à un sondage ?',
+		1 => 'La limite d’options d’un sondage est réglée par l’administrateur du forum. Si le nombre d’options que vous pouvez ajouter à un sondage vous semble trop restreint, demandez à un administrateur du forum s’il est possible de l’augmenter.'
 	),
 	array(
-		0 => 'What are announcements?',
-		1 => 'Announcements often contain important information for the forum you are currently reading and you should read them whenever possible. Announcements appear at the top of every page in the forum to which they are posted. As with global announcements, announcement permissions are granted by the board administrator.'
+		0 => 'Comment puis-je éditer ou supprimer un sondage ?',
+		1 => 'Comme pour les messages, les sondages ne peuvent être édités que par leur auteur, un modérateur ou un administrateur. Pour éditer un sondage, éditez tout simplement le premier message du sujet car le sondage est obligatoirement associé à ce dernier. Si personne n’a encore voté, il est possible de supprimer le sondage ou d’éditer ses options. Cependant, si des votes ont été exprimés, seuls les modérateurs ou les administrateurs sont habilités à éditer ou supprimer le sondage. Ceci empêche de modifier les options d’un sondage en cours.'
 	),
 	array(
-		0 => 'What are sticky topics?',
-		1 => 'Sticky topics within the forum appear below announcements and only on the first page. They are often quite important so you should read them whenever possible. As with announcements and global announcements, sticky topic permissions are granted by the board administrator.'
+		0 => 'Pourquoi ne puis-je pas accéder à un forum ?',
+		1 => 'Certains forums peuvent être limités à certains utilisateurs ou groupes d’utilisateurs. Pour consulter, lire, publier ou réaliser n’importe quelle autre action, vous avez besoin de permissions spéciales. Contactez un modérateur ou un administrateur du forum afin de demander votre accès.'
 	),
 	array(
-		0 => 'What are locked topics?',
-		1 => 'Locked topics are topics where users can no longer reply and any poll it contained was automatically ended. Topics may be locked for many reasons and were set this way by either the forum moderator or board administrator. You may also be able to lock your own topics depending on the permissions you are granted by the board administrator.'
+		0 => 'Pourquoi ne puis-je pas insérer de pièces jointes ?',
+		1 => 'Les permissions permettant d’insérer des pièces jointes sont accordées par forum, par groupe ou par utilisateur. L’administrateur du forum n’a peut-être pas autorisé l’insertion de pièces jointes dans le forum concerné, ou seuls certains groupes détiennent cette autorisation. Pour plus d’informations, veuillez contacter un administrateur du forum.'
 	),
 	array(
-		0 => 'What are topic icons?',
-		1 => 'Topic icons are author chosen images associated with posts to indicate their content. The ability to use topic icons depends on the permissions set by the board administrator.'
+		0 => 'Pourquoi ai-je reçu un avertissement ?',
+		1 => 'Chaque forum a son propre ensemble de règles. Si vous ne respectez pas une de ces règles, vous recevrez un avertissement. Veuillez noter que cette décision n’appartient qu’à l’administrateur du forum concerné, le phpBB Group n’est en aucun cas responsable de ce qui est appliqué ou non. Pour plus d’informations, veuillez contacter un administrateur du forum.'
+	),
+	array(
+		0 => 'Comment puis-je rapporter des messages à un modérateur ?',
+		1 => 'Si l’administrateur du forum a activé cette fonctionnalité, un bouton à cette fin devrait être affiché à côté du message que vous souhaitez rapporter. En cliquant sur celui-ci, vous trouverez toutes les étapes nécessaires afin de rapporter le message.'
+	),
+	array(
+		0 => 'À quoi sert le bouton « Sauvegarder » affiché lors de la rédaction d’un sujet ?',
+		1 => 'Il vous permet de sauvegarder les messages qui doivent être complétés et envoyés ultérieurement. Rendez-vous sur votre panneau de contrôle de l’utilisateur afin de recharger un message sauvegardé.'
+	),
+	array(
+		0 => 'Pourquoi mon message a-t-il besoin d’être approuvé ?',
+		1 => 'L’administrateur du forum peut décider que les messages que vous publiez sur le forum doivent être vérifiés avant d’être publiés. Il est également possible que l’administrateur vous ait placé dans un groupe d’utilisateurs pour lequel il juge nécessaire cette action. Pour plus d’informations, veuillez contacter un administrateur du forum.'
+	),
+	array(
+		0 => 'Comment puis-je remonter mes sujets ?',
+		1 => 'En cliquant sur le lien « Remonter le sujet » lorsque vous êtes en train de consulter un sujet, vous pouvez remonter celui-ci en haut de la liste des sujets, à la première page du forum. Cependant, si vous ne voyez pas ce lien, cette fonctionnalité a peut-être été désactivée ou le temps d’attente nécessaire entre les remontées n’a peut-être pas encore été atteint. Il est également possible de remonter le sujet simplement en y répondant, mais assurez-vous de le faire tout en respectant les règles du forum.'
+	),
+	array(
+		0 => '--',
+		1 => 'Mise en forme et types de sujets'
+	),
+	array(
+		0 => 'Qu’est-ce que le BBCode ?',
+		1 => 'Le BBCode est une implémentation spéciale de l’HTML, vous offrant un meilleur contrôle sur la mise en forme d’un message. L’utilisation du BBCode est déterminée par l’administrateur mais il vous est également possible de la désactiver sur chaque message depuis le formulaire de rédaction. Le BBCode est similaire à l’architecture de l’HTML, les balises sont contenues entre des crochets [ et ] à la place de &lt; et &gt;. Pour plus d’informations à propos du BBCode, veuillez consulter le guide qui est accessible depuis la page de rédaction.'
+	),
+	array(
+		0 => 'Puis-je utiliser de l’HTML ?',
+		1 => 'Non, il n’est pas possible d’utiliser de l’HTML sur ce forum. La majeure partie de la mise en forme qui peut être réalisée avec de l’HTML peut également être obtenue grâce à l’utilisation du BBCode.'
+	),
+	array(
+		0 => 'Que sont les émoticônes ?',
+		1 => 'Les émoticônes sont de petites images qui peuvent être utilisées grâce à l’utilisation d’un code court et qui permettent d’exprimer des sentiments. Par exemple, « :) » exprime la joie alors qu’au contraire « :( » exprime la tristesse. Vous pouvez consulter la liste complète des émoticônes depuis le formulaire de rédaction. Essayez cependant de ne pas abuser des émoticônes, elles peuvent rapidement rendre un message illisible et un modérateur pourrait décider de l’éditer ou de le supprimer complètement. L’administrateur du forum peut également limiter le nombre d’émoticônes qui peuvent être insérées dans un message.'
+	),
+	array(
+		0 => 'Puis-je insérer des images ?',
+		1 => 'Oui, vous pouvez insérer des images dans vos messages. Si l’administrateur du forum a autorisé l’insertion de pièces jointes, vous pourrez transférer des images sur le forum. Dans le cas contraire, vous devrez insérer un lien pointant vers une image stockée sur un serveur internet public, comme http://www.exemple.com/mon-image.gif. Vous ne pourrez cependant ni insérer de lien pointant vers des images stockées sur votre propre ordinateur (à moins, bien évidemment, que celui-ci soit en lui-même un serveur internet), ni insérer de lien pointant vers des images stockées derrière un quelconque système d’authentification, comme par exemple les services de messagerie électronique de Hotmail ou de Yahoo, les sites protégés par un mot de passe, etc. Pour insérer une image, utilisez la balise BBCode [img].'
+	),
+	array(
+		0 => 'Que sont les annonces globales ?',
+		1 => 'Les annonces globales contiennent des informations très importantes et vous devriez les consulter le plus rapidement possible. Elles apparaissent en haut de chaque forum et dans votre panneau de contrôle de l’utilisateur. Les permissions concernant les annonces globales sont définies par l’administrateur du forum.'
+	),
+	array(
+		0 => 'Que sont les annonces ?',
+		1 => 'Les annonces contiennent souvent des informations importantes sur le forum dans lequel vous naviguez et vous devriez les consulter le plus rapidement possible. Les annonces apparaissent en haut de chaque page du forum dans lequel elles ont été publiées. Tout comme les annonces globales, les permissions concernant les annonces sont définies par l’administrateur du forum.'
+	),
+	array(
+		0 => 'Que sont les notes ?',
+		1 => 'Les notes apparaissent en dessous des annonces et seulement sur la première page du forum concerné. Elles sont souvent assez importantes et il est recommandé de les consulter dès que vous en avez la possibilité. Tout comme les annonces et les annonces globales, les permissions concernant les notes sont définies par l’administrateur du forum.'
+	),
+	array(
+		0 => 'Que sont les sujets verrouillés ?',
+		1 => 'Les sujets verrouillés sont des sujets dans lesquels les utilisateurs ne peuvent plus répondre et dans lesquels les sondages sont automatiquement expirés. Les sujets peuvent être verrouillés pour de nombreuses raisons par un modérateur ou un administrateur du forum. Vous pouvez également verrouiller vos propres sujets si l’administrateur en a décidé ainsi.'
+	),
+	array(
+		0 => 'Que sont les icônes de sujet ?',
+		1 => 'Les icônes de sujet sont de petites images que l’auteur peut insérer afin d’illustrer le contenu de son sujet. L’administrateur du forum peut ne pas avoir activé cette fonctionnalité.'
 	),
 	// This block will switch the FAQ-Questions to the second template column
 	array(
@@ -209,135 +209,135 @@ $help = array(
 	),
 	array(
 		0 => '--',
-		1 => 'User Levels and Groups'
+		1 => 'Niveaux des utilisateurs et des groupes d’utilisateurs'
 	),
 	array(
-		0 => 'What are Administrators?',
-		1 => 'Administrators are members assigned with the highest level of control over the entire board. These members can control all facets of board operation, including setting permissions, banning users, creating usergroups or moderators, etc., dependent upon the board founder and what permissions he or she has given the other administrators. They may also have full moderator capabilities in all forums, depending on the settings put forth by the board founder.'
+		0 => 'Que sont les administrateurs ?',
+		1 => 'Les administrateurs sont les membres possédant le plus haut niveau de contrôle sur le forum. Ces utilisateurs peuvent contrôler toutes les opérations du forum, telles que le réglage des permissions, le bannissement d’utilisateurs, la création de groupes d’utilisateurs ou de modérateurs, etc. Ils peuvent également être abilités à modérer l’ensemble des forums. Tout ceci dépend des réglages effectués par le fondateur du forum.'
 	),
 	array(
-		0 => 'What are Moderators?',
-		1 => 'Moderators are individuals (or groups of individuals) who look after the forums from day to day. They have the authority to edit or delete posts and lock, unlock, move, delete and split topics in the forum they moderate. Generally, moderators are present to prevent users from going off-topic or posting abusive or offensive material.'
+		0 => 'Que sont les modérateurs ?',
+		1 => 'Les modérateurs sont des utilisateurs individuels (ou des groupes d’utilisateurs individuels) qui surveillent jour après jour les forums. Ils ont la possibilité d’éditer ou de supprimer les sujets, les verrouiller, les déverrouiller, les déplacer, les fusionner et les diviser dans le forum qu’ils modèrent. En règle générale, les modérateurs sont présents pour éviter que les utilisateurs fassent du hors-sujet ou publient du contenu abusif ou offensant.'
 	),
 	array(
-		0 => 'What are usergroups?',
-		1 => 'Usergroups are groups of users that divide the community into manageable sections board administrators can work with. Each user can belong to several groups and each group can be assigned individual permissions. This provides an easy way for administrators to change permissions for many users at once, such as changing moderator permissions or granting users access to a private forum.'
+		0 => 'Que sont les groupes d’utilisateurs ?',
+		1 => 'Les groupes d’utilisateurs sont une façon pour les administrateurs du forum de regrouper plusieurs utilisateurs. Chaque utilisateur peut appartenir à plusieurs groupes et chaque groupe peut détenir des permissions individuelles. Ceci facilite les tâches aux administrateurs qui pourront modifier les permissions de plusieurs utilisateurs en une seule fois, ou encore leur accorder des pouvoirs de modération, ou bien leur donner accès à un forum privé.'
 	),
 	array(
-		0 => 'Where are the usergroups and how do I join one?',
-		1 => 'You can view all usergroups via the “Usergroups” link within your User Control Panel. If you would like to join one, proceed by clicking the appropriate button. Not all groups have open access, however. Some may require approval to join, some may be closed and some may even have hidden memberships. If the group is open, you can join it by clicking the appropriate button. If a group requires approval to join you may request to join by clicking the appropriate button. The user group leader will need to approve your request and may ask why you want to join the group. Please do not harass a group leader if they reject your request; they will have their reasons.'
+		0 => 'Où sont les groupes d’utilisateurs et comment puis-je en rejoindre un ?',
+		1 => 'Vous pouvez consulter tous les groupes d’utilisateurs par l’intermédiaire du lien « Groupes d’utilisateurs » depuis votre panneau de contrôle de l’utilisateur. Si vous souhaitez en rejoindre un, cliquez sur le bouton approprié. Cependant, tous les groupes d’utilisateurs ne sont pas ouverts aux nouvelles adhésions. Certains peuvent nécessiter une approbation, d’autres peuvent être fermés et d’autres peuvent même être invisibles. Si le groupe est ouvert, vous pouvez le rejoindre en cliquant sur le bouton approprié. S’il nécessite une approbation, cliquez également sur le bouton approprié. Le responsable du groupe d’utilisateurs devra approuver votre requête et pourra vous demander pourquoi vous souhaitez le rejoindre. Merci de ne pas harceler un responsable de groupe s’il refuse votre requête : il doit avoir ses propres raisons.'
 	),
 	array(
-		0 => 'How do I become a usergroup leader?',
-		1 => 'A usergroup leader is usually assigned when usergroups are initially created by a board administrator. If you are interested in creating a usergroup, your first point of contact should be an administrator; try sending a private message.',
+		0 => 'Comment puis-je devenir le responsable d’un groupe d’utilisateurs ?',
+		1 => 'Le responsable d’un groupe d’utilisateurs est généralement assigné lorsque les groupes d’utilisateurs sont initialement créés par un administrateur du forum. Si vous êtes intéressé(e) par la création d’un groupe d’utilisateurs, votre premier contact devrait être un administrateur ; essayez de lui envoyer un message privé.',
 	),
 	array(
-		0 => 'Why do some usergroups appear in a different colour?',
-		1 => 'It is possible for the board administrator to assign a colour to the members of a usergroup to make it easy to identify the members of this group.'
+		0 => 'Pourquoi certains groupes d’utilisateurs apparaissent dans une couleur différente ?',
+		1 => 'Les administrateurs du forum peuvent assigner une couleur aux membres d’un groupe d’utilisateurs afin de faciliter leur identification.'
 	),
 	array(
-		0 => 'What is a “Default usergroup”?',
-		1 => 'If you are a member of more than one usergroup, your default is used to determine which group colour and group rank should be shown for you by default. The board administrator may grant you permission to change your default usergroup via your User Control Panel.'
+		0 => 'Qu’est-ce qu’un « groupe d’utilisateurs par défaut » ?',
+		1 => 'Si vous êtes membre de plus d’un groupe d’utilisateurs, votre groupe d’utilisateurs par défaut est utilisé afin de déterminer quelle sera la couleur et le rang qui vous sera assigné par défaut. L’administrateur du forum peut vous donner la permission de modifier vous-même votre groupe d’utilisateurs par défaut par l’intermédiaire de votre panneau de contrôle de l’utilisateur.'
 	),
 	array(
-		0 => 'What is “The team” link?',
-		1 => 'This page provides you with a list of board staff, including board administrators and moderators and other details such as the forums they moderate.'
-	),
-	array(
-		0 => '--',
-		1 => 'Private Messaging'
-	),
-	array(
-		0 => 'I cannot send private messages!',
-		1 => 'There are three reasons for this; you are not registered and/or not logged on, the board administrator has disabled private messaging for the entire board, or the board administrator has prevented you from sending messages. Contact a board administrator for more information.'
-	),
-	array(
-		0 => 'I keep getting unwanted private messages!',
-		1 => 'You can block a user from sending you private messages by using message rules within your User Control Panel. If you are receiving abusive private messages from a particular user, inform a board administrator; they have the power to prevent a user from sending private messages.'
-	),
-	array(
-		0 => 'I have received a spamming or abusive e-mail from someone on this board!',
-		1 => 'We are sorry to hear that. The e-mail form feature of this board includes safeguards to try and track users who send such posts, so e-mail the board administrator with a full copy of the e-mail you received. It is very important that this includes the headers that contain the details of the user that sent the e-mail. The board administrator can then take action.'
+		0 => 'Qu’est-ce que le lien « L’équipe » ?',
+		1 => 'Cette page liste les membres de l’équipe du forum que sont les administrateurs et les modérateurs, en plus de quelques informations tels que les forums qu’ils modèrent.'
 	),
 	array(
 		0 => '--',
-		1 => 'Friends and Foes'
+		1 => 'Messagerie privée'
 	),
 	array(
-		0 => 'What are my Friends and Foes lists?',
-		1 => 'You can use these lists to organise other members of the board. Members added to your friends list will be listed within your User Control Panel for quick access to see their online status and to send them private messages. Subject to template support, posts from these users may also be highlighted. If you add a user to your foes list, any posts they make will be hidden by default.'
+		0 => 'Je ne peux pas envoyer de messages privés !',
+		1 => 'Trois raisons peuvent en être la cause ; soit vous n’êtes pas inscrit(e) et connecté(e), soit un administrateur a désactivé entièrement la messagerie privée sur le forum, soit un des administrateurs vous empêche d’envoyer des messages privés. Pour plus d’informations, veuillez contacter l’administrateur du forum.'
 	),
 	array(
-		0 => 'How can I add / remove users to my Friends or Foes list?',
-		1 => 'You can add users to your list in two ways. Within each user’s profile, there is a link to add them to either your Friend or Foe list. Alternatively, from your User Control Panel, you can directly add users by entering their member name. You may also remove users from your list using the same page.'
+		0 => 'Je continue à recevoir des messages privés non sollicités !',
+		1 => 'Vous pouvez empêcher un utilisateur de vous envoyer des messages privés en utilisant les règles de messages depuis votre panneau de contrôle de l’utilisateur. Si vous recevez des messages privés de manière abusive de la part d’un autre utilisateur, informez-en un administrateur ; ils peuvent empêcher complètement un utilisateur d’envoyer des messages privés.'
 	),
 	array(
-		0 => '--',
-		1 => 'Searching the Forums'
-	),
-	array(
-		0 => 'How can I search a forum or forums?',
-		1 => 'Enter a search term in the search box located on the index, forum or topic pages. Advanced search can be accessed by clicking the “Advance Search” link which is available on all pages on the forum. How to access the search may depend on the style used.'
-	),
-	array(
-		0 => 'Why does my search return no results?',
-		1 => 'Your search was probably too vague and included many common terms which are not indexed by phpBB3. Be more specific and use the options available within Advanced search.'
-	),
-	array(
-		0 => 'Why does my search return a blank page!?',
-		1 => 'Your search returned too many results for the webserver to handle. Use “Advanced search” and be more specific in the terms used and forums that are to be searched.'
-	),
-	array(
-		0 => 'How do I search for members?',
-		1 => 'Visit to the “Members” page and click the “Find a member” link.'
-	),
-	array(
-		0 => 'How can I find my own posts and topics?',
-		1 => 'Your own posts can be retrieved either by clicking the “Search user’s posts” within the User Control Panel or via your own profile page. To search for your topics, use the Advanced search page and fill in the various options appropriately.'
+		0 => 'J’ai reçu un pourriel ou un courriel indésirable de la part de quelqu’un sur ce forum !',
+		1 => 'Nous en sommes désolés. Le formulaire d’envoi de courriels de ce forum possède des protections afin d’essayer de repérer les utilisateurs qui envoient de tels messages. Vous devriez envoyer par courriel à un administrateur du forum une copie complète du courriel que vous avez reçu. Il est très important d’y inclure les en-têtes contenant des informations sur l’auteur du courriel. Il pourra alors agir en conséquence.'
 	),
 	array(
 		0 => '--',
-		1 => 'Topic Subscriptions and Bookmarks'
+		1 => 'Amis et ignorés'
 	),
 	array(
-		0 => 'What is the difference between bookmarking and subscribing?',
-		1 => 'Bookmarking in phpBB3 is much like bookmarking in your web browser. You aren’t alerted when there’s an update, but you can come back to the topic later. Subscribing, however, will notify you when there is an update to the topic or forum on the board via your preferred method or methods.'
+		0 => 'À quoi sert ma liste d’amis et d’ignorés ?',
+		1 => 'Vous pouvez utiliser ces listes afin d’organiser et trier les utilisateurs du forum. Les membres ajoutés dans votre liste d’amis seront listés dans votre panneau de contrôle de l’utilisateur afin de consulter rapidement leur statut en ligne et leur envoyer des messages privés. Selon le template utilisé, les messages publiés par ces utilisateurs peuvent éventuellement être mis en surbrillance. Si vous ajoutez un utilisateur dans votre liste d’ignorés, tous les messages qu’il publiera seront masqués par défaut.'
 	),
 	array(
-		0 => 'How do I subscribe to specific forums or topics?',
-		1 => 'To subscribe to a specific forum, click the “Subscribe forum” link upon entering the forum. To subscribe to a topic, reply to the topic with the subscribe checkbox checked or click the “Subscribe topic” link within the topic itself.'
-	),
-	array(
-		0 => 'How do I remove my subscriptions?',
-		1 => 'To remove your subscriptions, go to your User Control Panel and follow the links to your subscriptions.'
+		0 => 'Comment puis-je ajouter ou supprimer des utilisateurs de ma liste d’amis et d’ignorés ?',
+		1 => 'Vous pouvez ajouter des utilisateurs à ces listes de deux manières. Dans chaque profil d’utilisateurs, un lien vous permet de les ajouter à votre liste d’amis ou d’ignorés. Alternativement, vous pouvez ajouter directement des utilisateurs depuis le panneau de contrôle de l’utilisateur en saisissant leur nom d’utilisateur. Vous pouvez également les supprimer de vos listes en utilisant cette même page.'
 	),
 	array(
 		0 => '--',
-		1 => 'Attachments'
+		1 => 'Recherche dans les forums'
 	),
 	array(
-		0 => 'What attachments are allowed on this board?',
-		1 => 'Each board administrator can allow or disallow certain attachment types. If you are unsure what is allowed to be uploaded, contact the board administrator for assistance.'
+		0 => 'Comment puis-je effectuer une recherche dans un ou des forums ?',
+		1 => 'Saisissez un terme dans la boîte de recherche située sur l’index, les pages des forums ou les pages des sujets. La recherche avancée est accessible en cliquant sur le lien « Recherche avancée » disponible sur toutes les pages du forum. L’accès à la recherche dépend du style utilisé.'
 	),
 	array(
-		0 => 'How do I find all my attachments?',
-		1 => 'To find your list of attachments that you have uploaded, go to your User Control Panel and follow the links to the attachments section.'
+		0 => 'Pourquoi ma recherche ne renvoie aucun résultat ?',
+		1 => 'Votre recherche était probablement trop vague ou incluait trop de termes communs qui ne sont pas indexés par phpBB3. Soyez plus précis et utilisez les options disponibles dans la recherche avancée.'
+	),
+	array(
+		0 => 'Pourquoi ma recherche renvoie à une page blanche ?!',
+		1 => 'Votre recherche a renvoyé trop de résultats pour que le serveur puisse les afficher. Utilisez la recherche avancée et soyez plus précis dans les termes utilisés et dans la sélection des forums dans lesquels vous souhaitez effectuer une recherche.'
+	),
+	array(
+		0 => 'Comment puis-je rechercher des utilisateurs ?',
+		1 => 'Rendez-vous sur la page « Membres » et cliquez sur le lien « Trouver un membre ».'
+	),
+	array(
+		0 => 'Comment puis-je retrouver mes propres messages et sujets ?',
+		1 => 'Vos propres messages peuvent être affichés en cliquant sur le lien « Rechercher les messages de l’utilisateur » par l’intermédiaire du panneau de contrôle de l’utilisateur ou sur la page de votre propre profil. Pour effectuer une recherche de vos propres sujets, utilisez la recherche avancée et remplissez convenablement les options qui vous sont disponibles.'
 	),
 	array(
 		0 => '--',
-		1 => 'phpBB 3 Issues'
+		1 => 'Signets et abonnements aux sujets'
 	),
 	array(
-		0 => 'Who wrote this bulletin board?',
-		1 => 'This software (in its unmodified form) is produced, released and is copyright <a href="https://www.phpbb.com/">phpBB Group</a>. It is made available under the GNU General Public License and may be freely distributed. See the link for more details.'
+		0 => 'Quelle est la différence entre le signetage et l’abonnement ?',
+		1 => 'Dans phpBB3, le signetage d’un sujet est similaire à ajouter une page aux favoris de votre navigateur internet. Vous ne recevrez pas de notification lors de la publication d’un nouveau message, mais vous pourrez retourner rapidement au sujet ultérieurement. Cependant, l’abonnement vous préviendra lors de la publication de nouveaux messages sur le sujet ou le forum que vous surveillez.'
 	),
 	array(
-		0 => 'Why isn’t X feature available?',
-		1 => 'This software was written by and licensed through phpBB Group. If you believe a feature needs to be added please visit the <a href="https://www.phpbb.com/ideas/">phpBB Ideas Centre</a>, where you can upvote existing ideas or suggest new features.'
+		0 => 'Comment puis-je m’abonner à un forum ou à un sujet spécifique ?',
+		1 => 'Pour s’abonner à un forum spécifique, cliquez sur le lien « S’abonner au forum » disponible dans le forum souhaité. Pour s’abonner à un sujet, répondez au sujet en sélectionnant l’option d’abonnement spécifique ou cliquez sur le lien « S’abonner au sujet » disponible sur la page du sujet.'
 	),
 	array(
-		0 => 'Who do I contact about abusive and/or legal matters related to this board?',
-		1 => 'Any of the administrators listed on the “The team” page should be an appropriate point of contact for your complaints. If this still gets no response then you should contact the owner of the domain (do a <a href="http://www.google.com/search?q=whois">whois lookup</a>) or, if this is running on a free service (e.g. Yahoo!, free.fr, f2s.com, etc.), the management or abuse department of that service. Please note that the phpBB Group has <strong>absolutely no jurisdiction</strong> and cannot in any way be held liable over how, where or by whom this board is used. Do not contact the phpBB Group in relation to any legal (cease and desist, liable, defamatory comment, etc.) matter <strong>not directly related</strong> to the phpBB.com website or the discrete software of phpBB itself. If you do e-mail phpBB Group <strong>about any third party</strong> use of this software then you should expect a terse response or no response at all.'
+		0 => 'Comment puis-je résilier mes abonnements ?',
+		1 => 'Pour résilier vos abonnements, rendez-vous sur le panneau de contrôle de l’utilisateur et suivez le lien vers vos abonnements.'
+	),
+	array(
+		0 => '--',
+		1 => 'Pièces jointes'
+	),
+	array(
+		0 => 'Quelles pièces jointes sont autorisées sur ce forum ?',
+		1 => 'Chaque administrateur du forum peut autoriser ou interdire certains types de pièces jointes. Si vous n’êtes pas certain(e) de ce qui est autorisé ou non, n’hésitez pas à demander assistance à un administrateur du forum.'
+	),
+	array(
+		0 => 'Comment puis-je retrouver toutes mes pièces jointes ?',
+		1 => 'Pour retrouver la liste des pièces jointes que vous avez transférées, rendez-vous sur le panneau de contrôle de l’utilisateur et suivez les liens vers la section des pièces jointes.'
+	),
+	array(
+		0 => '--',
+		1 => 'À propos de phpBB3'
+	),
+	array(
+		0 => 'Qui a développé ce logiciel de forum ?',
+		1 => 'Ce programme (dans sa forme non modifiée) est produit et distribué par le <a href="https://www.phpbb.com/">phpBB Group</a>, qui en est le légitime propriétaire. Il est rendu accessible sous la Licence Publique Générale GNU et peut être distribué gratuitement. Pour plus d’informations, veuillez cliquer sur le lien.'
+	),
+	array(
+		0 => 'Pourquoi la fonctionnalité X n’est pas disponible ?',
+		1 => 'Ce programme a été développé et mis sous licence par le phpBB Group. Si vous souhaitez proposer l’implantation d’une nouvelle fonctionnalité, veuillez vous rendre sur <a href="https://www.phpbb.com/ideas/">phpBB Ideas Centre</a> où vous pourrez voter pour les idées soumises par d’autres utilisateurs et suggérer les vôtres.'
+	),
+	array(
+		0 => 'Qui dois-je contacter à propos de problèmes d’abus ou d’ordres légaux liés à ce forum ?',
+		1 => 'Tous les administrateurs listés sur la page « L’équipe » devraient être un contact approprié pour ces genres de problèmes. Si vous n’obtenez aucune réponse de leur part, vous devriez alors contacter le propriétaire du domaine (faites une <a href="http://www.google.com/search?q=whois">requête WHOIS</a>) ou, si celui-ci fonctionne sur un service gratuit (comme Yahoo!, Free.fr, f2s.com, etc.), le service de gestion des abus. Veuillez notez que le phpBB Group n’a <strong>absolument aucune juridiction</strong> et ne peut en aucun cas être tenu comme responsable de comment, où et par qui ce forum est utilisé. Ne contactez pas le phpBB Group pour tout problème d’ordre légal (commentaire incessant, insultant, diffamatoire, etc.) qui n’ont <strong>pas directement de relation</strong> avec le site internet de phpBB.com ou le script phpBB en lui-même. Si vous envoyez un courriel au phpBB Group <strong>à propos d’une utilisation de tierce partie</strong> de ce logiciel, attendez-vous à une réponse laconique, ou à aucune réponse, tout simplement.'
 	)
 );
 

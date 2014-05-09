@@ -1,11 +1,11 @@
 <?php
 /**
 *
-* acp_modules [English]
+* acp_modules [French]
 *
 * @package language
 * @version $Id$
-* @copyright (c) 2005 phpBB Group
+* @copyright (c) 2005 phpBB Group, (c) Maël Soucaze
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 */
@@ -36,49 +36,49 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'ACP_MODULE_MANAGEMENT_EXPLAIN'	=> 'Here you are able to manage all kind of modules. Please note that the ACP has a three-level menu structure (Category -> Category -> Module) whereby the others having a two-level menu structure (Category -> Module) which must be kept. Please also be aware that you may lock out yourself if you disable or delete the modules responsible for the module management itself.',
-	'ADD_MODULE'					=> 'Add module',
-	'ADD_MODULE_CONFIRM'			=> 'Are you sure you want to add the selected module with the selected mode?',
-	'ADD_MODULE_TITLE'				=> 'Add module',
+	'ACP_MODULE_MANAGEMENT_EXPLAIN'	=> 'Vous pouvez gérer ici toutes sortes de modules. Veuillez noter que le PCA est divisé en structure à trois niveaux de menu (Catégorie -> Catégorie -> Module) où les autres ne sont divisés qu’en structure à deux niveaux de menu (Catégorie -> Module) qui doit être conservée. Veuillez également prendre en compte le fait que vous pouvez vous bloquer si vous désactivez ou supprimez les modules responsables de la gestion des modules.',
+	'ADD_MODULE'					=> 'Ajouter un module',
+	'ADD_MODULE_CONFIRM'			=> 'Êtes-vous sûr(e) de vouloir ajouter ce module avec le mode que vous avez sélectionné ?',
+	'ADD_MODULE_TITLE'				=> 'Ajouter un module',
 
-	'CANNOT_REMOVE_MODULE'	=> 'Unable to remove module, it has assigned children. Please remove or move all children before performing this action.',
-	'CATEGORY'				=> 'Category',
-	'CHOOSE_MODE'			=> 'Choose module mode',
-	'CHOOSE_MODE_EXPLAIN'	=> 'Choose the modules mode being used.',
-	'CHOOSE_MODULE'			=> 'Choose module',
-	'CHOOSE_MODULE_EXPLAIN'	=> 'Choose the file being called by this module.',
-	'CREATE_MODULE'			=> 'Create new module',
+	'CANNOT_REMOVE_MODULE'	=> 'Impossible de supprimer le module car il possède des sous-modules. Veuillez supprimer ou déplacer tous les sous-modules avant d’effectuer cette opération.',
+	'CATEGORY'				=> 'Catégorie',
+	'CHOOSE_MODE'			=> 'Sélectionner un mode de module ',
+	'CHOOSE_MODE_EXPLAIN'	=> 'Sélectionnez le mode qui sera utilisé par les modules.',
+	'CHOOSE_MODULE'			=> 'Sélectionner un module ',
+	'CHOOSE_MODULE_EXPLAIN'	=> 'Sélectionnez le fichier qui sera utilisé par ce module.',
+	'CREATE_MODULE'			=> 'Créer un nouveau module',
 
-	'DEACTIVATED_MODULE'	=> 'Deactivated module',
-	'DELETE_MODULE'			=> 'Delete module',
-	'DELETE_MODULE_CONFIRM'	=> 'Are you sure you want to remove this module?',
+	'DEACTIVATED_MODULE'	=> 'Module désactivé',
+	'DELETE_MODULE'			=> 'Supprimer le module',
+	'DELETE_MODULE_CONFIRM'	=> 'Êtes-vous sûr(e) de vouloir supprimer ce module ?',
 
-	'EDIT_MODULE'			=> 'Edit module',
-	'EDIT_MODULE_EXPLAIN'	=> 'Here you are able to enter module specific settings.',
+	'EDIT_MODULE'			=> 'Éditer le module',
+	'EDIT_MODULE_EXPLAIN'	=> 'Vous pouvez paramétrer ici les réglages spécifiques au module.',
 
-	'HIDDEN_MODULE'			=> 'Hidden module',
+	'HIDDEN_MODULE'			=> 'Module masqué',
 
 	'MODULE'					=> 'Module',
-	'MODULE_ADDED'				=> 'Module successfully added.',
-	'MODULE_DELETED'			=> 'Module successfully removed.',
-	'MODULE_DISPLAYED'			=> 'Module displayed',
-	'MODULE_DISPLAYED_EXPLAIN'	=> 'If you do not wish to display this module, but want to use it, set this to no.',
-	'MODULE_EDITED'				=> 'Module successfully edited.',
-	'MODULE_ENABLED'			=> 'Module enabled',
-	'MODULE_LANGNAME'			=> 'Module language name',
-	'MODULE_LANGNAME_EXPLAIN'	=> 'Enter the displayed module name. Use language constant if name is served from language file.',
-	'MODULE_TYPE'				=> 'Module type',
+	'MODULE_ADDED'				=> 'Le module a été ajouté.',
+	'MODULE_DELETED'			=> 'Le module a été supprimé.',
+	'MODULE_DISPLAYED'			=> 'Module affiché ',
+	'MODULE_DISPLAYED_EXPLAIN'	=> 'Si vous ne souhaitez pas afficher ce module mais que vous souhaitez l’utiliser, désactivez cette option.',
+	'MODULE_EDITED'				=> 'Le module a été édité.',
+	'MODULE_ENABLED'			=> 'Module activé ',
+	'MODULE_LANGNAME'			=> 'Nom de la langue du module ',
+	'MODULE_LANGNAME_EXPLAIN'	=> 'Saisissez le nom du module qui sera affiché. Utilisez une variable de langue si le nom est utilisé à partir du fichier de langue.',
+	'MODULE_TYPE'				=> 'Type de module ',
 
-	'NO_CATEGORY_TO_MODULE'	=> 'Unable to turn category into module. Please remove/move all children before performing this action.',
-	'NO_MODULE'				=> 'No module found.',
-	'NO_MODULE_ID'			=> 'No module id specified.',
-	'NO_MODULE_LANGNAME'	=> 'No module language name specified.',
-	'NO_PARENT'				=> 'No Parent',
+	'NO_CATEGORY_TO_MODULE'	=> 'Impossible de modifier cette catégorie en module. Veuillez supprimer ou déplacer tous les sous-modules avant d’effectuer cette opération.',
+	'NO_MODULE'				=> 'Aucun module n’a été trouvé.',
+	'NO_MODULE_ID'			=> 'Aucune identification n’a été spécifiée concernant ce module.',
+	'NO_MODULE_LANGNAME'	=> 'Aucun nom n’a été spécifié concernant la langue du module.',
+	'NO_PARENT'				=> 'Aucun parent',
 
-	'PARENT'				=> 'Parent',
-	'PARENT_NO_EXIST'		=> 'Parent does not exist.',
+	'PARENT'				=> 'Parent ',
+	'PARENT_NO_EXIST'		=> 'Le parent n’existe pas.',
 
-	'SELECT_MODULE'			=> 'Select a module',
+	'SELECT_MODULE'			=> 'Sélectionner un module ',
 ));
 
 ?>

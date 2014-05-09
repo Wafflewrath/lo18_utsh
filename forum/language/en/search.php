@@ -1,11 +1,11 @@
 <?php
 /**
 *
-* search [English]
+* search [French]
 *
 * @package language
 * @version $Id$
-* @copyright (c) 2005 phpBB Group
+* @copyright (c) 2005 phpBB Group, (c) Maël Soucaze
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 */
@@ -36,72 +36,72 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'ALL_AVAILABLE'			=> 'All available',
-	'ALL_RESULTS'			=> 'All results',
+	'ALL_AVAILABLE'			=> 'Tous disponibles',
+	'ALL_RESULTS'			=> 'Tous les résultats',
 
-	'DISPLAY_RESULTS'		=> 'Display results as',
+	'DISPLAY_RESULTS'		=> 'Afficher les résultats sous forme de ',
 
-	'FOUND_SEARCH_MATCH'		=> 'Search found %d match',
-	'FOUND_SEARCH_MATCHES'		=> 'Search found %d matches',
-	'FOUND_MORE_SEARCH_MATCHES'	=> 'Search found more than %d matches',
+	'FOUND_SEARCH_MATCH'		=> 'La recherche a retourné %d résultat',
+	'FOUND_SEARCH_MATCHES'		=> 'La recherche a retourné %d résultat(s)',
+	'FOUND_MORE_SEARCH_MATCHES'	=> 'La recherche a retourné plus de %d résultat(s)',
 
-	'GLOBAL'				=> 'Global announcement',
+	'GLOBAL'				=> 'Annonce globale',
 
-	'IGNORED_TERMS'			=> 'ignored',
-	'IGNORED_TERMS_EXPLAIN'	=> 'The following words in your search query were ignored because they are too common words: <strong>%s</strong>.',
+	'IGNORED_TERMS'			=> 'ignorés ',
+	'IGNORED_TERMS_EXPLAIN'	=> 'Les mots suivants ont été ignorés lors de votre recherche car ils sont considérés comme trop courants : <strong>%s</strong>.',
 
-	'JUMP_TO_POST'			=> 'Jump to post',
+	'JUMP_TO_POST'			=> 'Sauter vers le message',
 
-	'LOGIN_EXPLAIN_EGOSEARCH'	=> 'The board requires you to be registered and logged in to view your own posts.',
-	'LOGIN_EXPLAIN_UNREADSEARCH'=> 'The board requires you to be registered and logged in to view your unread posts.',
-	'LOGIN_EXPLAIN_NEWPOSTS'	=> 'The board requires you to be registered and logged in to view new posts since your last visit.',
+	'LOGIN_EXPLAIN_EGOSEARCH'	=> 'Vous devez vous inscrire et vous connecter afin de consulter vos messages.',
+	'LOGIN_EXPLAIN_UNREADSEARCH'=> 'Vous devez vous inscrire et vous connecter afin de consulter vos messages non lus.',
+	'LOGIN_EXPLAIN_NEWPOSTS'	=> 'Vous devez vous inscrire et vous connecter afin de consulter les nouveaux messages qui ont été publiés depuis votre dernière visite.',
 
-	'MAX_NUM_SEARCH_KEYWORDS_REFINE'	=> 'You specified too many words to search for. Please do not enter more than %1$d words.',
+	'MAX_NUM_SEARCH_KEYWORDS_REFINE'	=> 'Vous avez spécifié un trop grand nombre de mots à rechercher. Veuillez vous limiter à %1$d mot(s).',
 
-	'NO_KEYWORDS'			=> 'You must specify at least one word to search for. Each word must consist of at least %d characters and must not contain more than %d characters excluding wildcards.',
-	'NO_RECENT_SEARCHES'	=> 'No searches have been carried out recently.',
-	'NO_SEARCH'				=> 'Sorry but you are not permitted to use the search system.',
-	'NO_SEARCH_RESULTS'		=> 'No suitable matches were found.',
-	'NO_SEARCH_TIME'		=> 'Sorry but you cannot use search at this time. Please try again in a few minutes.',
-	'NO_SEARCH_UNREADS'		=> 'Sorry but searching for unread posts has been disabled on this board.',
-	'WORD_IN_NO_POST'		=> 'No posts were found because the word <strong>%s</strong> is not contained in any post.',
-	'WORDS_IN_NO_POST'		=> 'No posts were found because the words <strong>%s</strong> are not contained in any post.',
+	'NO_KEYWORDS'			=> 'Vous devez spécifier au moins un mot afin d’effectuer une recherche. Chaque mot doit être composé d’au moins %d caractère(s) et ne doit pas contenir plus de %d caractère(s), en excluant les jokers.',
+	'NO_RECENT_SEARCHES'	=> 'Aucune recherche n’a été effectuée récemment.',
+	'NO_SEARCH'				=> 'Vous n’êtes pas autorisé(e) à utiliser le système de recherche.',
+	'NO_SEARCH_RESULTS'		=> 'Aucun résultat ne correspond au(x) terme(s) que vous avez spécifié(s).',
+	'NO_SEARCH_TIME'		=> 'Vous ne pouvez pas utiliser le système de recherche actuellement. Veuillez réessayer ultérieurement.',
+	'NO_SEARCH_UNREADS'		=> 'Le système de recherche des messages non lus a été désactivé sur ce forum.',
+	'WORD_IN_NO_POST'		=> 'Aucun message n’a été trouvé car le mot <strong>%s</strong> n’est présent dans aucun message.',
+	'WORDS_IN_NO_POST'		=> 'Aucun message n’a été trouvé car les mots <strong>%s</strong> ne sont présents dans aucun message.',
 
-	'POST_CHARACTERS'		=> 'characters of posts',
+	'POST_CHARACTERS'		=> 'caractère(s) des messages',
 
-	'RECENT_SEARCHES'		=> 'Recent searches',
-	'RESULT_DAYS'			=> 'Limit results to previous',
-	'RESULT_SORT'			=> 'Sort results by',
-	'RETURN_FIRST'			=> 'Return first',
-	'RETURN_TO_SEARCH_ADV'	=> 'Return to advanced search',
+	'RECENT_SEARCHES'		=> 'Recherches récentes',
+	'RESULT_DAYS'			=> 'Limiter les résultats dans le temps ',
+	'RESULT_SORT'			=> 'Trier les résultats par ',
+	'RETURN_FIRST'			=> 'Retourner le(s) premier(s) ',
+	'RETURN_TO_SEARCH_ADV'	=> 'Retour à la recherche avancée',
 
-	'SEARCHED_FOR'				=> 'Search term used',
-	'SEARCHED_TOPIC'			=> 'Searched topic',
-	'SEARCHED_QUERY'			=> 'Searched query',
-	'SEARCH_ALL_TERMS'			=> 'Search for all terms or use query as entered',
-	'SEARCH_ANY_TERMS'			=> 'Search for any terms',
-	'SEARCH_AUTHOR'				=> 'Search for author',
-	'SEARCH_AUTHOR_EXPLAIN'		=> 'Use * as a wildcard for partial matches.',
-	'SEARCH_FIRST_POST'			=> 'First post of topics only',
-	'SEARCH_FORUMS'				=> 'Search in forums',
-	'SEARCH_FORUMS_EXPLAIN'		=> 'Select the forum or forums you wish to search in. Subforums are searched automatically if you do not disable “search subforums“ below.',
-	'SEARCH_IN_RESULTS'			=> 'Search these results',
-	'SEARCH_KEYWORDS_EXPLAIN'	=> 'Place <strong>+</strong> in front of a word which must be found and <strong>-</strong> in front of a word which must not be found. Put a list of words separated by <strong>|</strong> into brackets if only one of the words must be found. Use * as a wildcard for partial matches.',
-	'SEARCH_MSG_ONLY'			=> 'Message text only',
-	'SEARCH_OPTIONS'			=> 'Search options',
-	'SEARCH_QUERY'				=> 'Search query',
-	'SEARCH_SUBFORUMS'			=> 'Search subforums',
-	'SEARCH_TITLE_MSG'			=> 'Post subjects and message text',
-	'SEARCH_TITLE_ONLY'			=> 'Topic titles only',
-	'SEARCH_WITHIN'				=> 'Search within',
-	'SORT_ASCENDING'			=> 'Ascending',
-	'SORT_AUTHOR'				=> 'Author',
-	'SORT_DESCENDING'			=> 'Descending',
+	'SEARCHED_FOR'				=> 'Rechercher les termes utilisés ',
+	'SEARCHED_TOPIC'			=> 'Sujet recherché ',
+	'SEARCHED_QUERY'			=> 'Requête recherchée ',
+	'SEARCH_ALL_TERMS'			=> 'Rechercher tous les termes ou utiliser une question comme élément',
+	'SEARCH_ANY_TERMS'			=> 'Rechercher n’importe quels de ces termes',
+	'SEARCH_AUTHOR'				=> 'Rechercher par auteur ',
+	'SEARCH_AUTHOR_EXPLAIN'		=> 'Utilisez * comme joker si vous souhaitez effectuer des recherches partielles.',
+	'SEARCH_FIRST_POST'			=> 'Le premier message des sujets uniquement',
+	'SEARCH_FORUMS'				=> 'Rechercher dans le(s) forum(s) ',
+	'SEARCH_FORUMS_EXPLAIN'		=> 'Sélectionnez le forum ou les forums dans le(s)quel(s) vous souhaitez effectuer une recherche. Les sous-forums seront automatiquement inclus dans la recherche si vous ne désactivez pas l’option « Rechercher dans les sous-forums » affichée ci-dessous.',
+	'SEARCH_IN_RESULTS'			=> 'Rechercher dans ces résultats ',
+	'SEARCH_KEYWORDS_EXPLAIN'	=> 'Insérez <strong>+</strong> devant un mot qui doit être trouvé et <strong>-</strong> devant un mot qui doit être ignoré. Insérez une liste de mots séparés entre des barres verticales discontinues <strong>|</strong> si seul un des mots doit être trouvé. Utilisez * comme joker si vous souhaitez effectuer des recherches partielles.',
+	'SEARCH_MSG_ONLY'			=> 'Le contenu des messages uniquement',
+	'SEARCH_OPTIONS'			=> 'Options de la recherche',
+	'SEARCH_QUERY'				=> 'Question de la recherche',
+	'SEARCH_SUBFORUMS'			=> 'Rechercher dans les sous-forums ',
+	'SEARCH_TITLE_MSG'			=> 'Les titres des sujets et le contenu des messages',
+	'SEARCH_TITLE_ONLY'			=> 'Les titres des sujets uniquement',
+	'SEARCH_WITHIN'				=> 'Rechercher dans ',
+	'SORT_ASCENDING'			=> 'Croissant',
+	'SORT_AUTHOR'				=> 'Auteur',
+	'SORT_DESCENDING'			=> 'Décroissant',
 	'SORT_FORUM'				=> 'Forum',
-	'SORT_POST_SUBJECT'			=> 'Post subject',
-	'SORT_TIME'					=> 'Post time',
+	'SORT_POST_SUBJECT'			=> 'Sujet du message',
+	'SORT_TIME'					=> 'Heure du message',
 
-	'TOO_FEW_AUTHOR_CHARS'	=> 'You must specify at least %d characters of the authors name.',
+	'TOO_FEW_AUTHOR_CHARS'	=> 'Vous devez spécifier au moins %d caractère(s) du nom des auteurs.',
 ));
 
 ?>

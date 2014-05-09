@@ -1,13 +1,13 @@
-Subject: Post approved - "{POST_SUBJECT}"
+Subject: Message approuvé - « {POST_SUBJECT} »
 
-Hello {USERNAME},
+Bonjour {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+Vous recevez cette notification car votre message « {POST_SUBJECT} » sur « {SITENAME} » a été approuvé par un modérateur ou un administrateur.
 
-If you want to view the post, click the following link:
+Si vous souhaitez consulter le message, veuillez cliquer sur le lien suivant :
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+Si vous souhaitez consulter le sujet, veuillez cliquer sur le lien suivant :
 {U_VIEW_TOPIC}
 
 

@@ -1,11 +1,11 @@
 <?php
 /**
 *
-* acp_email [English]
+* acp_email [French]
 *
 * @package language
 * @version $Id$
-* @copyright (c) 2005 phpBB Group
+* @copyright (c) 2005 phpBB Group, (c) Maël Soucaze
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 */
@@ -37,33 +37,33 @@ if (empty($lang) || !is_array($lang))
 
 // Email settings
 $lang = array_merge($lang, array(
-	'ACP_MASS_EMAIL_EXPLAIN'		=> 'Here you can e-mail a message to either all of your users or all users of a specific group <strong>having the option to receive mass e-mails enabled</strong>. To achieve this an e-mail will be sent out to the administrative e-mail address supplied, with a blind carbon copy sent to all recipients. The default setting is to only include 50 recipients in such an e-mail, for more recipients more e-mails will be sent. If you are emailing a large group of people please be patient after submitting and do not stop the page halfway through. It is normal for a mass emailing to take a long time, you will be notified when the script has completed.',
-	'ALL_USERS'						=> 'All users',
+	'ACP_MASS_EMAIL_EXPLAIN'		=> 'Vous pouvez envoyer ici un courriel à la totalité des utilisateurs ou aux utilisateurs d’un groupe d’utilisateurs spécifique <strong>qui acceptent la réception de courriels de masse</strong>. Pour ce faire, un courriel sera envoyé à l’adresse de courrier électronique fournie par l’administrateur et une copie sera adressée à tous les destinataires. Le réglage par défaut est limité à 50 destinataires par courriel mais si ce nombre est dépassé, des courriels supplémentaires seront envoyés. Sachez également que plus les destinataires sont nombreux, plus le temps d’exécution est important. Il est normal que l’envoi d’un courriel de masse dure un certain temps, veillez à ne pas vous déplacer sur une autre page tant que l’opération n’est pas terminée.',
+	'ALL_USERS'						=> 'Tous les utilisateurs',
 
-	'COMPOSE'				=> 'Compose',
+	'COMPOSE'				=> 'Composer',
 
-	'EMAIL_SEND_ERROR'		=> 'There were one or more errors while sending the e-mail. Please check the %sError log%s for detailed error messages.',
-	'EMAIL_SENT'			=> 'This message has been sent.',
-	'EMAIL_SENT_QUEUE'		=> 'This message has been queued for sending.',
+	'EMAIL_SEND_ERROR'		=> 'Une ou plusieurs erreurs sont survenues lors de l’envoi du courriel. Pour plus d’informations, veuillez consulter l’%shistorique des erreurs%s.',
+	'EMAIL_SENT'			=> 'Ce message a été envoyé.',
+	'EMAIL_SENT_QUEUE'		=> 'Ce message est en file d’attente et sera envoyé ultérieurement.',
 
-	'LOG_SESSION'			=> 'Log mail session to critical log',
+	'LOG_SESSION'			=> 'Historique de la session de la messagerie électronique vers l’historique des erreurs critiques',
 
-	'SEND_IMMEDIATELY'		=> 'Send immediately',
-	'SEND_TO_GROUP'			=> 'Send to group',
-	'SEND_TO_USERS'			=> 'Send to users',
-	'SEND_TO_USERS_EXPLAIN'	=> 'Entering names here will override any group selected above. Enter each username on a new line.',
+	'SEND_IMMEDIATELY'		=> 'Envoyer immédiatement ',
+	'SEND_TO_GROUP'			=> 'Envoyer au groupe d’utilisateurs ',
+	'SEND_TO_USERS'			=> 'Envoyer aux utilisateurs ',
+	'SEND_TO_USERS_EXPLAIN'	=> 'Si vous saisissez ici des noms d’utilisateurs, ces derniers écraseront tous les groupes d’utilisateurs précédemment sélectionnés. Saisissez chaque nom d’utilisateur sur une nouvelle ligne.',
 
-	'MAIL_BANNED'			=> 'Mail banned users',
-	'MAIL_BANNED_EXPLAIN'	=> 'When sending a mass e-mail to a group you can select here whether banned users will also receive the e-mail.',
-	'MAIL_HIGH_PRIORITY'	=> 'High',
-	'MAIL_LOW_PRIORITY'		=> 'Low',
-	'MAIL_NORMAL_PRIORITY'	=> 'Normal',
-	'MAIL_PRIORITY'			=> 'Mail priority',
-	'MASS_MESSAGE'			=> 'Your message',
-	'MASS_MESSAGE_EXPLAIN'	=> 'Please note that you may enter only plain text. All markup will be removed before sending.',
+	'MAIL_BANNED'			=> 'Envoyer le courriel aux utilisateurs bannis ',
+	'MAIL_BANNED_EXPLAIN'	=> 'Lorsque vous envoyez un courriel de masse à un groupe d’utilisateurs, vous pouvez décider d’également envoyer ce dernier aux utilisateurs bannis.',
+	'MAIL_HIGH_PRIORITY'	=> 'Élevée',
+	'MAIL_LOW_PRIORITY'		=> 'Faible',
+	'MAIL_NORMAL_PRIORITY'	=> 'Normale',
+	'MAIL_PRIORITY'			=> 'Priorité du courriel ',
+	'MASS_MESSAGE'			=> 'Votre message ',
+	'MASS_MESSAGE_EXPLAIN'	=> 'Veuillez noter que vous ne devez saisir que du texte brut. Toutes les balises seront automatiquement supprimées avant l’envoi.',
 
-	'NO_EMAIL_MESSAGE'		=> 'You must enter a message.',
-	'NO_EMAIL_SUBJECT'		=> 'You must specify a subject for your message.',
+	'NO_EMAIL_MESSAGE'		=> 'Vous devez saisir un message.',
+	'NO_EMAIL_SUBJECT'		=> 'Vous devez spécifier le sujet de votre message.',
 ));
 
 ?>

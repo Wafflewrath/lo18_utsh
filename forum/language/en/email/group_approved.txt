@@ -1,9 +1,9 @@
-Subject: Your request has been approved
+Subject: Votre demande a été approuvée
 
-Congratulations,
+Félicitations,
 
-Your request to join the "{GROUP_NAME}" group on "{SITENAME}" has been approved.
-Click on the following link to see your group membership.
+Votre demande d’adhésion au groupe « {GROUP_NAME} » sur « {SITENAME} » a été approuvée.
+Cliquez sur le lien suivant afin de consulter les membres de votre groupe.
 
 {U_GROUP}
 

@@ -1,16 +1,16 @@
-Subject: "{SITENAME}" - E-mail a friend
+Subject: « {SITENAME} » - Envoi d’un courriel par un ami
 
-Hello {TO_USERNAME},
+Bonjour {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+Ce courriel a été envoyé de « {SITENAME} » par {FROM_USERNAME}, qui a pensé que vous pourriez être intéressé(e) par le sujet suivant :
 
 {TOPIC_NAME}
 
-You can find it at:
+Vous pouvez le retrouver ici :
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Un message de la part de {FROM_USERNAME} peut également être inclus ci-dessous. Veuillez noter que ce message n’a pas été consulté ou approuvé par les administrateurs du forum. Si vous souhaitez vous plaindre à propos de la réception de ce courriel, veuillez contacter l’administrateur du forum sur {BOARD_CONTACT}. Veuillez citer les en-têtes du message lorsque vous contacterez cette adresse.
 
 ----------
 
