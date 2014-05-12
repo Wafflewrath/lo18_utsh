@@ -131,6 +131,14 @@ body {
 	text-align: justify;
 }
 
+.presentation {
+	margin-top: 20px;
+}
+
+.presentation p {
+	margin-bottom: 10px;
+}
+
 .image_presentation {
 	background-image: url('images/gis_presentation.jpg');
 	background-repeat: no-repeat;

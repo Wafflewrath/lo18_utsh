@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Dim 04 Mai 2014 à 17:46
+-- Généré le: Lun 12 Mai 2014 à 09:34
 -- Version du serveur: 5.5.24-log
 -- Version de PHP: 5.3.13
 
@@ -29,19 +29,22 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `projets` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(35) NOT NULL,
+  `nomcomplet` varchar(50) DEFAULT NULL,
+  `datecreation` datetime NOT NULL,
   `texte` mediumtext NOT NULL,
-  `url` varchar(50) NOT NULL,
+  `url` varchar(50) DEFAULT NULL,
   `etat` int(11) NOT NULL,
   `visibilite` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Contenu de la table `projets`
 --
 
-INSERT INTO `projets` (`id`, `nom`, `texte`, `url`, `etat`, `visibilite`) VALUES
-(1, 'Homme''tech', 'Blablablablablablablabla', 'http://thereisanurllol.com', 1, 1);
+INSERT INTO `projets` (`id`, `nom`, `nomcomplet`, `datecreation`, `texte`, `url`, `etat`, `visibilite`) VALUES
+(1, 'HOMTECH', 'Sciences de l’HOMme en univers TECHnologique', '2014-05-12 00:00:00', 'Redaction de la description en cours', 'http://urlvershommetech.com', 1, 1),
+(2, 'Projet Séminaire et Colloque', 'La relation technique/vivant en agriculture', '2014-05-12 00:00:00', '', NULL, 1, 1);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
