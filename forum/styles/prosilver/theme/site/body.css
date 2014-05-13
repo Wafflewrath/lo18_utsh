@@ -81,3 +81,72 @@
 	line-height: 250px;
 	text-align: justify;
 }
+
+footer{
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 1px solid grey;
+}
+
+.contact {
+	font-weight:bold;
+	color:grey;
+	margin-top: 0px;
+	line-height:25px;
+}
+
+.utc_logo {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	background-image:  url('images/logo-utc.png');
+	width:120px;
+	height:42px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.utt_logo {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	background-image:  url('images/utt.png');
+	width:120px;
+	height:42px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.lasalle_logo {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	background-image:  url('images/logo-lasalle.png');
+	width:120px;
+	height:42px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.utbm_logo {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	background-image:  url('images/logo-utbm.png');
+	width:120px;
+	height:42px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.imgfoot{
+	background-image: url('./images/pixel.jpg');
+	background-repeat: repeat-y;
+	height: 100%;
+	position: relative;
+}
+
+.contact_ {
+	display: inline-block;
+	text-align: center;
+}
