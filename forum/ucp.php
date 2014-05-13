@@ -11,6 +11,8 @@
 /**
 * @ignore
 */
+session_start();
+$return_page_URI = isset($_SESSION['return_page']) ?$_SESSION['return_page'] : false ;
 define('IN_PHPBB', true);
 $phpbb_root_path = (defined('PHPBB_ROOT_PATH')) ? PHPBB_ROOT_PATH : './';
 $phpEx = substr(strrchr(__FILE__, '.'), 1);
@@ -74,29 +76,29 @@ switch ($mode)
 
 	case 'login':
 		if ($user->data['is_registered'])
-		{
 			redirect(append_sid("{$phpbb_root_path}index.$phpEx"));
-		}
-
-		login_box(request_var('redirect', "index.$phpEx"));
+		if($_GET['redir']==1 && $return_page_URI) // redirection personnalisée
+			login_box(request_var('redirect',$return_page_URI));
+		else // redirection classique sur le forum
+			login_box(request_var('redirect', "index.$phpEx"));
 	break;
 
 	case 'logout':
-		if ($user->data['user_id'] != ANONYMOUS && isset($_GET['sid']) && !is_array($_GET['sid']) && $_GET['sid'] === $user->session_id)
-		{
+		if ($user->data['user_id'] != ANONYMOUS && isset($_GET['sid']) && !is_array($_GET['sid']) && $_GET['sid'] ===$user->session_id()) {
 			$user->session_kill();
 			$user->session_begin();
-			$message = $user->lang['LOGOUT_REDIRECT'];
+			$message =$user->lang['LOGOUT_REDIRECT'];
+		} else {
+			$message = ($user->data['user_id'] == ANONYMOUS) ?$user->lang['LOGOUT_REDIRECT'] :$user->lang['LOGOUT_FAILED'];
 		}
-		else
-		{
-			$message = ($user->data['user_id'] == ANONYMOUS) ? $user->lang['LOGOUT_REDIRECT'] : $user->lang['LOGOUT_FAILED'];
+		if($_GET['redir']==1 && $return_page_URI) { // redirection personnalisée
+			meta_refresh(3, append_sid($return_page_URI));
+			$message =$message . '<br /><br />' . sprintf($user->lang['RETURN_INDEX'], '<a href="' . append_sid($return_page_URI) . '">', '</a> ');
+		} else { // redirection classique vers le forum
+			meta_refresh(3, append_sid("{$phpbb_root_path}index.$phpEx"));
+			$message =$message . '<br /><br />' . sprintf($user->lang['RETURN_INDEX'], '<a href="' . append_sid("{$phpbb_root_path}index.$phpEx") . '">', '</a> ');
 		}
-		meta_refresh(3, append_sid("{$phpbb_root_path}index.$phpEx"));
-
-		$message = $message . '<br /><br />' . sprintf($user->lang['RETURN_INDEX'], '<a href="' . append_sid("{$phpbb_root_path}index.$phpEx") . '">', '</a> ');
 		trigger_error($message);
-
 	break;
 
 	case 'terms':
