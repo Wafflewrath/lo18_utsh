@@ -215,6 +215,10 @@ form .form {
 	margin-bottom: 5px;
 }
 
+form .news_title.form input {
+	width: 750px;
+}
+
 .createnews_link {
 	color: red;
 }

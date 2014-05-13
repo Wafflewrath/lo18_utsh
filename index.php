@@ -43,7 +43,7 @@
 					}
 				?>
 			<div id="forumstuile" class=<?php echo '"tuilecontainer'; if(!$user->data['is_registered']){ echo ' desactivate"'; } else {echo '"';} ?> >
-				<div <?php echo'class="tuiletitle forumtitle'; if($user->data['is_registered']){ echo  ' " onclick="window.location.href='."'./forum'".';"';} else { echo ' alone desactivate"'; } ?>>Forums</div>
+				<div <?php echo'class="tuiletitle forumtitle'; if($user->data['is_registered']){ echo  ' " onclick="window.location.href='."'./forum'".';"';} else { echo ' alone desactivate"'; } ?>>Forum</div>
 				<?php
 					if($user->data['is_registered'])
 					{

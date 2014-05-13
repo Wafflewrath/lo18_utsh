@@ -38,12 +38,12 @@
 			<div class="logo" onclick="window.location.href='index.php';"></div>
 
 			<nav>
-				<a href="index.php"><div class="menuElementFirst"><p>accueil</p></div></a>
-				<a href="news.php"><div><p>actualités</p></div></a>
+				<a href="index.php"><div class="menuElementFirst"><p>Accueil</p></div></a>
+				<a href="news.php"><div><p>Actualités</p></div></a>
 				<a href="presentation.php"><div><p>UTSH</p></div></a>
-				<a href="./forum"><div><p>forum</p></div></a>
-				<a href="ressources.php"><div><p>ressources</p></div></a>
-				<a href="projets.php"><div><p>projets</p></div></a>
+				<a href="./forum"><div><p>Forum</p></div></a>
+				<a href="ressources.php"><div><p>Ressources</p></div></a>
+				<a href="projets.php"><div><p>Projets</p></div></a>
 			</nav>
 		</div>
 
