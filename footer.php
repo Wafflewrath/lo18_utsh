@@ -1,6 +1,6 @@
 
 <footer class="row footer">
-	<div class="contact col-lg-1">Nous contacter :</div>
+	<div class="contact col-lg-2">Nous contacter :</div>
 	<div class="col-lg-3">
 		<div>
 			<div class="utc_logo" onclick="window.location.href='http://www.utc.fr';"></div>
