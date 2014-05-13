@@ -62,9 +62,15 @@ body {
 }
 #newstitle{
 	padding-bottom: 10px;
-	margin-top:10px;
+	margin-top:0px;
 	font-size: 30px;
 	font-weight: bold;
+	vertical-align: middle;
+}
+#newstitle:hover{
+	background-color: rgb(255, 255, 60);
+	cursor: pointer;
+	border-radius: 5px;
 }
 
 

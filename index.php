@@ -12,7 +12,7 @@
 		
 		<div class="col-lg-5 grptuile">
 			<div class="tuilecontainer">
-				<h1 id="newstitle">News</h1>
+				<div id="newstitle" onclick="window.location.href='./news.php'">News</div>
 				<?php 
 					$news = new News_adapter();
 					$news->displayNews();
