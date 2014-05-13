@@ -5,7 +5,11 @@
 		<div class="col-lg-3 grptuile">
 			<div class="tuile" onclick="window.location.href='presentation.php';">
 				<div class="tuiletitle">Qui sommes-nous?</div>
-				<p>Présentation du GIS UTSH, GIS a vocation d'améliorer l'apprentissage des sciences humaines dans les écoles d'ingénieurs</p></div>
+				<p>Le GIS UTSH se propose de promouvoir une recherche et un enseignement de sciences humaines et sociales en technologie.
+
+Les équipes de SHS qui le composent ont l’expérience d’une recherche menée dans l’environnement d’écoles d’ingénieurs.
+
+Il s’agit de développer une recherche sur la question technique qui soit partagée entre sciences de l’homme, sciences de la matière et sciences du vivant, sans instrumentalisation réciproque, sans position de surplomb ; mais au contraire dans un travail commun aussi bien dans les processus d’innovations que dans la réflexion sur les choix techniques.</p></div>
 			<?php if($user->data['is_registered']) include('calendar.php'); ?>
 		</div>
 		
