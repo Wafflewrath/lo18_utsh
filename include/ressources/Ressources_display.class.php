@@ -23,10 +23,10 @@ class Ressources_display
 		$DB_temp = new Database;
 
 		if ($filtre == "datecreation" || $filtre == "type" || $filtre == "titre") {
-			$query = "SELECT ressources.id, titre, datecreation, nom_ressource FROM ressources INNER JOIN type_ressources ON ressources.type = type_ressources.id WHERE etat = " . $this->ressourceEtat_valide. " ORDER BY " . $filtre . " DESC LIMIT 0, 30;";
+			$query = "SELECT ressources.id, titre, datecreation, ressources.ressource_name, nom_ressource FROM ressources INNER JOIN type_ressources ON ressources.type = type_ressources.id WHERE etat = " . $this->ressourceEtat_valide. " ORDER BY " . $filtre . " DESC LIMIT 0, 30;";
 		}
 		else {
-			$query = "SELECT ressources.id, titre, datecreation, nom_ressource FROM ressources INNER JOIN type_ressources ON ressources.type = type_ressources.id WHERE etat = " . $this->ressourceEtat_valide. " AND nom_ressource = '" . $filtre . "' ORDER BY datecreation DESC LIMIT 0, 30;";
+			$query = "SELECT ressources.id, titre, datecreation, ressources.ressource_name, typeressource.nom_ressource FROM ressources INNER JOIN type_ressources ON ressources.type = type_ressources.id WHERE etat = " . $this->ressourceEtat_valide. " AND nom_ressource = '" . $filtre . "' ORDER BY datecreation DESC LIMIT 0, 30;";
 		}
 
 		$raw_data = $DB_temp->select($query);
@@ -39,6 +39,7 @@ class Ressources_display
 				$this->id[$i] = $raw_data[$i]['id'];
 				$this->title[$i] = $raw_data[$i]['titre'];
 				$this->datecreation[$i] = $raw_data[$i]['datecreation'];
+				$this->nom[$i] = $raw_data[$i]['ressource_name'];
 				$this->type[$i] = $raw_data[$i]['nom_ressource'];
 			}
 		}
@@ -67,7 +68,7 @@ class Ressources_display
 
 	private function printLink($index)
 	{
-		echo "<div class='ressource_link'><a href='#'>lien</a></div>";
+		echo "<div class='ressource_link'><a href='././ressources/". $this->nom[$index] . "'>lien</a></div>";
 	}
 	
 	public function displayRessources()

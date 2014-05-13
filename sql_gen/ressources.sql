@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Dim 04 Mai 2014 à 17:30
+-- Généré le: Mar 13 Mai 2014 à 19:27
 -- Version du serveur: 5.5.24-log
 -- Version de PHP: 5.3.13
 
@@ -32,6 +32,7 @@ CREATE TABLE IF NOT EXISTS `ressources` (
   `datecreation` datetime NOT NULL,
   `type` int(11) NOT NULL,
   `etat` int(11) NOT NULL,
+  `ressource_name` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `type` (`type`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Gère les ressources' AUTO_INCREMENT=4 ;
@@ -40,10 +41,10 @@ CREATE TABLE IF NOT EXISTS `ressources` (
 -- Contenu de la table `ressources`
 --
 
-INSERT INTO `ressources` (`id`, `titre`, `datecreation`, `type`, `etat`) VALUES
-(1, 'first ressource', '2014-05-04 16:05:57', 1, 1),
-(2, 'second plus tard', '2014-05-04 18:24:02', 1, 1),
-(3, 'alcolique', '2014-05-04 18:47:00', 3, 1);
+INSERT INTO `ressources` (`id`, `titre`, `datecreation`, `type`, `etat`, `ressource_name`) VALUES
+(1, 'Compte rendu GIS UTSH 19-03-12', '2014-05-04 16:05:57', 1, 1, '1-CR GIS UTSH-19_03_12.doc'),
+(2, 'second plus tard', '2014-05-04 18:24:02', 1, 1, ''),
+(3, 'historique du data mining', '2014-05-04 18:47:00', 3, 1, '');
 
 --
 -- Contraintes pour les tables exportées
