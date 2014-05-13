@@ -6,11 +6,7 @@
 			<div class="tuile" onclick="window.location.href='presentation.php';">
 				<div class="tuiletitle">Qui sommes-nous?</div>
 				<p>Présentation du GIS UTSH, GIS a vocation d'améliorer l'apprentissage des sciences humaines dans les écoles d'ingénieurs</p></div>
-			
-			<div class=<?php echo '"tuilecalendar'; if(! $user->data['is_registered']){ echo " desactivate"; } echo '"'; ?> >
-					<div class="tuiletitle">Accès au projet et calendrier</div>
-					<div id="my-calendar"></div>
-			</div>
+			<?php if($user->data['is_registered']) include('calendar.php'); ?>
 		</div>
 		
 		
@@ -57,6 +53,7 @@
 				?>
 			</div>
 			<div class=<?php echo '"tuile tuiletitle alone'; if(! $user->data['is_registered']){ echo ' desactivate"'; } else { echo 'onclick="window.location.href=\'ressources.php\';';} ?>>Liens / Ressources</div>
+			<?php if(!$user->data['is_registered']) include('calendar.php'); ?>
 		</div>	
 	</div>
 
