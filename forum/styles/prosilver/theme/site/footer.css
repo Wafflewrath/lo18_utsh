@@ -1,5 +1,6 @@
 .footer {
 	margin-top:15px;
+	height: 120px;
 }
 
 .imgfoot{
@@ -10,7 +11,9 @@
 }
 
 footer{
-	height: 60px;
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 1px solid grey;
 }
 
 ul.mail{
@@ -37,11 +40,64 @@ ul.mail{
 
 .contact {
 	font-weight:bold;
-	background-color: rgb(0, 165, 232);
+	color:grey;
 	margin-top: 0px;
 	line-height:25px;
 }
 
 .contact, .mail{
 	text-align:center;
+}
+
+.utc_logo {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	background-image:  url('images/logo-utc.png');
+	width:120px;
+	height:42px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.utt_logo {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	background-image:  url('images/utt.png');
+	width:120px;
+	height:42px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.lasalle_logo {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	background-image:  url('images/logo-lasalle.png');
+	width:120px;
+	height:42px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.utbm_logo {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	background-image:  url('images/logo-utbm.png');
+	width:120px;
+	height:42px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.contact_ {
+	display: inline-block;
+	text-align: center;
+}
+
+.tuile{
+	background-color: rgb(0, 165, 232);
 }
