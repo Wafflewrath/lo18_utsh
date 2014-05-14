@@ -21,7 +21,6 @@ class Ressources_display
 	function __construct($filtre)
 	{
 		$DB_temp = new Database;
-
 		if ($filtre == "datecreation" || $filtre == "type" || $filtre == "titre") {
 			$query = "SELECT ressources.id, titre, datecreation, ressources.ressource_name, nom_ressource FROM ressources INNER JOIN type_ressources ON ressources.type = type_ressources.id WHERE etat = " . $this->ressourceEtat_valide. " ORDER BY " . $filtre . " DESC LIMIT 0, 30;";
 		}

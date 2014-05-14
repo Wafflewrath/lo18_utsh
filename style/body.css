@@ -234,6 +234,11 @@ form .news_title.form input {
 
 }
 
+.text_pres {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
 .infofiltre {
 	margin-top: 10px;
 	margin-bottom: 10px;

@@ -8,10 +8,26 @@
 		"classname":"purple-event" 
 	}, 
 	{ 
-		"date":"2014-04-22", 
+		"date":"2014-05-14", 
 		"badge":true, 
-		"title":"Rendu de projet", 
-		"body":"<p class=\"lead\">Rendu<\/p><p>Rendre le cahier des charges<\/p>", 
+		"title":"Réunion commune de l'Atelier de recherche, du bureau de direction et du comité directeur", 
+		"body":"<p class=\"lead\">Réunion<\/p><pSignature de la création du GIS, présentation du site internet<\/p>", 
+		"footer":"Compiègne", 
+		"classname":"purple-event" 
+	},
+	{ 
+		"date":"2014-04-16", 
+		"badge":true, 
+		"title":"Réunion", 
+		"body":"<p class=\"lead\">Réunion<\/p><p>Atelier du 15/04/2014.<\/p>", 
+		"footer":"<button type=\"button\" class=\"btn btn-primary\" onclick=\"window.location.href='presentation.php';\">En savoir plus<\/button>", 
+		"classname":"purple-event" 
+	}, 
+	{ 
+		"date":"2014-07-01", 
+		"badge":true, 
+		"title":"Réunion  de l'atelier de recherche", 
+		"body":"<p class=\"lead\">Réunion<\/p><p>Réunion de l'atelier de recherche. La réunion aura lieu à l'IMI, 62 Bd de Sébastopol, 75003 Paris, deuxième étage. Ordre du jour : Vers yun master inter-UT.<\/p>", 
 		"footer":"Compiègne", 
 		"classname":"purple-event" 
 	} 
