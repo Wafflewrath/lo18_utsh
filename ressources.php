@@ -15,7 +15,9 @@
 			<div class="aide"> 
 				<p>Vous trouverez ici l'ensemble des ressources liés au GIS, vous pouvez les trier ou les filtrer.</p>
 			</div>
-			
+			<div class="col-lg-12">
+				<a class="ajout_ressource" href="upload_ressource.php">Ajouter une ressource</a>
+			</div>
 			<div class="ressourcesfiltre col-lg-3">
 				<p>Trier par : 
 					<form action="ressources.php" method="post">
