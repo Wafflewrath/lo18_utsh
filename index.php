@@ -15,7 +15,6 @@
 </div>
 			<?php if($user->data['is_registered']) include('calendar.php'); ?>
 		</div>
-		<a href="upload_ressource.php">lien vers l'upload</a>
 		
 		<div class="col-lg-5 grptuile">
 			<div class="tuilecontainer">
