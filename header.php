@@ -37,13 +37,29 @@
 		<div class="degrade col-lg-12">
 			<div class="logo" onclick="window.location.href='index.php';"></div>
 
-			<nav>
+			<?php
+					if($user->data['is_registered'])
+					{
+						echo '<nav class="nav_deco">';
+					}
+					else
+					{
+						echo "<nav>";
+					}
+			?>
 				<a href="index.php"><div class="menuElementFirst"><p>Accueil</p></div></a>
 				<a href="news.php"><div><p>Actualités</p></div></a>
 				<a href="presentation.php"><div><p>UTSH</p></div></a>
 				<a href="./forum"><div><p>Forum</p></div></a>
 				<a href="ressources.php"><div><p>Ressources</p></div></a>
 				<a href="projets.php"><div><p>Projets</p></div></a>
+			<?php
+					if($user->data['is_registered'])
+					{
+						$javascript_to_add = "window.location.href='".$phpbb_root_path."ucp.php?mode=logout&redir=1&sid=".$user->session_id."'";
+						echo '<a onclick="'.$javascript_to_add.'"><div class="deco"><div class="deconnexion"><p></p></div></div></a>';
+					}
+			?>
 			</nav>
 		</div>
 

@@ -48,6 +48,14 @@ nav {
 	font-size: 0px;
 }
 
+nav.nav_deco {
+	width: 650px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	font-size: 0px;
+}
+
 nav div {
 	display: inline-block;
 	width: 100px;
@@ -55,6 +63,19 @@ nav div {
 	border-right:1px solid black;
 	text-align: center;
 	font-size: 18px;
+}
+
+nav div.deco {
+	width: 50px;
+	border-right:1px solid black;
+}
+
+nav div.deconnexion {
+	display: inline-block;
+	text-align: center;
+	margin-left: 9px;
+	background-image: url('images/deconnexion.png');
+	background-repeat: no-repeat;
 }
 
 nav div p{
@@ -67,6 +88,12 @@ nav div p{
 	border-left: 1px solid black;
 }
 
+nav div.deconnexion:hover {
+}
+
 nav div:hover {
 	background-color: rgba(100,100,100, 0.5);
+	cursor: pointer;
 }
+
+
