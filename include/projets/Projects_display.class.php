@@ -62,6 +62,13 @@ class Projects_display
 	{
 		echo "<div class='res_date'>" . $this->datecreation[$index] . "</div>";
 	}
+
+	private function printEdit($index)
+	{
+		echo "<a class='en_savoir_plus' href='projet_ajout.php?projectid=".$this->id[$index]."'>éditer le projet</a>";
+		echo " - ";
+		echo "<a class='en_savoir_plus' href='projet_ajout.php?projectdeleteid=".$this->id[$index]."'>éditer le projet</a>";
+	}
 	
 	public function displayProjects()
 	{
@@ -78,6 +85,7 @@ class Projects_display
 			echo '<div class="a_project col-lg-12" onclick=window.location.href="projets.php?projectid=' . $this->id[$ressources_index] .'">';
 				$this->printName($ressources_index);
 				$this->printDate($ressources_index);
+				$this->printEdit($ressources_index);
 			echo '</div>';
 		}
 		echo "</div>";

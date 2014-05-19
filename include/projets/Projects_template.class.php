@@ -31,12 +31,12 @@ class Projects_template
 				ON projets.id = projets_ressources.projet 
 				INNER JOIN ressources 
 				ON projets_ressources.ressource = ressources.id 
-				WHERE projets.id=1 
+				WHERE projets.id=".$id." 
 				AND projets.etat=1 
 				AND ressources.etat=1 
 				ORDER BY nom DESC LIMIT 0, 30;";
 		
-
+		echo $query;
 		$raw_data = $DB_temp->select($query);
 		
 		if ($raw_data !== false)
