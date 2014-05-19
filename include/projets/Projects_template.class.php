@@ -25,29 +25,28 @@ class Projects_template
 		$DB_temp = new Database;
 
 		
-		$query = "SELECT projets.nom, projets.datecreation, projets.texte, projets.url, ressources.titre 
+		$query = "SELECT projets.nom, projets.datecreation, projets.texte, projets.url, ressources.titre, ressources.etat
 				FROM projets 
-				INNER JOIN projets_ressources 
+				LEFT OUTER JOIN projets_ressources 
 				ON projets.id = projets_ressources.projet 
-				INNER JOIN ressources 
+				LEFT OUTER JOIN ressources 
 				ON projets_ressources.ressource = ressources.id 
 				WHERE projets.id=".$id." 
 				AND projets.etat=1 
-				AND ressources.etat=1 
 				ORDER BY nom DESC LIMIT 0, 30;";
 		
-		echo $query;
 		$raw_data = $DB_temp->select($query);
 		
 		if ($raw_data !== false)
 		{
-			
-			$this->id[0] = $raw_data[0]['id'];
-			$this->nom[0] = $raw_data[0]['nom'];
-			$this->datecreation[0] = $raw_data[0]['datecreation'];
-			$this->texte[0] = $raw_data[0]['texte'];
-			$this->url[0] = $raw_data[0]['url'];
-			$this->ressource[0] = $raw_data[0]['titre'];
+			if ($raw_data[0]['etat'] != 2) {
+				$this->id[0] = $raw_data[0]['id'];
+				$this->nom[0] = $raw_data[0]['nom'];
+				$this->datecreation[0] = $raw_data[0]['datecreation'];
+				$this->texte[0] = $raw_data[0]['texte'];
+				$this->url[0] = $raw_data[0]['url'];
+				$this->ressource[0] = $raw_data[0]['titre'];
+			}
 			
 		}
 		else
