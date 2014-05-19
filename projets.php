@@ -24,6 +24,10 @@
 		</ol>
 			
 	<?php }
+	if ($Privilege_manager->execif_Admin("") == true)
+	{
+		echo '<a href="projet_ajout.php">Créer un nouveau projet</a>';
+	}
 	$res->displayProjets();
 ?>
 		
