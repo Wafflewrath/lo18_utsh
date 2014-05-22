@@ -11,23 +11,23 @@
 			if (isset($_POST['project_title']) && !isset($_POST['projectedit_id']))
 			{
 				$news = new Project_adapter();
-				redirect($_SERVER['REQUEST_URI']."/../index.php");
+				redirect($_SERVER['REQUEST_URI']."/../projets.php");
 				die();
 			}
 			elseif (isset($_POST['projectedit_id']))
 			{
 				$news = new Project_adapter();
-				redirect($_SERVER['REQUEST_URI']."/../index.php");
+				redirect($_SERVER['REQUEST_URI']."/../projets.php");
 				die();
 			}
-			elseif (isset($_GET['newsedit']))
+			elseif (isset($_GET['projectedit']))
 			{
 				$news = new Project_adapter();
 			}
-			elseif (isset($_GET['projectdelete']))
+			elseif (isset($_GET['projectdeleteid']))
 			{
 				$news = new Project_adapter();
-				header('Location: index.php?ck=0.1'); //cache killer pour obfuscation du sid
+				header('Location: projets.php?ck=0.1'); //cache killer pour obfuscation du sid
 				die();
 			}
 			else
@@ -43,28 +43,29 @@
 						<div class="news_actualite"> 
 							<form action="projet_ajout.php" method="post">
 								<div class="news_title form">
-									<label for="project_title">Sigle du projet : </label><input type="text" placeholder="Entrez le sigle du projet" name="project_title">
+									<input type="text" placeholder="Entrez le sigle du projet" name="project_title">
 								</div>
 								<div class="news_title form">
-									<label for="project_title_complet">Nom du projet : </label><input type="text" placeholder="Entrez le titre complet du projet" name="project_title_complet">
+									<input type="text" placeholder="Entrez le titre complet du projet" name="project_title_complet">
 								</div>
 								<div class="news_resume form">
-									<label for="project_resume">Résumé du projet : </label><textarea name="project_resume" rows="6" cols="150" placeholder="Résumé du projet"></textarea>
+									<textarea name="project_resume" rows="6" cols="150" placeholder="Résumé du projet"></textarea>
 								</div>
 								<div class="news_resume form">
-									<label for="project_link">Lien vers le site du projet : </label><input type="text" placeholder="Lien vers le site" name="project_link">
+									<input type="text" placeholder="Lien vers le site" name="project_link" style="min-width:300px">
 								</div>
 
 								<div class="news_title form">
-									<label for="projet_visibilite">Visibilité du projet : </label>
 									<select name="projet_visibilite">
-										<option value="1">public</option>
-										<option value="2">private</option>
+										<option value="1">Publique</option>
+										<option value="2">Private</option>
 									</select>
 								</div>
+								
 								<div id="ressource_projet"></div>
 								<a id="add_ressource">ajouter une ressource à ce projet</a>
-								<input type="submit" value="Créer le projet">
+								<br/><input type="submit" value="Créer le projet">
+								
 								<script type="text/javascript">
 									document.getElementById("add_ressource").onclick(function() {
 										var div = document.getElementById('divID');
@@ -72,6 +73,7 @@
 										div.innerHTML = div.innerHTML + '<p>Extra stuff</p>';
 									})
 								</script>
+								
 							</form>
 						</div>
 						<br/>

@@ -11,8 +11,8 @@
 		  <li><a href="index.php">Accueil</a></li>
 		  <li><a href="projets.php">Projets</a></li>
 		  <li class="active"><?php $res->getProjectName(); ?></li>
-		 </ol>
-		 
+		</ol>
+		
 <?php
 	}
 	else {
@@ -24,10 +24,7 @@
 		</ol>
 			
 	<?php }
-	if ($Privilege_manager->execif_Admin("") == true)
-	{
-		echo '<a href="projet_ajout.php">Créer un nouveau projet</a>';
-	}
+	
 	$res->displayProjets();
 ?>
 		

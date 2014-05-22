@@ -14,19 +14,30 @@ class Projects_display
 	public $datecreation = array();
 	public $url = array();
 	public $etat = array();
-	public $visibilite = array();
+	public $visibilite = array();	
 	
 	public $nombre_projets_affiche = array();
 	
 	private $projetEtat_valide = 1;
+	private $Privilege_manager;
 
 	function __construct()
 	{
 		$DB_temp = new Database;
+		global $user;
+		$this->Privilege_manager = new Privilege($user->data['user_id']);
+		
+		if ($this->Privilege_manager->execif_Visitor("", true) == true)
+		{
+			$query_add = " AND projets.visibilite <> 0";
+		}
+		else
+		{
+			$query_add = "";
+		}
+		
+		$query = "SELECT * FROM projets WHERE etat = " . $this->projetEtat_valide. " " . $query_add . " ORDER BY nom DESC LIMIT 0, 30;";
 
-		
-		$query = "SELECT * FROM projets WHERE etat = " . $this->projetEtat_valide. " ORDER BY nom DESC LIMIT 0, 30;";
-		
 
 		$raw_data = $DB_temp->select($query);
 		
@@ -65,9 +76,9 @@ class Projects_display
 
 	private function printEdit($index)
 	{
-		echo "<a class='en_savoir_plus' href='projet_ajout.php?projectid=".$this->id[$index]."'>éditer le projet</a>";
+		echo "<a class='en_savoir_plus' href='projet_ajout.php?projectedit=".$this->id[$index]."'>Editer le projet</a>";
 		echo " - ";
-		echo "<a class='en_savoir_plus' href='projet_ajout.php?projectdeleteid=".$this->id[$index]."'>éditer le projet</a>";
+		echo "<a class='en_savoir_plus' href='projet_ajout.php?projectdeleteid=".$this->id[$index]."'>Supprimer le projet</a>";
 	}
 	
 	public function displayProjects()
@@ -78,6 +89,10 @@ class Projects_display
 		echo '</div>';
 		echo '<div class="aide"> ';
 		echo '<p>Vous trouverez ici l\'ensemble des projets menés ou soutenu par le GIS.</p>';
+		if ($this->Privilege_manager->execif_Admin("") == true)
+		{
+			echo '<a href="projet_ajout.php">Créer un nouveau projet</a>';
+		}
 		echo '</div>';
 
 		for ($ressources_index = 0; $ressources_index < $this->nombre_projets_affiche; $ressources_index ++)
@@ -85,7 +100,12 @@ class Projects_display
 			echo '<div class="a_project col-lg-12" onclick=window.location.href="projets.php?projectid=' . $this->id[$ressources_index] .'">';
 				$this->printName($ressources_index);
 				$this->printDate($ressources_index);
-				$this->printEdit($ressources_index);
+				
+				
+				if ($this->Privilege_manager->execif_admin("") == true)
+				{
+					$this->printEdit($ressources_index);
+				}
 			echo '</div>';
 		}
 		echo "</div>";

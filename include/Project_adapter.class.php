@@ -2,20 +2,18 @@
 <?php include('projets/Projects_template.class.php'); ?>
 <?php include('projets/Project_creator.class.php'); ?>
 <?php include('projets/Project_editor.class.php'); ?>
+<?php include('projets/Project_destructor.class.php'); ?>
 
 <?php
 class Project_adapter
 {
 	public $project_class;
-	private $class_type;
-	
-	private $newsEtat_valide = 1;
-	private $newsDisplayNumber = 3;
 
 	function __construct()
 	{	
 		if (isset($_GET['projectid']))
 			$projectId = $_GET['projectid'];
+			
 		if ($projectId != "")
 		{
 			// construction de l'objet News_template
@@ -36,7 +34,7 @@ class Project_adapter
 				$projectUrl = "";
 				
 			}
-			$this->news_class = new Project_creator($projectTitle, $project_title_complet, $project_resume, $projectUrl, $projectVisibilite);
+			$this->project_class = new Project_creator($projectTitle, $project_title_complet, $project_resume, $projectUrl, $projectVisibilite);
 			
 		}
 		elseif (isset($_POST['project_title']) && isset($_POST['project_resume']) && isset($_POST['project_title_complet']) && isset($_POST['projectedit_id']))
@@ -52,12 +50,23 @@ class Project_adapter
 			else {
 				$project_url = "";
 			}
-			$this->news_class = new Project_editor($projectTitle, $project_title_complet, $project_resume, $projectUrl, $projectVisibilite);
+			$this->project_class = new Project_editor($projectTitle, $project_title_complet, $project_resume, $projectUrl, $projectVisibilite, $projectId);
 
+		}
+		elseif (isset($_GET['projectedit']))
+		{
+			$projectId = intval($_GET['projectedit']);
+			$this->project_class = new Projects_template($projectId);
+			$this->project_class->displayEditForm();
+		}
+		elseif (isset($_GET['projectdeleteid']))
+		{
+			$projectId = intval($_GET['projectdeleteid']);
+			$this->project_class = new Project_destructor($projectId);
 		}
 		else
 		{
-			// construction de l'objet News_display
+			// construction de l'objet Projects_display
 			$this->project_class = new Projects_display();
 		}
 	}
