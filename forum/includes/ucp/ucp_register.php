@@ -1,3 +1,5 @@
+<?php include('Mail_verificator.class.php') ?>
+
 <?php
 /**
 *
@@ -299,6 +301,11 @@ class ucp_register
 					'user_inactive_time'	=> $user_inactive_time,
 				);
 
+				$verifictor = new Mail_verificator($user_row['user_email']);
+				if($verifictor->addWaiting()) {
+					$user_row['group_id'] = 8;
+				}
+
 				if ($config['new_member_post_limit'])
 				{
 					$user_row['user_new'] = 1;
@@ -318,8 +325,11 @@ class ucp_register
 				{
 					$captcha->reset();
 				}
-
-				if ($coppa && $config['email_enable'])
+				if ($verifictor->addDirectly()) {
+					$message = $user->lang['ACCOUNT_ADDED'];
+					$email_template = 'user_welcome';
+				}
+				else if ($coppa && $config['email_enable'])
 				{
 					$message = $user->lang['ACCOUNT_COPPA'];
 					$email_template = 'coppa_welcome_inactive';
@@ -329,7 +339,7 @@ class ucp_register
 					$message = $user->lang['ACCOUNT_INACTIVE'];
 					$email_template = 'user_welcome_inactive';
 				}
-				else if ($config['require_activation'] == USER_ACTIVATION_ADMIN && $config['email_enable'])
+				else if ($config['require_activation'] == USER_ACTIVATION_ADMIN && $config['email_enable'] && $verifictor->addWaiting())
 				{
 					$message = $user->lang['ACCOUNT_INACTIVE_ADMIN'];
 					$email_template = 'admin_welcome_inactive';
@@ -369,8 +379,8 @@ class ucp_register
 					}
 
 					$messenger->send(NOTIFY_EMAIL);
-
-					if ($config['require_activation'] == USER_ACTIVATION_ADMIN)
+					$verifictor = new Mail_verificator($$data['email']);
+					if ($config['require_activation'] == USER_ACTIVATION_ADMIN && $verifictor->addWaiting())
 					{
 						// Grab an array of user_id's with a_user permissions ... these users can activate a user
 						$admin_ary = $auth->acl_get_list(false, 'a_user', false);
