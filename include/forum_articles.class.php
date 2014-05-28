@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 class Forum_articles
 {
@@ -13,8 +13,10 @@ class Forum_articles
 
 	function __construct($nb)
 	{
+		$encode="SET NAMES 'utf8';";
 		$query= "SELECT post_time, post_subject, post_text, post_id, topic_id, forum_id FROM phpbb_posts ORDER BY post_time DESC LIMIT $nb;";
 		$DB=new Database;
+		$raw_data = $DB->select($encode, 'lo18');
 		$raw_data = $DB->select($query, 'lo18');
 		if ($raw_data !== false)
 		{
@@ -27,6 +29,25 @@ class Forum_articles
 				$this->forumId[$i] = $raw_data[$i]['forum_id'];
 				$this->topicId[$i] = $raw_data[$i]['topic_id'];
 				$this->postId[$i] = $raw_data[$i]['post_id'];
+				$this->postArticle[$i]=preg_replace('/\[b\:.+?\]/im', "", $this->postArticle[$i]);
+				$this->postArticle[$i]=preg_replace("/\[\/b\:.+?\]/im", "", $this->postArticle[$i]);
+				$this->postArticle[$i]=preg_replace("/\[i\:.+?\]/im", "", $this->postArticle[$i]);
+				$this->postArticle[$i]=preg_replace("/\[\/i\:.+?\]/im", "", $this->postArticle[$i]);
+				$this->postArticle[$i]=preg_replace("/\[u\:.+?\]/im", "", $this->postArticle[$i]);
+				$this->postArticle[$i]=preg_replace("/\[\/u\:.+?\]/im", "", $this->postArticle[$i]);
+				$this->postArticle[$i]=preg_replace("/\[quote\:.+?\]/im", "", $this->postArticle[$i]);
+				$this->postArticle[$i]=preg_replace("/\[\/quote\:.+?\]/im", "", $this->postArticle[$i]);
+				$this->postArticle[$i]=preg_replace("/\[code\:.+?\]/im", "", $this->postArticle[$i]);
+				$this->postArticle[$i]=preg_replace("/\[\/code\:.+?\]/im", "", $this->postArticle[$i]);
+				$this->postArticle[$i]=preg_replace("/\[list=.*?\]/im", "", $this->postArticle[$i]);
+				$this->postArticle[$i]=preg_replace("/\[\/list\:.+?\]/im", "", $this->postArticle[$i]);
+				$this->postArticle[$i]=preg_replace("/\[list\:.+?\]/im", "", $this->postArticle[$i]);
+				$this->postArticle[$i]=preg_replace("/\[\/list\]/im", "", $this->postArticle[$i]);
+				$this->postArticle[$i]=preg_replace("/\[\*\:.+?\]/im", "", $this->postArticle[$i]);
+				$this->postArticle[$i]=preg_replace("/\[\/\*:.+?\]/im", "", $this->postArticle[$i]);
+				$this->postArticle[$i]=preg_replace("/\[img.*?\].*\[\/img\]/im", "", $this->postArticle[$i]);
+				$this->postArticle[$i]=preg_replace("/\[url.*?\].*\[\/url\]/im", "", $this->postArticle[$i]);
+				$this->postArticle[$i]=preg_replace("/\[flash=.*?\].*\[\/flash\]/im", "", $this->postArticle[$i]);
 			}
 		}
 		else
@@ -37,10 +58,12 @@ class Forum_articles
 		}
 	}
 
+
 	private function getDate($id)
 	{
 		return DATE("H:i:s d/m/Y", $this->postTime[$id]);
 	}
+
 	
 	private function getArticle($id)
 	{
