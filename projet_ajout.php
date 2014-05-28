@@ -11,13 +11,13 @@
 			if (isset($_POST['project_title']) && !isset($_POST['projectedit_id']))
 			{
 				$news = new Project_adapter();
-				redirect($_SERVER['REQUEST_URI']."/../projets.php");
+				redirect($_SERVER['REQUEST_URI']."/../projets.php?projetcrate=1");
 				die();
 			}
 			elseif (isset($_POST['projectedit_id']))
 			{
 				$news = new Project_adapter();
-				redirect($_SERVER['REQUEST_URI']."/../projets.php");
+				redirect($_SERVER['REQUEST_URI']."/../projets.php?projetedit=1");
 				die();
 			}
 			elseif (isset($_GET['projectedit']))

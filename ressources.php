@@ -6,7 +6,7 @@
 	// si l'utilisateur est connecté, on affiche la page, sinon on le redirige
 	if ($Privilege_manager->execif_Registered("") == false)
 	{
-		redirect($_SERVER['REQUEST_URI']."/../index.php");
+		redirect($_SERVER['REQUEST_URI']."/../index.php?forbidden=1");
 	}
 ?>
 
