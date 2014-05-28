@@ -1,5 +1,6 @@
 <?php include('header.php') ?>
 <?php include('include/Project_adapter.class.php') ?>
+<?php include('include/ressources/Ressources_display.class.php') ?>
 
 <body>
 
@@ -62,8 +63,18 @@
 									</select>
 								</div>
 								
-								<div id="ressource_projet"></div>
-								<a id="add_ressource">ajouter une ressource à ce projet</a>
+								<div>
+								<select name="ressource_link" style="width:250px">
+									<?php 
+										$res = new Ressources_display("datecreation");
+										echo '<option value="0">Ne pas lier de ressource</option>';
+										for($i = 0; $i < $res->nombre_ressources_affiche; $i++)
+										{
+											echo '<option value="' . $res->nom[$i] . '">' . $res->title[$i] . '</option>';
+										}
+									?>
+								</select>
+								</div>
 								<br/><input type="submit" value="Créer le projet">
 								
 								<script type="text/javascript">

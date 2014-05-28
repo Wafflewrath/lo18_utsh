@@ -29,7 +29,6 @@ class News_adapter
 			if (isset($_POST['ressource_link']) && $_POST['ressource_link'] != 0)
 			{
 				$ress_url = "<a href=\'././ressources/". $_POST['ressource_link'] . "\'>Télécharger la ressource associée</a>";
-				
 				$appendContent = " <br/><br/> " . $ress_url;
 			}
 			$newsContent = htmlspecialchars($_POST['news_content'], ENT_QUOTES) . $appendContent;

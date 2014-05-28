@@ -10,7 +10,6 @@ class Project_creator
 		$DB_temp = new Database;
 		$query = "INSERT INTO projets (nom, nomcomplet, datecreation, texte, url, etat, visibilite) 
 				VALUES ('".$projectTitle."', '".$project_title_complet."', now(),'".$projectResume."', '".$url."', ".$this->projetEtat_valide.", ".$projectVisibilite.");";
-		// var_dump($query);
 		$DB_temp->insert($query);
 	}
 }

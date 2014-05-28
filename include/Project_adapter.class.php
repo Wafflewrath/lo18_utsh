@@ -22,7 +22,13 @@ class Project_adapter
 		}
 		elseif (isset($_POST['project_title']) && isset($_POST['project_resume']) && isset($_POST['project_title_complet']) && !isset($_POST['projectedit_id']))
 		{
-			$project_resume = htmlspecialchars($_POST['project_resume'], ENT_QUOTES);
+			$appendContent = "";
+			if (isset($_POST['ressource_link']) && $_POST['ressource_link'] != 0)
+			{
+				$ress_url = "<a href=\'././ressources/". $_POST['ressource_link'] . "\'>Télécharger la ressource associée</a>";
+				$appendContent = " <br/><br/> " . $ress_url;
+			}
+			$project_resume = htmlspecialchars($_POST['project_resume'], ENT_QUOTES) . $appendContent;
 			$project_title_complet = htmlspecialchars($_POST['project_title_complet'], ENT_QUOTES);
 			$projectTitle = htmlspecialchars($_POST['project_title'], ENT_QUOTES);
 			$projectVisibilite = intval($_POST['projet_visibilite']);
