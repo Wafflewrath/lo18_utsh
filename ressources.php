@@ -1,6 +1,15 @@
 <?php include('header.php') ?>
 <?php include('include/ressources/Ressources_display.class.php') ?>
 <?php include('include/ressources/Ressource_type_display.class.php') ?>
+
+<?php
+	// si l'utilisateur est connecté, on affiche la page, sinon on le redirige
+	if ($Privilege_manager->execif_Registered("") == false)
+	{
+		redirect($_SERVER['REQUEST_URI']."/../index.php");
+	}
+?>
+
 	<div class="content row">
 		<ol class="breadcrumb">
 		  <li><a href="index.php">Accueil</a></li>
