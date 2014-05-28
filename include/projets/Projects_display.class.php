@@ -27,6 +27,7 @@ class Projects_display
 		global $user;
 		$this->Privilege_manager = new Privilege($user->data['user_id']);
 		
+		// modif de la requete SQL dans le cas d'un visiteur sans privileges pour ne pas disclose des projets privés
 		if ($this->Privilege_manager->execif_Visitor("", true) == true)
 		{
 			$query_add = " AND projets.visibilite <> 0";
@@ -37,8 +38,6 @@ class Projects_display
 		}
 		
 		$query = "SELECT * FROM projets WHERE etat = " . $this->projetEtat_valide. " " . $query_add . " ORDER BY nom DESC LIMIT 0, 30;";
-
-
 		$raw_data = $DB_temp->select($query);
 		
 		if ($raw_data !== false)
@@ -59,7 +58,7 @@ class Projects_display
 			$this->nombre_projets_affiche = 1;
 			$this->id[0] = 0;
 			$this->nom[0] = "Aucun projets";
-			$this->datecreation[0] = "Il n'y a actuellement aucun projets !";
+			$this->datecreation[0] = "Il n'y a actuellement aucun projet !";
 			
 		}
 	}
