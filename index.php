@@ -17,6 +17,10 @@ else if (isset($_GET['projetcreate']))
 {
 	echo '<div class="alert alert-success">Votre projet à bien été publiée</div>';
 }
+else if (isset($_GET['reucreate']))
+{
+	echo '<div class="alert alert-success">Votre évenement à bien été publiée</div>';
+}
 else if (isset($_GET['projetedit']))
 {
 	echo '<div class="alert alert-success">Votre projet à bien été éditée</div>';
