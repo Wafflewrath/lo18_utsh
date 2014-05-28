@@ -14,7 +14,7 @@ class Ressources_display
 	public $type = array();
 	public $lien = array();
 	
-	public $nombre_ressources_affiche = array();
+	public $nombre_ressources_affiche = 0;
 	
 	private $ressourceEtat_valide = 1;
 

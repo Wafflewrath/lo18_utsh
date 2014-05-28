@@ -12,7 +12,7 @@ class Project_adapter
 	function __construct()
 	{	
 		if (isset($_GET['projectid']))
-			$projectId = $_GET['projectid'];
+			$projectId = intval($_GET['projectid']);
 			
 		if ($projectId != "")
 		{
