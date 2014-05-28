@@ -28,12 +28,13 @@ class Ressources_display
 			$query = "SELECT ressources.id, titre, datecreation, ressources.ressource_name, type_ressources.nom_ressource FROM ressources INNER JOIN type_ressources ON ressources.type = type_ressources.id WHERE etat = " . $this->ressourceEtat_valide. " AND nom_ressource = '" . $filtre . "' ORDER BY datecreation DESC LIMIT 0, 30;";
 		}
 
+		// echo $query;
 		$raw_data = $DB_temp->select($query);
 		
 		if ($raw_data !== false)
 		{
 			$this->nombre_ressources_affiche = count($raw_data);
-			for ($i = 0; $i < count($raw_data); $i++)
+			for ($i = 0; $i < $this->nombre_ressources_affiche; $i++)
 			{
 				$this->id[$i] = $raw_data[$i]['id'];
 				$this->title[$i] = $raw_data[$i]['titre'];
@@ -44,8 +45,8 @@ class Ressources_display
 		}
 		else
 		{
-			$this->title[0] = "Aucune News";
-			$this->datecreation[0] = "Il n'y a actuellement aucune news !";
+			$this->title[0] = "Aucune Ressource";
+			$this->datecreation[0] = "Il n'y a actuellement aucune ressource !";
 			$this->type[0] = "";
 		}
 	}

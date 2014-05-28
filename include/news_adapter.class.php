@@ -25,7 +25,14 @@ class News_adapter
 		}
 		elseif (isset($_POST['news_title']) && isset($_POST['news_content']) && isset($_POST['news_resume']) && !isset($_POST['newsedit_id']))
 		{
-			$newsContent = htmlspecialchars($_POST['news_content'], ENT_QUOTES);
+			$appendContent = "";
+			if (isset($_POST['ressource_link']) && $_POST['ressource_link'] != 0)
+			{
+				$ress_url = "<a href=\'././ressources/". $_POST['ressource_link'] . "\'>Télécharger la ressource associée</a>";
+				
+				$appendContent = " <br/><br/> " . $ress_url;
+			}
+			$newsContent = htmlspecialchars($_POST['news_content'], ENT_QUOTES) . $appendContent;
 			$newsTitle = htmlspecialchars($_POST['news_title'], ENT_QUOTES);
 			$newsResume = htmlspecialchars($_POST['news_resume'], ENT_QUOTES);
 			$this->news_class = new News_creator($newsTitle, $newsContent, $newsResume);

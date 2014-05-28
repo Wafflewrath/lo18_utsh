@@ -56,13 +56,13 @@
 			
 			<?php 
 				if($_POST['filtre'] != null) {
-					echo '<div class="infofiltre col-lg-12">Vous filtrez actuellement selon : ' . $_POST['filtre'] . '</div>';
+					echo '<div class="infofiltre col-lg-12">Vous filtrez actuellement selon : ' . htmlspecialchars($_POST['filtre']) . '</div>';
 				}
 			?>
 
 			<?php 
 			if ($_POST['filtre'] != null) {
-				$res = new Ressources_display($_POST['filtre']);
+				$res = new Ressources_display(htmlspecialchars($_POST['filtre']));
 				$res->displayRessources();
 			}
 			else {
