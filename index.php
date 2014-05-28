@@ -1,5 +1,28 @@
 <?php include('header.php') ?>
 
+<?php
+if (isset($_GET['newscreate']))
+{
+	echo '<div class="alert alert-success">Votre news à bien été publiée</div>';
+}
+else if (isset($_GET['newsedit']))
+{
+	echo '<div class="alert alert-success">Votre news à bien été éditée</div>';
+}
+else if (isset($_GET['forbidden']))
+{
+	echo '<div class="alert alert-danger">Vous devez être connecté pour accèder à cette rubrique</div>';
+}
+else if (isset($_GET['projetcreate']))
+{
+	echo '<div class="alert alert-success">Votre projet à bien été publiée</div>';
+}
+else if (isset($_GET['projetedit']))
+{
+	echo '<div class="alert alert-success">Votre projet à bien été éditée</div>';
+}
+?>
+
 	<div class="content row">
 	
 		<div class="col-lg-3 grptuile">
