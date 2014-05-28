@@ -50,7 +50,7 @@ else if (isset($_GET['projetedit']))
 				?>
 			</div>
 		</div>
-		
+		<a href="edit_reu.php">Quelle abération</a>
 		<div class="col-lg-4 grptuile">
 				<?php
 					if($user->data['is_registered'])
