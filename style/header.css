@@ -75,8 +75,13 @@ nav div.deconnexion {
 	display: inline-block;
 	text-align: center;
 	margin-left: 9px;
+	width: 41px;
 	background-image: url('images/deconnexion.png');
 	background-repeat: no-repeat;
+}
+
+nav div.deconnexion:hover {
+	background-color: rgba(0,0,0,0);
 }
 
 nav div p{
@@ -89,8 +94,6 @@ nav div p{
 	border-left: 1px solid black;
 }
 
-nav div.deconnexion:hover {
-}
 
 nav div:hover {
 	background-color: rgba(100,100,100, 0.5);
