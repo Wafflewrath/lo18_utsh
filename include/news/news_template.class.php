@@ -43,7 +43,7 @@ class News_template
 
 	private function printContenu()
 	{
-		echo "<div class='news_resume'>".$this->contenu."</div>";
+		echo '<div class="news_resume">'.$this->contenu.'</div>';
 	}
 	
 	public function displayNewsTemplate()

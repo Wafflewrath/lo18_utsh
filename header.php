@@ -18,7 +18,7 @@
 	$Privilege_manager = new Privilege($user->data['user_id']);
 ?>
 
-<html>
+<meta charset="utf-8">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title>UTSH</title>

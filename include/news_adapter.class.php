@@ -11,7 +11,7 @@ class News_adapter
 	private $class_type;
 	
 	private $newsEtat_valide = 1;
-	private $newsDisplayNumber = 3;
+	private $newsDisplayNumber = 6;
 
 	function __construct()
 	{	
@@ -31,7 +31,7 @@ class News_adapter
 				$ress_url = "<a href=\'././ressources/". $_POST['ressource_link'] . "\'>Télécharger la ressource associée</a>";
 				$appendContent = " <br/><br/> " . $ress_url;
 			}
-			$newsContent = htmlspecialchars($_POST['news_content'], ENT_QUOTES) . $appendContent;
+			$newsContent = $_POST['news_content'] . $appendContent;
 			$newsTitle = htmlspecialchars($_POST['news_title'], ENT_QUOTES);
 			$newsResume = htmlspecialchars($_POST['news_resume'], ENT_QUOTES);
 			$this->news_class = new News_creator($newsTitle, $newsContent, $newsResume);

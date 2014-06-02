@@ -1,5 +1,6 @@
 <?php include('header.php') ?>
 <?php include('include/ressources/Ressources_display.class.php') ?>
+ <script src="ckeditor/ckeditor.js"></script>
 <body>
 
 	<?php
@@ -45,10 +46,10 @@
 									<input type="text" placeholder="Entrez votre Titre" name="news_title">
 								</div>
 								<div class="news_resume form">
-									<textarea name="news_resume" rows="6" cols="150" placeholder="Résumé de la news (affiché sur la page d\'accueil)"></textarea>
+									<textarea id="news_resume" name="news_resume" rows="6" cols="150" placeholder="Résumé de la news (affiché sur la page d\'accueil)"></textarea>
 								</div>
 								<div class="news_resume form">
-									<textarea name="news_content" rows="13" cols="150" placeholder="Contenu de la news"></textarea>
+									<textarea id="news_content" name="news_content" rows="13" cols="150">Entrez le contenu de la news</textarea>
 								</div>
 								<div>
 								<select name="ressource_link" style="width:250px">
@@ -67,6 +68,7 @@
 						</div>
 						<br/>
 				</div>
+				<script type="text/javascript">CKEDITOR.replace( 'news_content' );</script>
 				
 	<?php
 			}
