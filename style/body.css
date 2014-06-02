@@ -182,6 +182,11 @@ body {
 	padding-top: 10px;
 }
 
+.one_ressource {
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
 .news_title, .res_title, .proj_title {
 	font-weight: bold;
 	font-size: large;
@@ -247,6 +252,7 @@ form .news_title.form input {
 
 .proj_text {
 	text-align: justify;
+	margin-bottom: 20px;
 }
 
 .a_project {
@@ -260,4 +266,15 @@ form .news_title.form input {
 .desactivate:hover {
 	background-color: rgb(150,150,150);
 	cursor: auto;
+}
+
+.edit_ressource {
+	margin-bottom: 5px;
+	margin-top: 20px;
+}
+
+.edit_news {
+	margin-bottom: 5px;
+	margin-top: 20px;
+	border-top: 1px solid grey;
 }

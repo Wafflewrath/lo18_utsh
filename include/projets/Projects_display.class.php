@@ -70,7 +70,7 @@ class Projects_display
 
 	private function printDate($index)
 	{
-		echo "<div class='res_date'>" . $this->datecreation[$index] . "</div>";
+		echo "<div class='res_date'>Créé le : " . $this->datecreation[$index] . "</div>";
 	}
 
 	private function printEdit($index)

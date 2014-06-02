@@ -58,17 +58,17 @@ class Ressources_display
 
 	private function printDate($index)
 	{
-		echo "<div class='res_date'>" . $this->datecreation[$index] . "</div>";
+		echo "<div class='res_date'>Créé le : " . $this->datecreation[$index] . "</div>";
 	}
 
 	private function printType($index)
 	{
-		echo "<div class='ressource_type'>" . $this->type[$index] . "</div>";
+		echo "<div class='ressource_type'>Type : " . $this->type[$index] . "</div>";
 	}
 
 	private function printLink($index)
 	{
-		echo "<div class='ressource_link'><a href='././ressources/". $this->nom[$index] . "'>lien</a></div>";
+		echo "<div class='ressource_link'><a href='././ressources/". $this->nom[$index] . "'>Télécharger la ressource</a></div>";
 	}
 	
 	public function displayRessources()

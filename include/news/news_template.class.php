@@ -38,7 +38,7 @@ class News_template
 	private function printTitleAndDate()
 	{
 		echo "<div class='lineHeader'><h2>".$this->title."</h2></div>";
-		echo '<div class="news_date">'.$this->datecreation.'</div><br />';
+		echo '<div class="news_date">Créé le : '.$this->datecreation.'</div><br />';
 	}
 
 	private function printContenu()
@@ -52,8 +52,10 @@ class News_template
 		$this->printContenu();
 		
 		global $user;
-		$editCommand = "echo \"<a href='edit_form.php?newsedit=".$this->id."' class='en_savoir_plus'>Editer la News</a>\";";
+		$editCommand = "echo \"<div class='edit_news'>\";";
+		$editCommand .= "echo \"<a href='edit_form.php?newsedit=".$this->id."' class='en_savoir_plus'>Editer la News</a>\";";
 		$editCommand .= " echo \" - <a href='edit_form.php?newsdelete=".$this->id."' class='en_savoir_plus'>Supprimer la News</a>\";";
+		$editCommand .= "echo \"</div>\";";
 		$Privilege_manager = new Privilege($user->data['user_id']);
 		$Privilege_manager->execif_Admin($editCommand);
 	}

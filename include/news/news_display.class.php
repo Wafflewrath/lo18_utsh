@@ -51,6 +51,11 @@ class News_display
 		echo "<div class='news_title'>" . $this->title[$index] . "</div>";
 	}
 
+	private function printDate($index)
+	{
+		echo "<div class='news_date'>Créé le : " . $this->datecreation[$index] . "</div>";
+	}
+
 	private function printContenuResume($index)
 	{
 		echo "<div class='news_resume'>" . $this->contenu_resume[$index] . "</div>";
@@ -69,6 +74,7 @@ class News_display
 		{
 			echo '<div class="a_news" onclick="window.location.href=\'a_news_template.php?newsid='.$this->id[$news_index].'\'">';
 				$this->printTitle($news_index);
+				$this->printDate($news_index);
 				$this->printContenuResume($news_index);
 			echo '</div>';
 		}

@@ -38,7 +38,7 @@ class Projects_template
 		}
 
 		
-		$query = "SELECT projets.nom, projets.nomcomplet, projets.datecreation, projets.texte, projets.url, ressources.titre, ressources.etat
+		$query = "SELECT projets.nom, projets.nomcomplet, projets.datecreation, projets.texte, projets.url, ressources.titre, ressources.etat, ressources.ressource_name
 				FROM projets 
 				LEFT OUTER JOIN projets_ressources 
 				ON projets.id = projets_ressources.projet 
@@ -61,6 +61,7 @@ class Projects_template
 				$this->url[0] = $raw_data[0]['url'];
 				$this->ressource[0] = $raw_data[0]['titre'];
 				$this->nomcomplet[0] = $raw_data[0]['nomcomplet'];
+				$this->nameressource[0] = $raw_data[0]['ressource_name'];
 				$this->etat[0] = 1;
 			}
 			
@@ -85,12 +86,12 @@ class Projects_template
 
 	private function printDate($index)
 	{
-		echo "<div class='proj_date'>" . $this->datecreation[$index] . "</div>";
+		echo "<div class='proj_date'>Créé le : " . $this->datecreation[$index] . "</div>";
 	}
 
 	private function printText($index)
 	{
-		echo "<div class='proj_text'>" . $this->texte[$index] . "</div>";
+		echo "<div class='proj_text'><h3>Présentation du projet</h3>" . $this->texte[$index] . "</div>";
 	}
 
 	private function printUrl($index) {
@@ -100,20 +101,24 @@ class Projects_template
 	}
 	
 	private function printRessource($index) {
-		echo "<div class='proj_url'><a href=\"mdr\">" . $this->ressource[$index] . "</a></div>";
+		if ($this->ressource[$index] != null) {
+			echo "<div class='proj_url'>Ressource : <a href=\"ressources/" .$this->nameressource[$index] . "\">" . $this->ressource[$index] . "</a></div>";
+		}
 	}
 	
 	private function printEdit($index)
 	{
+		echo "<div class='edit_ressource'>";
 		echo "<a class='en_savoir_plus' href='projet_ajout.php?projectedit=".$this->id[$index]."'>Editer le projet</a>";
 		echo " - ";
 		echo "<a class='en_savoir_plus' href='projet_ajout.php?projectdeleteid=".$this->id[$index]."'>Supprimer le projet</a>";
+		echo "</div>";
 	}
 	
 	public function displayProjectTemplate()
 	{
 		
-		echo '<div class="a_ressource col-lg-12">';
+		echo '<div class="one_ressource col-lg-12">';
 			$this->printName(0);
 			$this->printDate(0);
 			$this->printUrl(0);
