@@ -80,6 +80,8 @@ class Ressources_display
 				$this->printDate($ressources_index);
 				$this->printType($ressources_index);
 				$this->printLink($ressources_index);
+				
+				
 			echo '</div>';
 		}
 	}
