@@ -37,6 +37,10 @@ else if (isset($_GET['error418']))
 {
 	echo '<div class="alert alert-danger">Le serveur est une théière.</div>';
 }
+else if (isset($_GET['presentation_edit']))
+{
+	echo '<div class="alert alert-success">La présentation a bien été mise à jour</div>';
+}
 ?>
 
 	<div class="content row">
