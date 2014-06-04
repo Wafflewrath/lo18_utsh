@@ -30,7 +30,7 @@ class Projects_display
 		// modif de la requete SQL dans le cas d'un visiteur sans privileges pour ne pas disclose des projets privés
 		if ($this->Privilege_manager->execif_Visitor("", true) == true)
 		{
-			$query_add = " AND projets.visibilite <> 0";
+			$query_add = " AND projets.visibilite <> 0 AND projets.visibilite <> 2";
 		}
 		else
 		{

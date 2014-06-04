@@ -59,7 +59,7 @@
 								<div class="news_title form">
 									<select name="projet_visibilite">
 										<option value="1">Publique</option>
-										<option value="2">Private</option>
+										<option value="0">Private</option>
 									</select>
 								</div>
 								

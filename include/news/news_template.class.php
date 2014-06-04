@@ -64,7 +64,7 @@ class News_template
 	public function displayEditForm()
 	{
 		echo '
-		<div class="tuile_container col-lg-8">
+		<div class="tuile_container col-lg-12">
 			<div class="lineHeader">
 				<h2>Edition d\'une News</h2>
 			</div>

@@ -30,7 +30,7 @@ class Projects_template
 		
 		if ($this->Privilege_manager->execif_Visitor("", true) == true)
 		{
-			$query_add = " AND projets.visibilite <> 0";
+			$query_add = " AND projets.visibilite <> 0 AND projets.visibilite <> 2";
 		}
 		else
 		{
