@@ -25,6 +25,18 @@ else if (isset($_GET['projetedit']))
 {
 	echo '<div class="alert alert-success">Votre projet à bien été éditée</div>';
 }
+else if (isset($_GET['error404']))
+{
+	echo '<div class="alert alert-danger">La page que vous recherchez n\'existe pas.</div>';
+}
+else if (isset($_GET['error403']))
+{
+	echo '<div class="alert alert-danger">L\'accès à cette page est interdit.</div>';
+}
+else if (isset($_GET['error418']))
+{
+	echo '<div class="alert alert-danger">Le serveur est une théière.</div>';
+}
 ?>
 
 	<div class="content row">
