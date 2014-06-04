@@ -64,6 +64,7 @@ class News_template
 	public function displayEditForm()
 	{
 		echo '
+ 		<script src="ckeditor/ckeditor.js"></script>
 		<div class="tuile_container col-lg-12">
 			<div class="lineHeader">
 				<h2>Edition d\'une News</h2>
@@ -84,7 +85,7 @@ class News_template
 					<input type="submit" value="Editer la News">
 				</form>
 			</div>
-			<br/>
+			<script type="text/javascript">CKEDITOR.replace( \'news_content\' );</script>			<br/>
 		</div>
 		';
 	}

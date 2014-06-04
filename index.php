@@ -25,6 +25,10 @@ else if (isset($_GET['projetedit']))
 {
 	echo '<div class="alert alert-success">Votre projet à bien été éditée</div>';
 }
+else if (isset($_GET['presentation_edit']))
+{
+	echo '<div class="alert alert-success">La présentation a bien été mise à jour</div>';
+}
 ?>
 
 	<div class="content row">
