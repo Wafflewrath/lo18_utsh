@@ -1,5 +1,6 @@
 <?php include('header.php') ?>
 <?php include('include/reu/Reu_adapter.class.php') ?>
+ <script src="ckeditor/ckeditor.js"></script>
 
 <body>
 	<?php
@@ -48,7 +49,7 @@
 									<input type="text" placeholder="Entrez un lieu" name="reu_lieu">
 								</div>
 								<div class="news_resume form">
-									<textarea name="reu_content" rows="13" cols="150" placeholder="Contenu de l'évenement"></textarea>
+									<textarea id="reu_content" name="reu_content" rows="13" cols="150" placeholder="Contenu de l'évenement"></textarea>
 								</div>
 								<div class="news_resume form">
 									<input type="date" placeholder="Entrez la date" name="reu_date">
@@ -58,6 +59,7 @@
 						</div>
 						<br/>
 				</div>
+				<script type="text/javascript">CKEDITOR.replace( 'reu_content' );</script>
 				
 	<?php
 			}
