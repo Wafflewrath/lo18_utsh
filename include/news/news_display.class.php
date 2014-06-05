@@ -17,14 +17,23 @@ class News_display
 	public $nombre_news_affiche = array();
 	
 	private $newsEtat_valide = 1;
+	private $nombreTotal;
+	private $pageTotal;
+	private $actualPage;
+	private $displayedNumber;
 
-	function __construct($displayedNumber)
+	function __construct($displayedNumber, $page)
 	{
+		$this->displayedNumber = $displayedNumber;
+		$initialNumber = ($page - 1) * $displayedNumber;
+		$finalNumber = $initialNumber + $displayedNumber;
+		$this->actualPage = $page;
+
 		$DB_temp = new Database;
-		$query = "SELECT id, titre, contenu, contenuresume, datecreation FROM news WHERE etat = " . $this->newsEtat_valide. " ORDER BY id DESC LIMIT 0, " . $displayedNumber . ";";
-		
+		$query = "SELECT id, titre, contenu, contenuresume, datecreation FROM news WHERE etat = " . $this->newsEtat_valide. " ORDER BY id DESC LIMIT " . $initialNumber . ", " . $finalNumber . ";";
+
 		$raw_data = $DB_temp->select($query);
-		
+
 		if ($raw_data !== false)
 		{
 			$this->nombre_news_affiche = count($raw_data);
@@ -43,6 +52,15 @@ class News_display
 			$this->contenu[0] = "Il n'y a actuellement aucune news !";
 			$this->contenu_resume[0] = "Il n'y a actuellement aucune news !";
 			$this->datecreation[0] = "";
+		}
+
+		$queryCount = "SELECT count(*) as counter FROM news;";
+		$raw_data = $DB_temp->select($queryCount);
+		
+		if ($raw_data !== false)
+		{
+			$this->nombreTotal = $raw_data[0]['counter'];
+			$this->pageTotal = $this->nombreTotal / $displayedNumber;
 		}
 	}
 	
@@ -77,7 +95,29 @@ class News_display
 				$this->printDate($news_index);
 				$this->printContenuResume($news_index);
 			echo '</div>';
+			
 		}
+		if (preg_match('/\/lo18_utsh\/news.php.*/', $_SERVER['REQUEST_URI']) && $this->nombreTotal > $this->displayedNumber) {
+				echo '<ul class="pagination">';
+				if ($this->actualPage == 1) {
+					echo '<li><a class="disabled" href="#">&laquo;</a></li>';
+					echo '<li><a class="active" href="news.php?newsPage=1">1</a></li>';
+					echo '<li><a href="news.php?newsPage=2">2</a></li>';
+					echo '<li><a href="news.php?newsPage=2">&raquo;</a></li>';
+
+				}
+				else {
+					$precedent = $this->actualPage -1;
+					$future = $this->actualPage + 1;
+					echo '<li><a href="news.php?newsPage=' . $precedent . '">&laquo;</a></li>';
+					echo '<li><a href="news.php?newsPage=' . $precedent . '">' . $precedent . '</a></li>';
+					echo '<li><a class="active" href="news.php?newsPage=' . $this->actualPage . '">'.$this->actualPage.'</a></li>';
+					echo '<li><a href="news.php?newsPage=' . $future . '">' . $future . '</a></li>';
+					echo '<li><a href="news.php?newsPage=' . $future. '">&raquo;</a></li>';
+				}
+				
+				echo '</ul>';
+			}
 	}
 }
 ?>

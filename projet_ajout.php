@@ -1,6 +1,7 @@
 <?php include('header.php') ?>
 <?php include('include/Project_adapter.class.php') ?>
 <?php include('include/ressources/Ressources_display.class.php') ?>
+ <script src="ckeditor/ckeditor.js"></script>
 
 <body>
 
@@ -50,16 +51,16 @@
 									<input type="text" placeholder="Entrez le titre complet du projet" name="project_title_complet">
 								</div>
 								<div class="news_resume form">
-									<textarea name="project_resume" rows="6" cols="150" placeholder="Résumé du projet"></textarea>
+									<textarea id="project_resume" name="project_resume" rows="6" cols="150" placeholder="Résumé du projet"></textarea>
 								</div>
 								<div class="news_resume form">
-									<input type="text" placeholder="Lien vers le site" name="project_link" style="min-width:300px">
+									<input type="text" placeholder="Lien vers le site" name="project_url" style="min-width:300px">
 								</div>
 
 								<div class="news_title form">
 									<select name="projet_visibilite">
 										<option value="1">Publique</option>
-										<option value="0">Private</option>
+										<option value="0">Privé</option>
 									</select>
 								</div>
 								
@@ -83,7 +84,6 @@
 									var compteur = 1;
 									function add_ress()
 									{
-										console.log('test');
 										var div = $('#divID');
 										div.append('<br/><br/><select name="ressource_link'+compteur+'" style="width:250px">' + '<?php 
 																				$res = new Ressources_display("datecreation");
@@ -102,6 +102,7 @@
 						</div>
 						<br/>
 				</div>
+				<script type="text/javascript">CKEDITOR.replace( 'project_resume' );</script>
 				
 	<?php
 			}

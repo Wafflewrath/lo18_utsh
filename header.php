@@ -57,7 +57,7 @@
 					if($user->data['is_registered'])
 					{
 						$javascript_to_add = "window.location.href='".$phpbb_root_path."ucp.php?mode=logout&redir=1&sid=".$user->session_id."'";
-						echo '<a onclick="'.$javascript_to_add.'"><div class="deco"><div class="deconnexion"><p></p></div></div></a>';
+						echo '<a onclick="'.$javascript_to_add.'"><div class="deco"><p>Déconnexion</p></div></a>';
 					}
 			?>
 			</nav>

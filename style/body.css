@@ -12,7 +12,8 @@ body {
 
 .tuile{
 	/*background-color: rgb(0, 165, 255)*/
-	background-color: rgb(0, 165, 232);
+	/*background-color: rgb(0, 165, 232);*/
+	background-color: rgb(93, 188, 210);
 	/*background-color: rgb(241, 165, 58);*/
 	/*background-color: rgb(181, 217, 239);*/
 	/*background-color: #FF9900;*/
@@ -23,17 +24,20 @@ body {
 }
 .tuile:hover{
 	/*background-color: rgb(0, 229, 238);*/
-	background-color: rgb(255, 255, 60);
+	/*background-color: rgb(255, 255, 60);*/
+	background-color: rgb(93, 188, 210);
 	/*background-color: rgb(120, 225, 0);*/
 }
 .tuile_nohover {
-	background-color: rgb(0, 165, 232);
+	/*background-color: rgb(0, 165, 232);*/
+	background-color: rgb(93, 188, 210);
 	margin-top: 15px;
 	padding: 5px;
 }
 
 .tuilecontainer {
-	background-color: rgb(0, 165, 232);
+	/*background-color: rgb(0, 165, 232);*/
+	background-color: rgb(93, 188, 210);
 	/*background-color: rgb(241, 165, 58);*/
 	/*background-color: rgb(181, 217, 239);*/
 	margin-top: 15px;
@@ -42,7 +46,8 @@ body {
 }
 
 .tuilecalendar {
-	background-color: rgb(0, 165, 232);
+	/*background-color: rgb(0, 165, 232);*/
+	background-color: rgb(93, 188, 210);
 	/*background-color: rgb(241, 165, 58);*/
 	/*background-color: rgb(181, 217, 239);*/
 	margin-top: 15px;
@@ -69,7 +74,8 @@ body {
 	vertical-align: middle;
 }
 #newstitle:hover{
-	background-color: rgb(255, 255, 60);
+	/*background-color: rgb(255, 255, 60);*/
+	background-color: rgb(241, 194, 106);
 	cursor: pointer;
 	border-radius: 5px;
 }
@@ -100,14 +106,16 @@ body {
 }
 
 .forumtitle:hover{
-	background-color: rgb(255, 255, 60);
+	/*background-color: rgb(255, 255, 60);*/
+	background-color: rgb(241, 194, 106);
 	cursor: pointer;
 	border-radius: 5px;
 }
 
 .forumpost:hover {
 	/*background-color: rgb(0, 229, 238);*/
-	background-color: rgb(255, 255, 60);
+	/*background-color: rgb(255, 255, 60);*/
+	background-color: rgb(241, 194, 106);
 	/*background-color: rgb(120, 225, 0);*/
 	/*background-color: #FF9900;*/
 	
@@ -166,7 +174,8 @@ body {
 
 .a_news:hover {
 	/*background-color: rgb(0, 229, 238);*/
-	background-color: rgb(255, 255, 60);
+	/*background-color: rgb(255, 255, 60);*/
+	background-color: rgb(241, 194, 106);
 	/*background-color: rgb(120, 225, 0);*/
 	/*background-color: #FF9900;*/
 	border-radius: 5px;

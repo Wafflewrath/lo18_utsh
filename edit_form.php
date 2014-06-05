@@ -11,13 +11,13 @@
 			if (isset($_POST['news_title']) && !isset($_POST['newsedit_id']))
 			{
 				$news = new News_adapter();
-				redirect($_SERVER['REQUEST_URI']."/../index.php?newscreate=1");
+				redirect($_SERVER['REQUEST_URI']."/../index.php");
 				die();
 			}
 			elseif (isset($_POST['newsedit_id']))
 			{
 				$news = new News_adapter();
-				redirect($_SERVER['REQUEST_URI']."/../index.php?newsedit=1");
+				redirect($_SERVER['REQUEST_URI']."/../index.php");
 				die();
 			}
 			elseif (isset($_GET['newsedit']))
@@ -51,19 +51,38 @@
 								<div class="news_resume form">
 									<textarea id="news_content" name="news_content" rows="13" cols="150">Entrez le contenu de la news</textarea>
 								</div>
-								<div>
+								<div id="divID">
 								<select name="ressource_link" style="width:250px">
 									<?php 
 										$res = new Ressources_display("datecreation");
 										echo '<option value="0">Ne pas lier de ressource</option>';
 										for($i = 0; $i < $res->nombre_ressources_affiche; $i++)
 										{
-											echo '<option value="' . $res->nom[$i] . '">' . $res->title[$i] . '</option>';
+											echo '<option value="' . $res->id[$i] . '">' . $res->title[$i] . '</option>';
 										}
 									?>
 								</select>
 								</div>
 								<input type="submit" value="Créer la News">
+								<div id="add_ressource">Ajouter une autre ressource</div>
+								<script type="text/javascript">
+									$("#add_ressource").attr('onclick','add_ress();');
+									var compteur = 1;
+									function add_ress()
+									{
+										var div = $('#divID');
+										div.append('<br/><br/><select name="ressource_link'+compteur+'" style="width:250px">' + '<?php 
+																				$res = new Ressources_display("datecreation");
+																				echo '<option value="0">Ne pas lier de ressource</option>';
+																				for($i = 0; $i < $res->nombre_ressources_affiche; $i++)
+																				{
+																					echo '<option value="' . $res->id[$i] . '">' . $res->title[$i] . '</option>';
+																				}
+																			?> '
+																		+ '</select>');
+										compteur++;
+									}
+								</script>
 							</form>
 						</div>
 						<br/>

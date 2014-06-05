@@ -25,16 +25,28 @@ class News_adapter
 		}
 		elseif (isset($_POST['news_title']) && isset($_POST['news_content']) && isset($_POST['news_resume']) && !isset($_POST['newsedit_id']))
 		{
-			$appendContent = "";
+			$ress_id = null;
 			if (isset($_POST['ressource_link']) && $_POST['ressource_link'] != 0)
 			{
-				$ress_url = "<a href=\'././ressources/". $_POST['ressource_link'] . "\'>Télécharger la ressource associée</a>";
-				$appendContent = " <br/><br/> " . $ress_url;
+				$ress_id = $_POST['ressource_link'];
 			}
-			$newsContent = $_POST['news_content'] . $appendContent;
+			
+			for ($c = 1; $c < 100; $c++)
+			{
+				if (isset($_POST['ressource_link'.$c]) && $_POST['ressource_link'.$c] != 0)
+				{
+					$ress_id = $ress_id . "-" . $_POST['ressource_link'.$c];
+				}
+				else
+				{
+					$c = 100;
+				}
+			}
+			
+			$newsContent = htmlspecialchars($_POST['news_content'], ENT_QUOTES);
 			$newsTitle = htmlspecialchars($_POST['news_title'], ENT_QUOTES);
 			$newsResume = htmlspecialchars($_POST['news_resume'], ENT_QUOTES);
-			$this->news_class = new News_creator($newsTitle, $newsContent, $newsResume);
+			$this->news_class = new News_creator($newsTitle, $newsContent, $newsResume, $ress_id);
 		}
 		elseif (isset($_POST['news_title']) && isset($_POST['news_content']) && isset($_POST['news_resume']) && isset($_POST['newsedit_id']))
 		{
@@ -58,7 +70,16 @@ class News_adapter
 		else
 		{
 			// construction de l'objet News_display
-			$this->news_class = new News_display($this->newsDisplayNumber);
+			if (isset($_GET['newsPage'])) {
+				$newsPage = intval($_GET['newsPage']);
+			}
+			else {
+				$newsPage = 1;
+			}
+			if (preg_match('/\/lo18_utsh\/news.php.*/', $_SERVER['REQUEST_URI'])) {
+				$this->newsDisplayNumber = 5;
+			}
+			$this->news_class = new News_display($this->newsDisplayNumber, $newsPage);
 		}
 	}
 	

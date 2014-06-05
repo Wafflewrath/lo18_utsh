@@ -50,7 +50,7 @@ nav {
 }
 
 nav.nav_deco {
-	width: 650px;
+	width: 720px;
 	position: absolute;
 	bottom: 0;
 	right: 0;
@@ -67,17 +67,7 @@ nav div {
 }
 
 nav div.deco {
-	width: 50px;
-	border-right:1px solid black;
-}
-
-nav div.deconnexion {
-	display: inline-block;
-	text-align: center;
-	margin-left: 9px;
-	width: 41px;
-	background-image: url('images/deconnexion.png');
-	background-repeat: no-repeat;
+	width: 120px;
 }
 
 nav div.deconnexion:hover {

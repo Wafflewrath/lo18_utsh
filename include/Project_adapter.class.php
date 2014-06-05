@@ -44,7 +44,8 @@ class Project_adapter
 			$project_title_complet = htmlspecialchars($_POST['project_title_complet'], ENT_QUOTES);
 			$projectTitle = htmlspecialchars($_POST['project_title'], ENT_QUOTES);
 			$projectVisibilite = intval($_POST['projet_visibilite']);
-			if(isset($_POST['project_url'])) {
+			if(isset($_POST['project_url'])) 
+			{
 				$projectUrl = htmlspecialchars($_POST['project_url'], ENT_QUOTES);
 				
 			}
@@ -63,6 +64,18 @@ class Project_adapter
 				$ress_id = $_POST['ressource_link'];
 			}
 			
+			for ($c = 1; $c < 100; $c++)
+			{
+				if (isset($_POST['ressource_link'.$c]) && $_POST['ressource_link'.$c] != 0)
+				{
+					$ress_id = $ress_id . "-" . $_POST['ressource_link'.$c];
+				}
+				else
+				{
+					$c = 100;
+				}
+			}
+			
 			$project_resume = htmlspecialchars($_POST['project_resume'], ENT_QUOTES);
 			$project_title_complet = htmlspecialchars($_POST['project_title_complet'], ENT_QUOTES);
 			$projectTitle = htmlspecialchars($_POST['project_title'], ENT_QUOTES);
@@ -72,7 +85,7 @@ class Project_adapter
 				$projectUrl = htmlspecialchars($_POST['project_url'], ENT_QUOTES);
 			}
 			else {
-				$project_url = "";
+				$projectUrl = "";
 			}
 			$this->project_class = new Project_editor($projectTitle, $project_title_complet, $project_resume, $projectUrl, $projectVisibilite, $projectId, $ress_id);
 

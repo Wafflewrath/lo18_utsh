@@ -14,7 +14,7 @@
 		<p>Team four</p>
 	</div>
 	<div class="tuile tuiletitle alone" onclick="window.location.href='charte.php';">La charte du GIS</div>
-	<div class="tuile tuiletitle alone">L'organigramme</div>
+	<div class="tuile tuiletitle alone" onclick="window.location.href='organigramme.php';">L'organigramme</div>
 	<div class="tuile tuiletitle alone">Conseil scientifique</div>
 	
 </div>
