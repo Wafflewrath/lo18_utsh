@@ -70,7 +70,16 @@ class News_adapter
 		else
 		{
 			// construction de l'objet News_display
-			$this->news_class = new News_display($this->newsDisplayNumber);
+			if (isset($_GET['newsPage'])) {
+				$newsPage = intval($_GET['newsPage']);
+			}
+			else {
+				$newsPage = 1;
+			}
+			if (preg_match('/\/lo18_utsh\/news.php.*/', $_SERVER['REQUEST_URI'])) {
+				$this->newsDisplayNumber = 5;
+			}
+			$this->news_class = new News_display($this->newsDisplayNumber, $newsPage);
 		}
 	}
 	
