@@ -33,7 +33,7 @@ class Presentation_accueil
 	public function displayRegistered()
 	{
 		$this->getValue();
-		$max=200;
+		$max=180;
 		$i=$max;
 		if(strlen($this->value)>$i)
 			while($this->value[$i]!=' ')
