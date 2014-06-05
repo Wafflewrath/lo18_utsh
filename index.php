@@ -1,5 +1,4 @@
 <?php include('header.php') ?>
-
 <?php
 if (isset($_GET['newscreate']))
 {
@@ -49,13 +48,20 @@ else if (isset($_GET['presentation_edit']))
 			<div class="tuile" onclick="window.location.href='presentation.php';">
 				<div class="tuiletitle">Qui sommes-nous?</div>
 				<div class="text_pres">
-				<p>Le GIS UTSH se propose de promouvoir une recherche et un enseignement de sciences humaines et sociales en technologie.</p>
-
-<p>Les équipes de SHS qui le composent ont l’expérience d’une recherche menée dans l’environnement d’écoles d’ingénieurs.</p>
-
-<p>Il s’agit de développer une recherche sur la question technique qui soit partagée entre sciences de l’homme, sciences de la matière et sciences du vivant, sans instrumentalisation réciproque, sans position de surplomb ; mais au contraire dans un travail commun aussi bien dans les processus d’innovations que dans la réflexion sur les choix techniques.</p>
-</div>
-</div>
+					<?php 
+						$pres= new Presentation_accueil();
+						if($user->data['is_registered'])
+						{
+							$pres->displayRegistered();
+						}
+						else
+						{
+							$pres->display();
+						}
+						$Privilege_manager->execif_Admin("echo '</br><a href=\"edit_pres.php\" class=\"createnews_link\">Editer</a>';")
+					?>
+				</div>
+			</div>
 			<?php if($user->data['is_registered']) include('calendar.php'); ?>
 		</div>
 		
