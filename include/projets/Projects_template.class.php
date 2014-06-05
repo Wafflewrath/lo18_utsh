@@ -56,7 +56,7 @@ class Projects_template
 				$this->id[0] = $id;
 				$this->nom[0] = $raw_data[0]['nom'];
 				$this->datecreation[0] = $raw_data[0]['datecreation'];
-				$this->texte[0] = $raw_data[0]['texte'];
+				$this->texte[0] = htmlspecialchars_decode($raw_data[0]['texte'], ENT_QUOTES);
 				$this->url[0] = $raw_data[0]['url'];
 				$this->nomcomplet[0] = $raw_data[0]['nomcomplet'];
 				$this->etat[0] = 1;
@@ -204,7 +204,7 @@ class Projects_template
 					<div class="news_title form">
 						<select name="projet_visibilite">
 							<option value="1">Publique</option>
-							<option value="2">Private</option>
+							<option value="2">Privé</option>
 						</select>
 					</div>
 					

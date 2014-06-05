@@ -22,7 +22,7 @@ class News_template
 		{
 			$this->id = $newsId;
 			$this->title = $raw_data[0]['titre'];
-			$this->contenu = $raw_data[0]['contenu'];
+			$this->contenu = htmlspecialchars_decode($raw_data[0]['contenu'], ENT_QUOTES);
 			$this->contenu_resume = $raw_data[0]['contenuresume'];
 			$this->datecreation = $raw_data[0]['datecreation'];
 		}

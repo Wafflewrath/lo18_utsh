@@ -54,13 +54,13 @@
 									<textarea id="project_resume" name="project_resume" rows="6" cols="150" placeholder="Résumé du projet"></textarea>
 								</div>
 								<div class="news_resume form">
-									<input type="text" placeholder="Lien vers le site" name="project_link" style="min-width:300px">
+									<input type="text" placeholder="Lien vers le site" name="project_url" style="min-width:300px">
 								</div>
 
 								<div class="news_title form">
 									<select name="projet_visibilite">
 										<option value="1">Publique</option>
-										<option value="0">Private</option>
+										<option value="0">Privé</option>
 									</select>
 								</div>
 								

@@ -44,7 +44,8 @@ class Project_adapter
 			$project_title_complet = htmlspecialchars($_POST['project_title_complet'], ENT_QUOTES);
 			$projectTitle = htmlspecialchars($_POST['project_title'], ENT_QUOTES);
 			$projectVisibilite = intval($_POST['projet_visibilite']);
-			if(isset($_POST['project_url'])) {
+			if(isset($_POST['project_url'])) 
+			{
 				$projectUrl = htmlspecialchars($_POST['project_url'], ENT_QUOTES);
 				
 			}
@@ -84,7 +85,7 @@ class Project_adapter
 				$projectUrl = htmlspecialchars($_POST['project_url'], ENT_QUOTES);
 			}
 			else {
-				$project_url = "";
+				$projectUrl = "";
 			}
 			$this->project_class = new Project_editor($projectTitle, $project_title_complet, $project_resume, $projectUrl, $projectVisibilite, $projectId, $ress_id);
 

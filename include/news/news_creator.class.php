@@ -8,7 +8,7 @@ class News_creator
 	
 	private $newsEtat_valide = 1;
 
-	function __construct($newsTitle, $newsContent, $newsResume)
+	function __construct($newsTitle, $newsContent, $newsResume, $ress_id)
 	{
 		$DB_temp = new Database;
 		$query = "INSERT INTO news (titre, contenu, contenuresume, datecreation, etat) VALUES ('".$newsTitle."', '".$newsContent."', '".$newsResume."', now(), ".$this->newsEtat_valide.");";
