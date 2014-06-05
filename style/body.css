@@ -193,6 +193,7 @@ body {
 
 .a_project:hover, .a_ressource:hover {
 	background-color: rgb(241, 194, 106);
+	border-radius: 5px;
 }
 
 .one_ressource {
@@ -294,4 +295,30 @@ form .news_title.form input {
 
 .marge_gauche {
 	margin-left: 25px;
+}
+
+.input_form  {
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+#add_ressource {
+	color: green;
+	cursor: pointer;
+	margin-top: 5px;
+	width: 190px;
+	text-align: center;
+}
+#add_ressource:hover {
+	background-color: rgb(241, 194, 106);
+	border-radius: 5px;
+}
+
+.news_form {
+	width: 100% !important;
+}
+
+#divID {
+	padding-top:10px;
+	padding-bottom:5px;
 }

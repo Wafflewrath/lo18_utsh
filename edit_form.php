@@ -43,13 +43,13 @@
 						<div class="news_actualite"> 
 							<form action="edit_form.php" method="post">
 								<div class="news_title form">
-									<input type="text" placeholder="Entrez votre Titre" name="news_title">
+									<input class="news_form" type="text" placeholder="Entrez votre Titre" name="news_title">
 								</div>
 								<div class="news_resume form">
-									<textarea id="news_resume" name="news_resume" rows="6" cols="150" placeholder="Résumé de la news (affiché sur la page d\'accueil)"></textarea>
+									<textarea class="news_form" id="news_resume" name="news_resume" rows="6" cols="150" placeholder="Résumé de la news (affiché sur la page d\'accueil)"></textarea>
 								</div>
 								<div class="news_resume form">
-									<textarea id="news_content" name="news_content" rows="13" cols="150">Entrez le contenu de la news</textarea>
+									<textarea class="news_form" id="news_content" name="news_content" rows="13" cols="150">Entrez le contenu de la news</textarea>
 								</div>
 								<div id="divID">
 								<select name="ressource_link" style="width:250px">
@@ -63,8 +63,8 @@
 									?>
 								</select>
 								</div>
-								<input type="submit" value="Créer la News">
 								<div id="add_ressource">Ajouter une autre ressource</div>
+								<input class="input_form" type="submit" value="Créer la News">
 								<script type="text/javascript">
 									$("#add_ressource").attr('onclick','add_ress();');
 									var compteur = 1;

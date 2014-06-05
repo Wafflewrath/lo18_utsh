@@ -114,17 +114,49 @@ class News_template
 			<br />
 			<div class="news_actualite"> 
 				<form action="edit_form.php" method="post">
-					<div class="news_title form">
-						<input type="text" value="'.$this->title.'" name="news_title">
+					<div class="news_form news_title form">
+						<input class="news_form" type="text" value="'.$this->title.'" name="news_title">
 					</div>
 					<div class="news_resume form">
-						<textarea name="news_resume" rows="6" cols="150">'.$this->contenu_resume.'</textarea>
+						<textarea class="news_form" name="news_resume" rows="6" cols="150">'.$this->contenu_resume.'</textarea>
 					</div>
 					<div class="news_resume form">
-						<textarea name="news_content" rows="13" cols="150">'.$this->contenu.'</textarea>
+						<textarea class="news_form" name="news_content" rows="13" cols="150">'.$this->contenu.'</textarea>
 					</div>
 					<input type="hidden" value="'.$this->id.'" name="newsedit_id">
-					<input type="submit" value="Editer la News">
+					<div id="divID">
+					<select name="ressource_link" style="width:250px">';
+						
+							$res = new Ressources_display("datecreation");
+							echo '<option value="0">Ne pas lier de ressource</option>';
+							for($i = 0; $i < $res->nombre_ressources_affiche; $i++)
+							{
+								echo '<option value="' . $res->id[$i] . '">' . $res->title[$i] . '</option>';
+							}
+						
+			echo '
+					</select>
+					</div>
+					<div id="add_ressource">Ajouter une autre ressource</div>
+					<input class="input_form" type="submit" value="Editer la News">
+					<script type="text/javascript">
+						$("#add_ressource").attr(\'onclick\',\'add_ress();\');
+						var compteur = 1;
+						function add_ress()
+						{
+							var div = $(\'#divID\');
+							div.append(\'<br/><br/><select name="ressource_link\'+compteur+\'" style="width:250px">\' + \''; 
+									$res = new Ressources_display("datecreation");
+									echo '<option value="0">Ne pas lier de ressource</option>';
+									for($i = 0; $i < $res->nombre_ressources_affiche; $i++)
+									{
+										echo '<option value="' . $res->id[$i] . '">' . $res->title[$i] . '</option>';
+									}
+			echo '\'
+															+ \'</select>\');
+							compteur++;
+						}
+					</script>
 				</form>
 			</div>
 			<script type="text/javascript">CKEDITOR.replace( \'news_content\' );</script>			<br/>

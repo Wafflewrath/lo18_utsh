@@ -50,11 +50,29 @@ class News_adapter
 		}
 		elseif (isset($_POST['news_title']) && isset($_POST['news_content']) && isset($_POST['news_resume']) && isset($_POST['newsedit_id']))
 		{
+			$ress_id = null;
+			if (isset($_POST['ressource_link']) && $_POST['ressource_link'] != 0)
+			{
+				$ress_id = $_POST['ressource_link'];
+			}
+			
+			for ($c = 1; $c < 100; $c++)
+			{
+				if (isset($_POST['ressource_link'.$c]) && $_POST['ressource_link'.$c] != 0)
+				{
+					$ress_id = $ress_id . "-" . $_POST['ressource_link'.$c];
+				}
+				else
+				{
+					$c = 100;
+				}
+			}
+			
 			$newsContent = htmlspecialchars($_POST['news_content'], ENT_QUOTES);
 			$newsTitle = htmlspecialchars($_POST['news_title'], ENT_QUOTES);
 			$newsResume = htmlspecialchars($_POST['news_resume'], ENT_QUOTES);
 			$newsId = intval($_POST['newsedit_id']);
-			$this->news_class = new News_editor($newsTitle, $newsContent, $newsResume, $newsId);
+			$this->news_class = new News_editor($newsTitle, $newsContent, $newsResume, $newsId, $ress_id);
 		}
 		elseif (isset($_GET['newsedit']))
 		{
