@@ -8,10 +8,17 @@ class News_template
 	public $contenu_resume;
 	public $datecreation;
 	
+	public $ressource_name = array();
+	public $ressource_url = array();
+	public $ressource_id = array();
+	
 	private $newsEtat_valide = 1;
+	private $Privilege_manager;
 
 	function __construct($newsId)
 	{
+		global $user;
+		$this->Privilege_manager = new Privilege($user->data['user_id']);
 		$DB_temp = new Database;
 		$query = "SELECT id, titre, contenu, contenuresume, datecreation FROM news WHERE etat = ".$this->newsEtat_valide." AND id = ".$newsId.";";
 		
@@ -33,6 +40,25 @@ class News_template
 			$this->contenu_resume = "La news que vous recherchez n'existe pas, ou vous n'y avez pas accès !";
 			$this->datecreation = "14/03/1879";
 		}
+		
+		$query_ress = "SELECT ressources.id, ressources.titre, ressources.ressource_name 
+						FROM ressources
+						INNER JOIN news_ressources ON ressources.id = news_ressources.ressource 
+						WHERE news_ressources.news = " . $this->id . "
+						AND ressources.etat = 1;";
+		$raw_data = $DB_temp->select($query_ress);
+		
+		if ($raw_data !== false && count($raw_data) != 0)
+		{
+			$j = 0;
+			foreach($raw_data as $ressource)
+			{
+				$this->ressource_name[$j] = $ressource["titre"];
+				$this->ressource_url[$j] = $ressource["ressource_name"];
+				$this->ressource_id[$j] = $ressource["id"];
+				$j++;
+			}
+		}
 	}
 	
 	private function printTitleAndDate()
@@ -46,18 +72,34 @@ class News_template
 		echo '<div class="news_resume">'.$this->contenu.'</div>';
 	}
 	
+	private function printRessource() {
+		if ($this->ressource_name != false) 
+		{
+			for($i = 0; $i < count($this->ressource_name); $i++)
+			{
+				echo "<div class='proj_url'>Ressource : <a href=\"ressources/" .$this->ressource_url[$i] . "\">" . $this->ressource_name[$i] . "</a>";
+				
+				if ($this->Privilege_manager->execif_Admin("") == true)
+				{
+					echo '<a class="en_savoir_plus marge_gauche" href="news_unlink.php?id2='.$this->id.'&id1='.$this->ressource_id[$i].'">(Retirer)</a>';
+				}
+				
+				echo "</div>";
+			}
+		}
+	}
+	
 	public function displayNewsTemplate()
 	{
 		$this->printTitleAndDate();
 		$this->printContenu();
+		$this->printRessource();
 		
-		global $user;
 		$editCommand = "echo \"<div class='edit_news'>\";";
 		$editCommand .= "echo \"<a href='edit_form.php?newsedit=".$this->id."' class='en_savoir_plus'>Editer la News</a>\";";
 		$editCommand .= " echo \" - <a href='edit_form.php?newsdelete=".$this->id."' class='en_savoir_plus'>Supprimer la News</a>\";";
 		$editCommand .= "echo \"</div>\";";
-		$Privilege_manager = new Privilege($user->data['user_id']);
-		$Privilege_manager->execif_Admin($editCommand);
+		$this->Privilege_manager->execif_Admin($editCommand);
 	}
 	
 	

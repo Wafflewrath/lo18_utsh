@@ -63,7 +63,6 @@
 									?>
 								</select>
 								</div>
-								</div>
 								<input type="submit" value="Créer la News">
 								<div id="add_ressource">Ajouter une autre ressource</div>
 								<script type="text/javascript">
