@@ -22,13 +22,25 @@ class Project_adapter
 		}
 		elseif (isset($_POST['project_title']) && isset($_POST['project_resume']) && isset($_POST['project_title_complet']) && !isset($_POST['projectedit_id']))
 		{
-			$appendContent = "";
+			$ress_id = null;
 			if (isset($_POST['ressource_link']) && $_POST['ressource_link'] != 0)
 			{
-				$ress_url = "<a href=\'././ressources/". $_POST['ressource_link'] . "\'>Télécharger la ressource associée</a>";
-				$appendContent = " <br/><br/> " . $ress_url;
+				$ress_id = $_POST['ressource_link'];
 			}
-			$project_resume = htmlspecialchars($_POST['project_resume'], ENT_QUOTES) . $appendContent;
+			
+			for ($c = 1; $c < 100; $c++)
+			{
+				if (isset($_POST['ressource_link'.$c]) && $_POST['ressource_link'.$c] != 0)
+				{
+					$ress_id = $ress_id . "-" . $_POST['ressource_link'.$c];
+				}
+				else
+				{
+					$c = 100;
+				}
+			}
+			
+			$project_resume = htmlspecialchars($_POST['project_resume'], ENT_QUOTES);
 			$project_title_complet = htmlspecialchars($_POST['project_title_complet'], ENT_QUOTES);
 			$projectTitle = htmlspecialchars($_POST['project_title'], ENT_QUOTES);
 			$projectVisibilite = intval($_POST['projet_visibilite']);
@@ -40,11 +52,17 @@ class Project_adapter
 				$projectUrl = "";
 				
 			}
-			$this->project_class = new Project_creator($projectTitle, $project_title_complet, $project_resume, $projectUrl, $projectVisibilite);
+			$this->project_class = new Project_creator($projectTitle, $project_title_complet, $project_resume, $projectUrl, $projectVisibilite, $ress_id);
 			
 		}
 		elseif (isset($_POST['project_title']) && isset($_POST['project_resume']) && isset($_POST['project_title_complet']) && isset($_POST['projectedit_id']))
 		{
+			$ress_id = null;
+			if (isset($_POST['ressource_link']) && $_POST['ressource_link'] != 0)
+			{
+				$ress_id = $_POST['ressource_link'];
+			}
+			
 			$project_resume = htmlspecialchars($_POST['project_resume'], ENT_QUOTES);
 			$project_title_complet = htmlspecialchars($_POST['project_title_complet'], ENT_QUOTES);
 			$projectTitle = htmlspecialchars($_POST['project_title'], ENT_QUOTES);
@@ -56,7 +74,7 @@ class Project_adapter
 			else {
 				$project_url = "";
 			}
-			$this->project_class = new Project_editor($projectTitle, $project_title_complet, $project_resume, $projectUrl, $projectVisibilite, $projectId);
+			$this->project_class = new Project_editor($projectTitle, $project_title_complet, $project_resume, $projectUrl, $projectVisibilite, $projectId, $ress_id);
 
 		}
 		elseif (isset($_GET['projectedit']))

@@ -63,26 +63,39 @@
 									</select>
 								</div>
 								
-								<div>
+								<div id="divID">
 								<select name="ressource_link" style="width:250px">
 									<?php 
 										$res = new Ressources_display("datecreation");
 										echo '<option value="0">Ne pas lier de ressource</option>';
 										for($i = 0; $i < $res->nombre_ressources_affiche; $i++)
 										{
-											echo '<option value="' . $res->nom[$i] . '">' . $res->title[$i] . '</option>';
+											echo '<option value="' . $res->id[$i] . '">' . $res->title[$i] . '</option>';
 										}
 									?>
 								</select>
 								</div>
 								<br/><input type="submit" value="Créer le projet">
 								
+								<div id="add_ressource">Ajouter une autre ressource</div>
 								<script type="text/javascript">
-									document.getElementById("add_ressource").onclick(function() {
-										var div = document.getElementById('divID');
-
-										div.innerHTML = div.innerHTML + '<p>Extra stuff</p>';
-									})
+									$("#add_ressource").attr('onclick','add_ress();');
+									var compteur = 1;
+									function add_ress()
+									{
+										console.log('test');
+										var div = $('#divID');
+										div.append('<br/><br/><select name="ressource_link'+compteur+'" style="width:250px">' + '<?php 
+																				$res = new Ressources_display("datecreation");
+																				echo '<option value="0">Ne pas lier de ressource</option>';
+																				for($i = 0; $i < $res->nombre_ressources_affiche; $i++)
+																				{
+																					echo '<option value="' . $res->id[$i] . '">' . $res->title[$i] . '</option>';
+																				}
+																			?> '
+																		+ '</select>');
+										compteur++;
+									}
 								</script>
 								
 							</form>

@@ -17,6 +17,10 @@ class Projects_template
 	public $visibilite = array();
 	public $nomcomplet = array();
 	
+	public $ressource_name = array();
+	public $ressource_url = array();
+	public $ressource_id = array();
+	
 	public $nombre_projets_affiche = array();
 	
 	private $projetEtat_valide = 1;
@@ -38,12 +42,7 @@ class Projects_template
 		}
 
 		
-		$query = "SELECT projets.nom, projets.nomcomplet, projets.datecreation, projets.texte, projets.url, ressources.titre, ressources.etat, ressources.ressource_name
-				FROM projets 
-				LEFT OUTER JOIN projets_ressources 
-				ON projets.id = projets_ressources.projet 
-				LEFT OUTER JOIN ressources 
-				ON projets_ressources.ressource = ressources.id 
+		$query = "SELECT projets.nom, projets.nomcomplet, projets.datecreation, projets.texte, projets.url FROM projets 
 				WHERE projets.id=".$id.$query_add." 
 				AND projets.etat=1;";
 				
@@ -59,9 +58,7 @@ class Projects_template
 				$this->datecreation[0] = $raw_data[0]['datecreation'];
 				$this->texte[0] = $raw_data[0]['texte'];
 				$this->url[0] = $raw_data[0]['url'];
-				$this->ressource[0] = $raw_data[0]['titre'];
 				$this->nomcomplet[0] = $raw_data[0]['nomcomplet'];
-				$this->nameressource[0] = $raw_data[0]['ressource_name'];
 				$this->etat[0] = 1;
 			}
 			
@@ -73,9 +70,27 @@ class Projects_template
 			$this->datecreation[0] = "";
 			$this->texte[0] = "";
 			$this->url[0] = "";
-			$this->ressource[0] = "";
 			$this->nomcomplet[0] = "Ce projet n'existe pas !";
 			$this->etat[0] = 0;
+		}
+		
+		$query_ress = "SELECT ressources.id, ressources.titre, ressources.ressource_name 
+						FROM ressources
+						INNER JOIN projets_ressources ON ressources.id = projets_ressources.ressource 
+						WHERE projets_ressources.projet = " . $this->id[0] . "
+						AND ressources.etat = 1;";
+		$raw_data = $DB_temp->select($query_ress);
+		
+		if ($raw_data !== false && count($raw_data) != 0)
+		{
+			$j = 0;
+			foreach($raw_data as $ressource)
+			{
+				$this->ressource_name[$j] = $ressource["titre"];
+				$this->ressource_url[$j] = $ressource["ressource_name"];
+				$this->ressource_id[$j] = $ressource["id"];
+				$j++;
+			}
 		}
 	}
 	
@@ -100,9 +115,20 @@ class Projects_template
 		}
 	}
 	
-	private function printRessource($index) {
-		if ($this->ressource[$index] != null) {
-			echo "<div class='proj_url'>Ressource : <a href=\"ressources/" .$this->nameressource[$index] . "\">" . $this->ressource[$index] . "</a></div>";
+	private function printRessource() {
+		if ($this->ressource_name != false) 
+		{
+			for($i = 0; $i < count($this->ressource_name); $i++)
+			{
+				echo "<div class='proj_url'>Ressource : <a href=\"ressources/" .$this->ressource_url[$i] . "\">" . $this->ressource_name[$i] . "</a>";
+				
+				if ($this->Privilege_manager->execif_Admin("") == true)
+				{
+					echo '<a class="en_savoir_plus marge_gauche" href="projet_unlink.php?id2='.$this->id[0].'&id1='.$this->ressource_id[$i].'">(Retirer)</a>';
+				}
+				
+				echo "</div>";
+			}
 		}
 	}
 	
@@ -123,7 +149,7 @@ class Projects_template
 			$this->printDate(0);
 			$this->printUrl(0);
 			$this->printText(0);
-			$this->printRessource(0);
+			$this->printRessource();
 			
 			if ($this->Privilege_manager->execif_admin("") == true && $this->etat[0] != 0)
 			{
@@ -182,23 +208,47 @@ class Projects_template
 						</select>
 					</div>
 					
-					<div id="ressource_projet"></div>
-					<a id="add_ressource">ajouter une ressource à ce projet</a>
-					<br/><input type="submit" value="Sauvegarder les changements">
+					<div id="divID">
+					<select name="ressource_link" style="width:250px">';
+						 
+							$res = new Ressources_display("datecreation");
+							echo '<option value="0">Ne pas lier de ressource</option>';
+							for($i = 0; $i < $res->nombre_ressources_affiche; $i++)
+							{
+								echo '<option value="' . $res->id[$i] . '">' . $res->title[$i] . '</option>';
+							}
+						
+				echo "
+					</select>
+					</div>
 					
-					<script type="text/javascript">
-						document.getElementById("add_ressource").onclick(function() {
-							var div = document.getElementById("divID");
-
-							div.innerHTML = div.innerHTML + "<p>Extra stuff</p>";
-						})
+					<br/><input type=\"submit\" value=\"Sauvegarder les changements\">
+					
+					<div id=\"add_ressource\">Ajouter une autre ressource</div>
+					<script type=\"text/javascript\">
+						$(\"#add_ressource\").attr('onclick','add_ress();');
+						var compteur = 1;
+						function add_ress()
+						{
+							var div = $('#divID');
+							div.append('<br/><br/><select name=\"ressource_link'+compteur+'\" style=\"width:250px\">' + '" ;
+																	$res = new Ressources_display("datecreation");
+																	echo '<option value="0">Ne pas lier de ressource</option>';
+																	for($i = 0; $i < $res->nombre_ressources_affiche; $i++)
+																	{
+																		echo '<option value="' . $res->id[$i] . '">' . $res->title[$i] . '</option>';
+																	}
+																	echo '\'';
+				echo "	+ '</select>');
+							compteur++;
+						}
 					</script>
 					
 				</form>
 			</div>
 			<br/>
 		</div>
-		';
+		";
 	}
 }
 ?>

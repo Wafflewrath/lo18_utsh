@@ -3,7 +3,7 @@
 class Project_editor
 {	
 
-	function __construct($projectTitle, $project_title_complet, $projectResume, $url, $projectVisibilite, $projetId)
+	function __construct($projectTitle, $project_title_complet, $projectResume, $url, $projectVisibilite, $projetId, $ressource_id = null)
 	{
 		$DB_temp = new Database;
 		$query = "UPDATE projets  
@@ -11,6 +11,13 @@ class Project_editor
 				WHERE id = ".$projetId.";";
 				
 		$DB_temp->update($query);
+		
+		if ($ressource_id != null && $projetId != null)
+		{
+			$query_ressource = "INSERT INTO projets_ressources (ressource, projet) 
+								VALUES (".intval($ressource_id).", ".intval($projetId).");";
+			$DB_temp->insert($query_ressource);
+		}
 	}
 }
 ?>

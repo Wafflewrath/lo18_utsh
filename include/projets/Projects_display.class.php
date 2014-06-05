@@ -37,7 +37,7 @@ class Projects_display
 			$query_add = "";
 		}
 		
-		$query = "SELECT * FROM projets WHERE etat = " . $this->projetEtat_valide. " " . $query_add . " ORDER BY nom DESC LIMIT 0, 30;";
+		$query = "SELECT * FROM projets WHERE etat = " . $this->projetEtat_valide. " " . $query_add . " ORDER BY datecreation DESC LIMIT 0, 30;";
 		$raw_data = $DB_temp->select($query);
 		
 		if ($raw_data !== false)

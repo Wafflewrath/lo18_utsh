@@ -278,3 +278,7 @@ form .news_title.form input {
 	margin-top: 20px;
 	border-top: 1px solid grey;
 }
+
+.marge_gauche {
+	margin-left: 25px;
+}
