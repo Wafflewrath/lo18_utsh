@@ -1,6 +1,7 @@
 <?php include('header.php') ?>
 <?php include('include/Project_adapter.class.php') ?>
 <?php include('include/ressources/Ressources_display.class.php') ?>
+ <script src="ckeditor/ckeditor.js"></script>
 
 <body>
 
@@ -50,7 +51,7 @@
 									<input type="text" placeholder="Entrez le titre complet du projet" name="project_title_complet">
 								</div>
 								<div class="news_resume form">
-									<textarea name="project_resume" rows="6" cols="150" placeholder="Résumé du projet"></textarea>
+									<textarea id="project_resume" name="project_resume" rows="6" cols="150" placeholder="Résumé du projet"></textarea>
 								</div>
 								<div class="news_resume form">
 									<input type="text" placeholder="Lien vers le site" name="project_link" style="min-width:300px">
@@ -102,6 +103,7 @@
 						</div>
 						<br/>
 				</div>
+				<script type="text/javascript">CKEDITOR.replace( 'project_resume' );</script>
 				
 	<?php
 			}
