@@ -80,7 +80,8 @@ class News_display
 		echo "<a href='a_news_template.php?newsid=".$this->id[$index]."' class='en_savoir_plus'>Lire la suite</a>";
 		
 		global $user;
-		$editCommand = "echo \" - <a href='edit_form.php?newsedit=".$this->id[$index]."' class='en_savoir_plus'>Editer la News</a>\";";
+		$editCommand = "echo \" - <a href='edit_form.php?newsedit=".$this->id[$index]."' class='en_savoir_plus'>Editer la news</a>\";";
+		// $editCommand = "echo \" - <img src='images/edit.jpg' onclick='window.location.href=\"edit_form.php?newsedit=".$this->id[$index]."\"' class='en_savoir_plus'>Editer la news</a>\";";
 		$editCommand .= " echo \" - <a href='edit_form.php?newsdelete=".$this->id[$index]."' class='en_savoir_plus'>Supprimer la News</a>\";";
 		$Privilege_manager = new Privilege($user->data['user_id']);
 		$Privilege_manager->execif_Admin($editCommand);

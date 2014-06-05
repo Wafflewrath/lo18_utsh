@@ -322,3 +322,9 @@ form .news_title.form input {
 	padding-top:10px;
 	padding-bottom:5px;
 }
+
+#edit_logo {
+	background-image: url('images/edit.jpg');
+	height:40px;
+	width:40px;
+}
