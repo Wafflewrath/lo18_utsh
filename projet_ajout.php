@@ -84,7 +84,6 @@
 									var compteur = 1;
 									function add_ress()
 									{
-										console.log('test');
 										var div = $('#divID');
 										div.append('<br/><br/><select name="ressource_link'+compteur+'" style="width:250px">' + '<?php 
 																				$res = new Ressources_display("datecreation");

@@ -63,6 +63,18 @@ class Project_adapter
 				$ress_id = $_POST['ressource_link'];
 			}
 			
+			for ($c = 1; $c < 100; $c++)
+			{
+				if (isset($_POST['ressource_link'.$c]) && $_POST['ressource_link'.$c] != 0)
+				{
+					$ress_id = $ress_id . "-" . $_POST['ressource_link'.$c];
+				}
+				else
+				{
+					$c = 100;
+				}
+			}
+			
 			$project_resume = htmlspecialchars($_POST['project_resume'], ENT_QUOTES);
 			$project_title_complet = htmlspecialchars($_POST['project_title_complet'], ENT_QUOTES);
 			$projectTitle = htmlspecialchars($_POST['project_title'], ENT_QUOTES);
