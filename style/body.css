@@ -191,6 +191,10 @@ body {
 	padding-top: 10px;
 }
 
+.a_project:hover, .a_ressource:hover {
+	background-color: rgb(241, 194, 106);
+}
+
 .one_ressource {
 	padding-bottom: 10px;
 	padding-top: 10px;
