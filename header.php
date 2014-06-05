@@ -1,24 +1,17 @@
-<!--sessions etc... -->
 <?php 
 	define('IN_PHPBB', true);
 	$phpbb_root_path = './forum/'; // changer path par le nom du dossier de votre forum.
 	$phpEx = substr(strrchr(__FILE__, '.'), 1);
 	include($phpbb_root_path . 'common.' .$phpEx);
 	$user->session_begin();
-?>
-
-<?php
 	session_start();
 	$_SESSION['return_page'] = $_SERVER['REQUEST_URI'];
-?>
-
-<?php include('include.php') ?>
-
-<?php // Classe à utiliser pour les executions et affichages selon les droits sur le site
+    include('include.php');
+    // Classe à utiliser pour les executions et affichages selon les droits sur le site
 	$Privilege_manager = new Privilege($user->data['user_id']);
 ?>
-
-<meta charset="utf-8">
+<!DOCTYPE html>
+<html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title>UTSH</title>
@@ -65,4 +58,3 @@
 
 		<div class="image_en_tete col-lg-12"></div>
 	</header>
-</body>
