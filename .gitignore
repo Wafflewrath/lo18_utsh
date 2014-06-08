@@ -217,6 +217,4 @@ pip-log.txt
 
 */cache
 
-forum/cache/data_bots.php
-forum/cache/data_hooks.php
-forum/cache/sql_9dc91161799801b44926b824ccc5cf51.php
+forum/cache/
