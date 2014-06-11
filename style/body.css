@@ -226,6 +226,7 @@ body {
 
 .en_savoir_plus {
 	color:red;
+	font-weight: bold;
 	text-align: left;
 }
 
@@ -244,6 +245,7 @@ form .news_title.form input {
 
 .createnews_link {
 	color: red;
+	font-weight: bold;
 }
 
 .ressource_type {
