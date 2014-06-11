@@ -118,7 +118,7 @@ else if (isset($_GET['presentation_edit']))
 	        					{
 	        						language: "fr",
 	        						today: true,
-	        						nav_icon: { prev: '<i class="fa fa-chevron-circle-left"></i>', next: '<i class="fa fa-chevron-circle-right"></i>' },
+	        						nav_icon: { prev: '<span class="glyphicon glyphicon-chevron-left"></span>', next: '<span class="glyphicon glyphicon-chevron-right"></span>' },
 	        						ajax: { url: "jsonTest/json.json", modal: true }
 	    						}
 	    	);

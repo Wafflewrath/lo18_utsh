@@ -11,7 +11,7 @@ class News_adapter
 	private $class_type;
 	
 	private $newsEtat_valide = 1;
-	private $newsDisplayNumber = 6;
+	private $newsDisplayNumber = 3;
 
 	function __construct()
 	{	
@@ -95,7 +95,7 @@ class News_adapter
 				$newsPage = 1;
 			}
 			if (preg_match('/\/lo18_utsh\/news.php.*/', $_SERVER['REQUEST_URI'])) {
-				$this->newsDisplayNumber = 5;
+				$this->newsDisplayNumber = 3;
 			}
 			$this->news_class = new News_display($this->newsDisplayNumber, $newsPage);
 		}

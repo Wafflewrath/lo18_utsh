@@ -16,6 +16,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title>UTSH</title>
 	<link rel="stylesheet" type="text/css" href="./style/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="./style/bootstrap-theme.min.css" />
 	<link rel="stylesheet" type="text/css" href="./style/footer.css" />
 	<link rel="stylesheet" type="text/css" href="./style/body.css" />
 	<link rel="stylesheet" type="text/css" href="./style/header.css" />
