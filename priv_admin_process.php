@@ -24,8 +24,6 @@
 						$user_id = intval($_POST['user_select']);
 						$PrivClass->addas_Visitor($user_id);
 						break;
-						
-					echo 'dans addas';
 				}
 			}
 			else
@@ -44,10 +42,10 @@
 						$user_id = intval($_POST['user_select']);
 						$PrivClass->changeto_Visitor($user_id);
 						break;
-					
-					echo 'dans changeto';
 				}
 			}
+			
+			redirect($_SERVER['REQUEST_URI']."/../index.php");
 		}
 		else
 		{

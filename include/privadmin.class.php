@@ -26,9 +26,7 @@ class Privilege_Administration
 	
 	public function getFormData()
 	{
-		$query = "SELECT user_id, username FROM phpbb_users WHERE user_email <> \"\" ORDER BY username ASC;";
-		
-		/* AND user_id <> ".$this->current_user." */
+		$query = "SELECT user_id, username FROM phpbb_users WHERE user_email <> \"\" AND user_id <> ".$this->current_user." ORDER BY username ASC;";
 
 		$res = $this->DB->select($query, 'lo18');
 		
