@@ -19,7 +19,7 @@ class Privilege
 		$res = $DB->select($query);
 		
 		if ($res != false && count($res) != 0)
-			$this->privilege = $res[0]['id'];
+			$this->privilege = $res[0]['priv_id'];
 		else
 			$this->privilege = 3;
 	}

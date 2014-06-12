@@ -52,7 +52,6 @@ class Database
 		$this->initDatabase($dbname);
 		
 		$result = $this->Database->query($request);
-		// var_dump($request);
 		
 		if (!$result)
 			return false;

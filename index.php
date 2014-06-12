@@ -106,7 +106,10 @@ else if (isset($_GET['presentation_edit']))
 					}
 				?>
 			</div>
-			<div class=<?php echo '"tuile tuiletitle alone'; if(! $user->data['is_registered']){ echo ' desactivate"'; } else { echo 'onclick="window.location.href=\'ressources.php\';';} ?>>Liens / Ressources</div>
+			<div class=<?php echo '"tuile tuiletitle alone'; if(! $user->data['is_registered']){ echo ' desactivate"'; } else { echo '" onclick="window.location.href=\'ressources.php\';"';} ?>>Liens / Ressources</div>
+			
+			<div class="tuile tuiletitle alone" onclick="window.location.href='priv_admin_form.php';">Administration</div>
+			
 			<?php if(!$user->data['is_registered']) include('calendar.php'); ?>
 		</div>	
 	</div>
