@@ -81,8 +81,8 @@ else if (isset($_GET['presentation_edit']))
 					if($user->data['is_registered'])
 					{
 						// j’utilise ici les fonctions interne à phpBB3 pour interroger la base de donnée sur le nombre de nouveaux message.
-						$nb_new_msg =$db->sql_query("SELECT COUNT(msg_id) AS nb FROM phpbb_privmsgs_to WHERE user_id='".$user->data['user_id']."' AND pm_new=1 LIMIT 1");
-						$nb_new_msg =$db->sql_fetchrow($nb_new_msg);
+						//$nb_new_msg =$db->sql_query("SELECT COUNT(msg_id) AS nb FROM phpbb_privmsgs_to WHERE user_id='".$user->data['user_id']."' AND pm_new=1 LIMIT 1");
+						//$nb_new_msg =$db->sql_fetchrow($nb_new_msg);
 						$javascript_to_add = "window.location.href='".$phpbb_root_path."ucp.php?mode=logout&redir=1&sid=".$user->session_id."'";
 						echo '<div class="tuile tuiletitle alone" onclick="'.$javascript_to_add.'">';
 						echo 'Déconnexion';
