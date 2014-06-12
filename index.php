@@ -40,6 +40,10 @@ else if (isset($_GET['presentation_edit']))
 {
 	echo '<div class="alert alert-success">La présentation a bien été mise à jour</div>';
 }
+else if (isset($_GET['contactEdit']))
+{
+	echo '<div class="alert alert-success">Le contact a bien été mis à jour</div>';
+}
 ?>
 
 	<div class="content row">
