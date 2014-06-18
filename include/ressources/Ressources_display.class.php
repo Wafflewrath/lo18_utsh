@@ -22,50 +22,78 @@ class Ressources_display
 	private $actualPage;
 	private $displayedNumber = 6;
 
-	function __construct($filtre, $page)
-	{
-		$initialNumber = ($page - 1) * $this->displayedNumber;
-		$finalNumber = $initialNumber + $this->displayedNumber;
-		$this->actualPage = $page;
-
-		$DB_temp = new Database;
-		if ($filtre == "datecreation" || $filtre == "type" || $filtre == "titre") {
-			$query = "SELECT ressources.id, titre, datecreation, ressources.ressource_name, nom_ressource FROM ressources INNER JOIN type_ressources ON ressources.type = type_ressources.id WHERE etat = " . $this->ressourceEtat_valide. " ORDER BY " . $filtre . " DESC LIMIT ".$initialNumber. ",".$this->displayedNumber .";";
-		}
-		else {
-			$query = "SELECT ressources.id, titre, datecreation, ressources.ressource_name, type_ressources.nom_ressource FROM ressources INNER JOIN type_ressources ON ressources.type = type_ressources.id WHERE etat = " . $this->ressourceEtat_valide. " AND nom_ressource = '" . $filtre . "' ORDER BY datecreation DESC LIMIT ".$initialNumber. ",".$this->displayedNumber .";";
-		}
-
-		$raw_data = $DB_temp->select($query);
-		
-		if ($raw_data !== false)
+	function __construct($filtre, $page = -99)
+	{	
+		if ($page != -99) // IF ELSE CRADE, mais moins que le refactor du code pour le link/unlink des ressources
 		{
-			$this->nombre_ressources_affiche = count($raw_data);
-			for ($i = 0; $i < $this->nombre_ressources_affiche; $i++)
+			$initialNumber = ($page - 1) * $this->displayedNumber;
+			$finalNumber = $initialNumber + $this->displayedNumber;
+			$this->actualPage = $page;
+
+			$DB_temp = new Database;
+			if ($filtre == "datecreation" || $filtre == "type" || $filtre == "titre") {
+				$query = "SELECT ressources.id, titre, datecreation, ressources.ressource_name, nom_ressource FROM ressources INNER JOIN type_ressources ON ressources.type = type_ressources.id WHERE etat = " . $this->ressourceEtat_valide. " ORDER BY " . $filtre . " DESC LIMIT ".$initialNumber. ",".$this->displayedNumber .";";
+			}
+			else {
+				$query = "SELECT ressources.id, titre, datecreation, ressources.ressource_name, type_ressources.nom_ressource FROM ressources INNER JOIN type_ressources ON ressources.type = type_ressources.id WHERE etat = " . $this->ressourceEtat_valide. " AND nom_ressource = '" . $filtre . "' ORDER BY datecreation DESC LIMIT ".$initialNumber. ",".$this->displayedNumber .";";
+			}
+
+			$raw_data = $DB_temp->select($query);
+			
+			if ($raw_data !== false)
 			{
-				$this->id[$i] = $raw_data[$i]['id'];
-				$this->title[$i] = $raw_data[$i]['titre'];
-				$this->datecreation[$i] = $raw_data[$i]['datecreation'];
-				$this->nom[$i] = $raw_data[$i]['ressource_name'];
-				$this->type[$i] = $raw_data[$i]['nom_ressource'];
+				$this->nombre_ressources_affiche = count($raw_data);
+				for ($i = 0; $i < $this->nombre_ressources_affiche; $i++)
+				{
+					$this->id[$i] = $raw_data[$i]['id'];
+					$this->title[$i] = $raw_data[$i]['titre'];
+					$this->datecreation[$i] = $raw_data[$i]['datecreation'];
+					$this->nom[$i] = $raw_data[$i]['ressource_name'];
+					$this->type[$i] = $raw_data[$i]['nom_ressource'];
+				}
+			}
+			else
+			{
+				$this->title[0] = "Aucune Ressource";
+				$this->datecreation[0] = "Il n'y a actuellement aucune ressource !";
+				$this->type[0] = "";
+			}
+
+			$queryCount = "SELECT count(*) as counter FROM ressources;";
+			$raw_data = $DB_temp->select($queryCount);
+			
+			if ($raw_data !== false)
+			{
+				$this->nombreTotal = $raw_data[0]['counter'];
+				$this->pageTotal = $this->nombreTotal / $this->displayedNumber;
+				if($this->nombreTotal / $this->displayedNumber != 0) {
+					$this->pageTotal += 1;
+				}
 			}
 		}
 		else
 		{
-			$this->title[0] = "Aucune Ressource";
-			$this->datecreation[0] = "Il n'y a actuellement aucune ressource !";
-			$this->type[0] = "";
-		}
-
-		$queryCount = "SELECT count(*) as counter FROM ressources;";
-		$raw_data = $DB_temp->select($queryCount);
-		
-		if ($raw_data !== false)
-		{
-			$this->nombreTotal = $raw_data[0]['counter'];
-			$this->pageTotal = $this->nombreTotal / $this->displayedNumber;
-			if($this->nombreTotal / $this->displayedNumber != 0) {
-				$this->pageTotal += 1;
+			$DB_temp = new Database;
+			$query = "SELECT ressources.id, titre, datecreation, ressources.ressource_name, nom_ressource FROM ressources INNER JOIN type_ressources ON ressources.type = type_ressources.id WHERE etat = " . $this->ressourceEtat_valide. " ORDER BY datecreation DESC;";
+			
+			$raw_data = $DB_temp->select($query);
+			if ($raw_data !== false)
+			{
+				$this->nombre_ressources_affiche = count($raw_data);
+				for ($i = 0; $i < $this->nombre_ressources_affiche; $i++)
+				{
+					$this->id[$i] = $raw_data[$i]['id'];
+					$this->title[$i] = $raw_data[$i]['titre'];
+					$this->datecreation[$i] = $raw_data[$i]['datecreation'];
+					$this->nom[$i] = $raw_data[$i]['ressource_name'];
+					$this->type[$i] = $raw_data[$i]['nom_ressource'];
+				}
+			}
+			else
+			{
+				$this->title[0] = "Aucune Ressource";
+				$this->datecreation[0] = "Il n'y a actuellement aucune ressource !";
+				$this->type[0] = "";
 			}
 		}
 	}
