@@ -25,7 +25,7 @@ class Reu_generation
 			$value = $value . "{" . '"date":"' . $calendrier['date'] . '",';
 			$value = $value . '"badge":"true",';
 			$value = $value . '"title":"' . $calendrier['nomreunion'] . '",';
-			$value = $value . '"body":"' . $calendrier['contenu'] . '",';
+			$value = $value . '"body":"' . $this->removeAntiSlashN($calendrier['contenu']) . '",';
 			$value = $value . '"footer":"' . $calendrier['lieu'] . '",';
 			$value = $value . '"classname":"purple-event"';
 			$value = $value . "}";
@@ -45,5 +45,10 @@ class Reu_generation
 		fclose($monfichier);
 
 	}
+
+	function removeAntiSlashN($string) {
+		return preg_replace("/(\r\n|\n|\r)/", " ", $string);
+	}
+
 }
 ?>

@@ -24,7 +24,7 @@
 	<link rel="shortcut icon" href="./style/images/LogoMini.png">
 	<script type="text/JavaScript" src="js/jquery.js"></script>
 	<script type="text/JavaScript" src="js/bootstrap.min.js"></script>
-	<script src="js/zabuto_calendar.min.js"></script>
+	<script type="text/JavaScript" src="js/zabuto_calendar.min.js"></script>
 </head>
 <body>
 	<header>
