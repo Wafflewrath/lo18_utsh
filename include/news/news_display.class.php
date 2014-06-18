@@ -101,20 +101,33 @@ class News_display
 		if (preg_match('/\/lo18_utsh\/news.php.*/', $_SERVER['REQUEST_URI']) && $this->nombreTotal > $this->displayedNumber) {
 				echo '<ul class="pagination">';
 				if ($this->actualPage == 1) {
-					echo '<li><a class="disabled" href="#">&laquo;</a></li>';
-					echo '<li><a class="active" href="news.php?newsPage=1">1</a></li>';
+					echo '<li class="disabled"><a href="#">&laquo;</a></li>';
+					echo '<li class="active"><a href="news.php?newsPage=1">1</a></li>';
 					echo '<li><a href="news.php?newsPage=2">2</a></li>';
+					if ($this->pageTotal > 3) {
+						echo '<li><a href="news.php?newsPage=3">3</a></li>';
+
+					}
 					echo '<li><a href="news.php?newsPage=2">&raquo;</a></li>';
+					
 
 				}
 				else {
 					$precedent = $this->actualPage -1;
 					$future = $this->actualPage + 1;
-					echo '<li><a href="news.php?newsPage=' . $precedent . '">&laquo;</a></li>';
-					echo '<li><a href="news.php?newsPage=' . $precedent . '">' . $precedent . '</a></li>';
-					echo '<li><a class="active" href="news.php?newsPage=' . $this->actualPage . '">'.$this->actualPage.'</a></li>';
-					echo '<li><a href="news.php?newsPage=' . $future . '">' . $future . '</a></li>';
-					echo '<li><a href="news.php?newsPage=' . $future. '">&raquo;</a></li>';
+					if ($future > $this->pageTotal) {
+						echo '<li><a href="news.php?newsPage=' . $precedent . '">&laquo;</a></li>';
+						echo '<li><a href="news.php?newsPage=' . $precedent . '">' . $precedent . '</a></li>';
+						echo '<li class="active"><a href="news.php?newsPage=' . $this->actualPage . '">'.$this->actualPage.'</a></li>';
+						echo '<li class="disabled"><a href="#">&raquo;</a></li>';
+					}
+					else {
+						echo '<li><a href="news.php?newsPage=' . $precedent . '">&laquo;</a></li>';
+						echo '<li><a href="news.php?newsPage=' . $precedent . '">' . $precedent . '</a></li>';
+						echo '<li class="active"><a href="news.php?newsPage=' . $this->actualPage . '">'.$this->actualPage.'</a></li>';
+						echo '<li><a href="news.php?newsPage=' . $future . '">' . $future . '</a></li>';
+						echo '<li><a href="news.php?newsPage=' . $future. '">&raquo;</a></li>';
+					}
 				}
 				
 				echo '</ul>';

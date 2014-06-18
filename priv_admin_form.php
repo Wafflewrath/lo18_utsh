@@ -57,7 +57,7 @@
 		}
 		else
 		{
-			redirect($_SERVER['REQUEST_URI']."/../index.php");
+			redirect($_SERVER['REQUEST_URI']."/../index.php?forbidden=1");
 		}
 	?>
 
