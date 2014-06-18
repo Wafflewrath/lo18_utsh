@@ -16,10 +16,12 @@
 							<br />
 								<form action="priv_admin_process.php" method="post">
 									<div class="radioform">
+									<label>Accorder les droits :</label><br/>
 									<input type="radio" name="privilege" value="1"> Administrateur<br/>
 									<input type="radio" name="privilege" value="2"> Utilisateur enregistré<br/>
 									<input type="radio" name="privilege" value="3"> Visiteur<br/>
 									</div>
+									<label>Pour l'utilisateur : </label>
 									<select name="user_select" style="width:250px">
 										<?php 
 											$res = new Privilege_Administration($user->data['user_id']);
@@ -52,6 +54,32 @@
 							<br/>
 					</div>
 				</div>
+				
+				<div class="tuile_container col-lg-12" style="border-bottom:1px solid black; margin-bottom:10px;">
+					<div class="tuile_container col-lg-6" style="margin-bottom: 20px;">
+						<div class="lineHeader">
+							<h2>Administration actuelle</h2>
+							<span style="font-style: italic;">Nom utilisateur : Privilège</span>
+						</div>
+						<div>
+							<?php
+								$res->displayElevatedUsers("1");
+							?>
+						</div>
+					</div>
+					<div class="tuile_container col-lg-6" style="margin-bottom: 20px;">
+						<div class="lineHeader">
+							<h2>Utilisateurs actuels</h2>
+							<span style="font-style: italic;">Nom utilisateur : Privilège</span>
+						</div>
+						<div>
+							<?php
+								$res->displayElevatedUsers("2");
+							?>
+						</div>
+					</div>
+				</div>
+				<br/>
 				
 	<?php
 		}

@@ -90,6 +90,41 @@ class Privilege_Administration
 		else
 			return false;
 	}
+	
+	public function displayElevatedUsers($priv_id)
+	{
+		$query = "SELECT * FROM siteprivilege WHERE priv_id = ".$priv_id." AND etat = 1 ORDER BY priv_id ASC;";
+
+		$res = $this->DB->select($query, 'admin');
+		
+		if ($res != false && count($res) != 0)
+		{
+			for($i = 0; $i < count($res); $i++)
+			{
+				$username = $this->usernameInterDBInnerJoin($res[$i]['fk_user']);
+				if ($username != "")
+				{
+					echo '<div><span style="font-weight:bold">'.$username.'</span> : '.$res[$i]['nompriviliege'].'</div>';
+				}
+			}
+		}
+		else
+		{
+			echo '<div><span style="font-weight:bold">Aucun utilisateurs trouvé pour ce type de Privilège</span></div>';
+		}
+	}
+	
+	private function usernameInterDBInnerJoin($user_id)
+	{
+		$query = "SELECT * FROM phpbb_users WHERE user_id = ".$user_id.";";
+
+		$res = $this->DB->select($query, 'lo18');
+		
+		if ($res != false && count($res) != 0)
+		{
+			return $res[0]['username'];
+		}
+	}
 }
 
 
