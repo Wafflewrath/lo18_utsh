@@ -10,7 +10,7 @@
 			{
 				echo "lolilol";
 				$news = new Ressource_adder();
-				redirect($_SERVER['REQUEST_URI']."/../index.php");
+				redirect($_SERVER['REQUEST_URI']."/../index.php?ressourceUpload=1");
 				die();
 			}
 

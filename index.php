@@ -44,6 +44,10 @@ else if (isset($_GET['contactEdit']))
 {
 	echo '<div class="alert alert-success">Le contact a bien été mis à jour</div>';
 }
+else if (isset($_GET['ressourceUpload']))
+{
+	echo '<div class="alert alert-success">Votre ressource à bien été envoyée au serveur</div>';
+}
 ?>
 
 	<div class="content row">
