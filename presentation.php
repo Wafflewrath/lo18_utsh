@@ -10,6 +10,12 @@
 			<div class="lineHeader">
 				<h2>Présentation</h2>
 			</div>
+			<?php if($Privilege_manager->execif_Admin("") == true) {
+				echo '<div>';
+				echo '<a href="edit_presentation.php" class="createnews_link">Éditer la présentation</a>';
+				echo '</div>';
+			}
+			?>
 			<div class="presentation">
 				<?php 
 					$pres = new Presentation_display();
