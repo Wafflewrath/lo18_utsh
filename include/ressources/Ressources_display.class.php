@@ -17,18 +17,25 @@ class Ressources_display
 	public $nombre_ressources_affiche = 0;
 	
 	private $ressourceEtat_valide = 1;
+	private $nombreTotal;
+	private $pageTotal;
+	private $actualPage;
+	private $displayedNumber = 6;
 
-	function __construct($filtre)
+	function __construct($filtre, $page)
 	{
+		$initialNumber = ($page - 1) * $this->displayedNumber;
+		$finalNumber = $initialNumber + $this->displayedNumber;
+		$this->actualPage = $page;
+
 		$DB_temp = new Database;
 		if ($filtre == "datecreation" || $filtre == "type" || $filtre == "titre") {
-			$query = "SELECT ressources.id, titre, datecreation, ressources.ressource_name, nom_ressource FROM ressources INNER JOIN type_ressources ON ressources.type = type_ressources.id WHERE etat = " . $this->ressourceEtat_valide. " ORDER BY " . $filtre . " DESC LIMIT 0, 30;";
+			$query = "SELECT ressources.id, titre, datecreation, ressources.ressource_name, nom_ressource FROM ressources INNER JOIN type_ressources ON ressources.type = type_ressources.id WHERE etat = " . $this->ressourceEtat_valide. " ORDER BY " . $filtre . " DESC LIMIT ".$initialNumber. ",".$this->displayedNumber .";";
 		}
 		else {
-			$query = "SELECT ressources.id, titre, datecreation, ressources.ressource_name, type_ressources.nom_ressource FROM ressources INNER JOIN type_ressources ON ressources.type = type_ressources.id WHERE etat = " . $this->ressourceEtat_valide. " AND nom_ressource = '" . $filtre . "' ORDER BY datecreation DESC LIMIT 0, 30;";
+			$query = "SELECT ressources.id, titre, datecreation, ressources.ressource_name, type_ressources.nom_ressource FROM ressources INNER JOIN type_ressources ON ressources.type = type_ressources.id WHERE etat = " . $this->ressourceEtat_valide. " AND nom_ressource = '" . $filtre . "' ORDER BY datecreation DESC LIMIT ".$initialNumber. ",".$this->displayedNumber .";";
 		}
 
-		// echo $query;
 		$raw_data = $DB_temp->select($query);
 		
 		if ($raw_data !== false)
@@ -48,6 +55,18 @@ class Ressources_display
 			$this->title[0] = "Aucune Ressource";
 			$this->datecreation[0] = "Il n'y a actuellement aucune ressource !";
 			$this->type[0] = "";
+		}
+
+		$queryCount = "SELECT count(*) as counter FROM ressources;";
+		$raw_data = $DB_temp->select($queryCount);
+		
+		if ($raw_data !== false)
+		{
+			$this->nombreTotal = $raw_data[0]['counter'];
+			$this->pageTotal = $this->nombreTotal / $this->displayedNumber;
+			if($this->nombreTotal / $this->displayedNumber != 0) {
+				$this->pageTotal += 1;
+			}
 		}
 	}
 	
@@ -84,6 +103,40 @@ class Ressources_display
 				
 			echo '</div>';
 		}
+		if (preg_match('/\/lo18_utsh\/ressources.php.*/', $_SERVER['REQUEST_URI']) && $this->nombreTotal > $this->displayedNumber) {
+				echo '<ul class="pagination">';
+				if ($this->actualPage == 1) {
+					echo '<li class="disabled"><a href="#">&laquo;</a></li>';
+					echo '<li class="active"><a href="ressources.php?page=1">1</a></li>';
+					echo '<li><a href="ressources.php?page=2">2</a></li>';
+					if ($this->pageTotal > 3) {
+						echo '<li><a href="ressources.php?page=3">3</a></li>';
+
+					}
+					echo '<li><a href="ressources.php?page=2">&raquo;</a></li>';
+					
+
+				}
+				else {
+					$precedent = $this->actualPage -1;
+					$future = $this->actualPage + 1;
+					if ($future > $this->pageTotal) {
+						echo '<li><a href="ressources.php?page=' . $precedent . '">&laquo;</a></li>';
+						echo '<li><a href="ressources.php?page=' . $precedent . '">' . $precedent . '</a></li>';
+						echo '<li class="active"><a href="ressources.php?page=' . $this->actualPage . '">'.$this->actualPage.'</a></li>';
+						echo '<li class="disabled"><a href="#">&raquo;</a></li>';
+					}
+					else {
+						echo '<li><a href="ressources.php?page=' . $precedent . '">&laquo;</a></li>';
+						echo '<li><a href="ressources.php?page=' . $precedent . '">' . $precedent . '</a></li>';
+						echo '<li class="active"><a href="ressources.php?page=' . $this->actualPage . '">'.$this->actualPage.'</a></li>';
+						echo '<li><a href="ressources.php?page=' . $future . '">' . $future . '</a></li>';
+						echo '<li><a href="ressources.php?page=' . $future. '">&raquo;</a></li>';
+					}
+				}
+				
+				echo '</ul>';
+			}
 	}
 }
 ?>

@@ -61,12 +61,18 @@
 			?>
 
 			<?php 
+			if (! isset($_GET['page'])) {
+				$page = 1;
+			}
+			else {
+				$page = intval($_GET['page']);
+			}
 			if ($_POST['filtre'] != null) {
-				$res = new Ressources_display(htmlspecialchars($_POST['filtre']));
+				$res = new Ressources_display(htmlspecialchars($_POST['filtre']), $page);
 				$res->displayRessources();
 			}
 			else {
-				$res = new Ressources_display("datecreation");
+				$res = new Ressources_display("datecreation", $page);
 				$res->displayRessources();
 			}
 			

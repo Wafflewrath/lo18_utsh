@@ -95,7 +95,7 @@ class News_adapter
 				$newsPage = 1;
 			}
 			if (preg_match('/\/lo18_utsh\/news.php.*/', $_SERVER['REQUEST_URI'])) {
-				$this->newsDisplayNumber = 3;
+				$this->newsDisplayNumber = 6;
 			}
 			$this->news_class = new News_display($this->newsDisplayNumber, $newsPage);
 		}

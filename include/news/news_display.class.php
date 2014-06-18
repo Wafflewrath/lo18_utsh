@@ -30,8 +30,8 @@ class News_display
 		$this->actualPage = $page;
 
 		$DB_temp = new Database;
-		$query = "SELECT id, titre, contenu, contenuresume, datecreation FROM news WHERE etat = " . $this->newsEtat_valide. " ORDER BY id DESC LIMIT " . $initialNumber . ", " . $finalNumber . ";";
-
+		$query = "SELECT id, titre, contenu, contenuresume, datecreation FROM news WHERE etat = " . $this->newsEtat_valide. " ORDER BY id DESC LIMIT " . $initialNumber . ", " . $this->displayedNumber . ";";
+		
 		$raw_data = $DB_temp->select($query);
 
 		if ($raw_data !== false)
@@ -61,6 +61,9 @@ class News_display
 		{
 			$this->nombreTotal = $raw_data[0]['counter'];
 			$this->pageTotal = $this->nombreTotal / $displayedNumber;
+			if($this->nombreTotal / $this->displayedNumber != 0) {
+				$this->pageTotal += 1;
+			}
 		}
 	}
 	
