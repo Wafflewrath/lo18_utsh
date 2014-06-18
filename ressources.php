@@ -1,6 +1,7 @@
 <?php include('header.php') ?>
 <?php include('include/ressources/Ressources_display.class.php') ?>
 <?php include('include/ressources/Ressource_type_display.class.php') ?>
+<?php include('include/ressources/Ressource_delete.class.php') ?>
 
 <?php
 	// si l'utilisateur est connecté, on affiche la page, sinon on le redirige
@@ -8,8 +9,12 @@
 	{
 		redirect($_SERVER['REQUEST_URI']."/../index.php?forbidden=1");
 	}
-?>
 
+if (isset($_GET['del']))
+{
+	echo '<div class="alert alert-success">La ressource a bien été supprimée.</div>';
+}
+?>
 	<div class="content row">
 		<ol class="breadcrumb">
 		  <li><a href="index.php">Accueil</a></li>
