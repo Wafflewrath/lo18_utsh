@@ -111,7 +111,7 @@ class Projects_template
 
 	private function printUrl($index) {
 		if ($this->url[$index] != "") {
-			echo "<div class='proj_url'><a href=\"" . $this->url[$index] . "\">lien vers le site</a></div>";
+			echo "<div class='proj_url'><a href=\"" . $this->url[$index] . "\" target='_blank'>lien vers le site</a></div>";
 		}
 	}
 	

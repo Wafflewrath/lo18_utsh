@@ -66,7 +66,7 @@ else if (isset($_GET['ressourceUpload']))
 						{
 							$pres->display();
 						}
-						$Privilege_manager->execif_Admin("echo '</br><a href=\"edit_pres.php\" class=\"createnews_link\">Editer</a>';")
+						$Privilege_manager->execif_Admin("echo '</br><a href=\"edit_pres.php\" class=\"createnews_link\">Editer</a>';");
 					?>
 				</div>
 			</div>
@@ -80,7 +80,7 @@ else if (isset($_GET['ressourceUpload']))
 					$news = new News_adapter();
 					$news->displayNews();
 					
-					$Privilege_manager->execif_Admin("echo '<a href=\"edit_form.php\" class=\"createnews_link\">Créer une news</a>';")
+					$Privilege_manager->execif_Admin("echo '<a href=\"edit_form.php\" class=\"createnews_link\">Créer une news</a>';");
 				?>
 			</div>
 		</div>

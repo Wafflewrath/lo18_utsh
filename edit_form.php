@@ -11,13 +11,13 @@
 			if (isset($_POST['news_title']) && !isset($_POST['newsedit_id']))
 			{
 				$news = new News_adapter();
-				redirect($_SERVER['REQUEST_URI']."/../index.php");
+				redirect($_SERVER['REQUEST_URI']."/../index.php?newscreate=1");
 				die();
 			}
 			elseif (isset($_POST['newsedit_id']))
 			{
 				$news = new News_adapter();
-				redirect($_SERVER['REQUEST_URI']."/../index.php");
+				redirect($_SERVER['REQUEST_URI']."/../index.php?newsedit=1");
 				die();
 			}
 			elseif (isset($_GET['newsedit']))
