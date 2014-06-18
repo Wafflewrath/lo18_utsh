@@ -47,7 +47,7 @@ class Reu_generation
 	}
 
 	function removeAntiSlashN($string) {
-		return preg_replace("/(\r\n|\n|\r| |\t)/", "", $string);
+		return preg_replace("/(\r\n|\n|\r|\t)/", "", $string);
 	}
 
 }
