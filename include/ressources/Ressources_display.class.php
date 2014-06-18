@@ -132,7 +132,7 @@ class Ressources_display
 			echo '</div>';
 		}
 		if (preg_match('/\/lo18_utsh\/ressources.php.*/', $_SERVER['REQUEST_URI']) && $this->nombreTotal > $this->displayedNumber) {
-				echo '<ul class="pagination">';
+				echo '<div class="col-lg-12"><ul class="pagination">';
 				if ($this->actualPage == 1) {
 					echo '<li class="disabled"><a href="#">&laquo;</a></li>';
 					echo '<li class="active"><a href="ressources.php?page=1">1</a></li>';
@@ -163,7 +163,7 @@ class Ressources_display
 					}
 				}
 				
-				echo '</ul>';
+				echo '</ul></div>';
 			}
 	}
 }
