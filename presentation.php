@@ -12,7 +12,7 @@
 			</div>
 			<?php if($Privilege_manager->execif_Admin("") == true) {
 				echo '<div>';
-				echo '<a href="edit_presentation.php" class="createnews_link">Éditer la présentation</a>';
+				echo '<a href="presentation_edit.php" class="createnews_link">Éditer la présentation</a>';
 				echo '</div>';
 			}
 			?>

@@ -15,7 +15,7 @@
 					</div>
 				</div>
 				<div class="col-lg-3 grptuile">
-					<div class="tuile login" onclick="window.location.href='<?php echo $phpbb_root_path . 'ucp.php?mode=login&redir=1' ; ?>'">
+					<div class="tuile login" onclick="window.location.href='<?php echo $phpbb_root_path . 'ucp.php?mode=register&redir=1' ; ?>'">
 						<div class="tuiletitle alone">Inscription</div>
 					</div>
 				</div>

@@ -5,5 +5,5 @@ Options All -Indexes
 
 AuthName "Mot de passe requis"
 AuthType Basic
-AuthUserFile "D:/wamp/www/lo18_utsh/.htpasswd"
+AuthUserFile "C:/wamp/www/lo18_utsh/.htpasswd"
 Require valid-user
