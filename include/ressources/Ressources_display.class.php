@@ -6,6 +6,7 @@
 // PROJET ==> page par projet  avec nom projet, texte, ressoucre, url...
 // status des projets (en cours, terminé, en attente validation)
 // calendrier grisé
+
 class Ressources_display
 {
 	public $id = array();
@@ -117,6 +118,16 @@ class Ressources_display
 	{
 		echo "<div class='ressource_link'><a href='././ressources/". $this->nom[$index] . "'>Télécharger la ressource</a></div>";
 	}
+
+	private function printDelete($index)
+	{
+		global $user;
+		$Privilege_manager = new Privilege($user->data['user_id']);
+		if($Privilege_manager->execif_Admin(" "))
+		{
+			echo "<div class='ressource_link'><a href='././res_delete.php?id=". $this->id[$index] . "'>Supprimer la ressource</a></div>";
+		}
+	}
 	
 	public function displayRessources()
 	{
@@ -127,7 +138,7 @@ class Ressources_display
 				$this->printDate($ressources_index);
 				$this->printType($ressources_index);
 				$this->printLink($ressources_index);
-				
+				$this->printDelete($ressources_index);
 				
 			echo '</div>';
 		}
