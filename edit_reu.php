@@ -52,7 +52,7 @@
 									<textarea id="reu_content" name="reu_content" rows="13" cols="150" placeholder="Contenu de l'évenement"></textarea>
 								</div>
 								<div class="news_resume form">
-									<input type="date" placeholder="Entrez la date" name="reu_date">
+									<input type="date" placeholder="Entrez la date" name="reu_date"><p>format AAAA-MM-JJ</p>
 								</div>
 								<input type="submit" value="Créer la réunion">
 							</form>

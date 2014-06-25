@@ -48,6 +48,10 @@ else if (isset($_GET['ressourceUpload']))
 {
 	echo '<div class="alert alert-success">Votre ressource à bien été envoyée au serveur</div>';
 }
+else if (isset($_GET['reuedit']))
+{
+	echo '<div class="alert alert-success">Votre réunion à bien été modifié</div>';
+}
 ?>
 
 	<div class="content row">

@@ -2,8 +2,3 @@ ErrorDocument 403 http://localhost:8080/lo18_utsh/index.php?error403=1
 ErrorDocument 404 http://localhost:8080/lo18_utsh/index.php?error404=1
 
 Options All -Indexes
-
-AuthName "Mot de passe requis"
-AuthType Basic
-AuthUserFile "D:/wamp/www/lo18_utsh/.htpasswd"
-Require valid-user
