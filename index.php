@@ -18,11 +18,11 @@ else if (isset($_GET['projetcreate']))
 }
 else if (isset($_GET['reucreate']))
 {
-	echo '<div class="alert alert-success">Votre évenement à bien été publiée</div>';
+	echo '<div class="alert alert-success">Votre évenement à bien été publié</div>';
 }
 else if (isset($_GET['projetedit']))
 {
-	echo '<div class="alert alert-success">Votre projet à bien été éditée</div>';
+	echo '<div class="alert alert-success">Votre projet à bien été édité</div>';
 }
 else if (isset($_GET['error404']))
 {

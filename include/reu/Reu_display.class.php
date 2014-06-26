@@ -63,8 +63,8 @@ class Reu_display
 		{
 			$this->nombreTotal = $raw_data[0]['counter'];
 			$this->pageTotal = $this->nombreTotal / $displayedNumber;
-			if($this->nombreTotal / $this->displayedNumber != 0) {
-				$this->pageTotal += 1;
+			if($this->nombreTotal % $this->displayedNumber != 0) {
+				$this->pageTotal = intval($this->pageTotal) + 1;
 			}
 		}
 	}
@@ -106,16 +106,22 @@ class Reu_display
 			
 		}
 		if ($this->pageTotal > 1) {
+			if (isset($_GET["getall"])) {
+				$adresse = "reu.php?getall=1&";
+			}
+			else {
+				$adresse = "reu.php?";
+			}
 			echo '<ul class="pagination">';
 			if ($this->actualPage == 1) {
 				echo '<li class="disabled"><a href="#">&laquo;</a></li>';
-				echo '<li class="active"><a href="reu.php?reuPage=1">1</a></li>';
-				echo '<li><a href="reu.php?reuPage=2">2</a></li>';
+				echo '<li class="active"><a href="'. $adresse .'reuPage=1">1</a></li>';
+				echo '<li><a href="'. $adresse .'reuPage=2">2</a></li>';
 				if ($this->pageTotal > 3) {
-					echo '<li><a href="reu.php?reuPage=3">3</a></li>';
+					echo '<li><a href="'. $adresse .'reuPage=3">3</a></li>';
 
 				}
-				echo '<li><a href="reu.php?reuPage=2">&raquo;</a></li>';
+				echo '<li><a href="'. $adresse .'reuPage=2">&raquo;</a></li>';
 				
 
 			}
@@ -123,17 +129,17 @@ class Reu_display
 				$precedent = $this->actualPage -1;
 				$future = $this->actualPage + 1;
 				if ($future > $this->pageTotal) {
-					echo '<li><a href="reu.php?reuPage=' . $precedent . '">&laquo;</a></li>';
-					echo '<li><a href="reu.php?reuPage=' . $precedent . '">' . $precedent . '</a></li>';
-					echo '<li class="active"><a href="reu.php?newsPage=' . $this->actualPage . '">'.$this->actualPage.'</a></li>';
+					echo '<li><a href="'. $adresse .'reuPage=' . $precedent . '">&laquo;</a></li>';
+					echo '<li><a href="'. $adresse .'reuPage=' . $precedent . '">' . $precedent . '</a></li>';
+					echo '<li class="active"><a href="'. $adresse .'newsPage=' . $this->actualPage . '">'.$this->actualPage.'</a></li>';
 					echo '<li class="disabled"><a href="#">&raquo;</a></li>';
 				}
 				else {
-					echo '<li><a href="reu.php?reuPage=' . $precedent . '">&laquo;</a></li>';
-					echo '<li><a href="reu.php?reuPage=' . $precedent . '">' . $precedent . '</a></li>';
-					echo '<li class="active"><a href="reu.php?reuPage=' . $this->actualPage . '">'.$this->actualPage.'</a></li>';
-					echo '<li><a href="reu.php?reuPage=' . $future . '">' . $future . '</a></li>';
-					echo '<li><a href="reu.php?reuPage=' . $future. '">&raquo;</a></li>';
+					echo '<li><a href="'. $adresse .'reuPage=' . $precedent . '">&laquo;</a></li>';
+					echo '<li><a href="'. $adresse .'reuPage=' . $precedent . '">' . $precedent . '</a></li>';
+					echo '<li class="active"><a href="'. $adresse .'reuPage=' . $this->actualPage . '">'.$this->actualPage.'</a></li>';
+					echo '<li><a href="'. $adresse .'reuPage=' . $future . '">' . $future . '</a></li>';
+					echo '<li><a href="'. $adresse .'reuPage=' . $future. '">&raquo;</a></li>';
 				}
 			}
 			

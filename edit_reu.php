@@ -24,7 +24,26 @@
 			{
 				$news = new Reu_adapter();
 			}
-			elseif (isset($_GET['reudelete']))
+			elseif (isset($_GET['reudelete']) && !isset($_GET['confirm']))
+			{
+				?>
+				<div class="tuile_container col-lg-12">
+						<div class="lineHeader">
+							<h2>Confirmer la suppression de l'évènement ?</h2>
+						</div>
+						<br />
+						<div class="news_actualite"> 
+							<form action="edit_reu.php" method="get" style="margin-bottom:15px;">
+							<input type="hidden" name="reudelete" value="<?php echo $_GET['reudelete']; ?>">
+							<input type="hidden" name="confirm" value="true">
+							<input type="submit" value="Supprimer l'évènement" style="margin-left:45%">
+							</form>
+						</div>
+						<br/>
+				</div>
+				<?php
+			}
+			elseif (isset($_GET['reudelete']) && isset($_GET['confirm']))
 			{
 				$news = new Reu_adapter();
 				header('Location: index.php?ck=0.1&reudelete=1'); //cache killer pour obfuscation du sid
