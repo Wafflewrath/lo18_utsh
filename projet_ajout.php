@@ -26,7 +26,26 @@
 			{
 				$news = new Project_adapter();
 			}
-			elseif (isset($_GET['projectdeleteid']))
+			elseif (isset($_GET['projectdeleteid']) && !isset($_GET['confirm']))
+			{
+				?>
+				<div class="tuile_container col-lg-12">
+						<div class="lineHeader">
+							<h2>Confirmer la suppression du Projet ?</h2>
+						</div>
+						<br />
+						<div class="news_actualite"> 
+							<form action="projet_ajout.php" method="get" style="margin-bottom:15px;">
+							<input type="hidden" name="projectdeleteid" value="<?php echo $_GET['projectdeleteid']; ?>">
+							<input type="hidden" name="confirm" value="true">
+							<input type="submit" value="Supprimer le projet" style="margin-left:45%">
+							</form>
+						</div>
+						<br/>
+				</div>
+				<?php
+			}
+			elseif (isset($_GET['projectdeleteid']) && isset($_GET['confirm']))
 			{
 				$news = new Project_adapter();
 				header('Location: projets.php?ck=0.1'); //cache killer pour obfuscation du sid

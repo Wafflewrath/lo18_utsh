@@ -28,6 +28,6 @@
 	$res->displayProjets();
 ?>
 		
-</div>	
+</div>
 
 <?php include('footer.php'); ?>
