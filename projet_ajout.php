@@ -48,8 +48,8 @@
 			elseif (isset($_GET['projectdeleteid']) && isset($_GET['confirm']))
 			{
 				$news = new Project_adapter();
-				header('Location: projets.php?ck=0.1'); //cache killer pour obfuscation du sid
-				die();
+				// header('Location: projets.php?ck=0.1'); //cache killer pour obfuscation du sid
+				die('<meta http-equiv="refresh" content="0;URL=index.php">');
 			}
 			else
 			{

@@ -60,7 +60,8 @@ if (!defined('PHPBB_INSTALLED'))
 	}
 
 	$url .= $script_path;
-	header('Location: ' . $url);
+	// header('Location: ' . $url);
+	die('<meta http-equiv="refresh" content="0;URL='.$url.'">');
 	exit;
 }
 

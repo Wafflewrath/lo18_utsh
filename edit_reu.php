@@ -46,7 +46,8 @@
 			elseif (isset($_GET['reudelete']) && isset($_GET['confirm']))
 			{
 				$news = new Reu_adapter();
-				header('Location: index.php?ck=0.1&reudelete=1'); //cache killer pour obfuscation du sid
+				// header('Location: index.php?ck=0.1&reudelete=1'); //cache killer pour obfuscation du sid
+				die('<meta http-equiv="refresh" content="0;URL=index.php?reudelete=1">');
 				die();
 			}
 			else

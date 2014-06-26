@@ -15,11 +15,13 @@
 							AND ressource = ".intval($_GET['id1']).";";
 				$DB_temp->delete($query);
 			}
-			header('Location: news.php?ck=0.1');
+			// header('Location: news.php?ck=0.1');
+			die('<meta http-equiv="refresh" content="0;URL=index.php">');
 		}
 		else
 		{
-			header('Location: news.php?ck=0.1');
+			// header('Location: news.php?ck=0.1');
+			die('<meta http-equiv="refresh" content="0;URL=index.php">');
 		}
 	?>
 	
