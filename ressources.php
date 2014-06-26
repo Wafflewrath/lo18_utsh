@@ -88,5 +88,13 @@ if (isset($_GET['del']))
 		</div>
 		
 	</div>	
+	
+	<script>
+		function confirm_del(id)
+		{
+			$('#res_del_'+id).text('').append('<a class="del_alert" href="././res_delete.php?id='+id+'">Souhaitez vous vraiment supprimer ce contenu ?</a>');
+			return false;
+		}
+	</script>
 
 <?php include('footer.php') ?>

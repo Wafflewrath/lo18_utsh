@@ -125,7 +125,8 @@ class Ressources_display
 		$Privilege_manager = new Privilege($user->data['user_id']);
 		if($Privilege_manager->execif_Admin(" "))
 		{
-			echo "<div class='ressource_link'><a href='././res_delete.php?id=". $this->id[$index] . "'>Supprimer la ressource</a></div>";
+			// echo "<div class='ressource_link'><a href='././res_delete.php?id=". $this->id[$index] . "'>Supprimer la ressource</a></div>";
+			echo "<div id='res_del_".$this->id[$index]."' class='ressource_link' onclick='confirm_del(".$this->id[$index].")'><a class='link'>Supprimer la ressource</a></div>";
 		}
 	}
 	
