@@ -54,7 +54,7 @@ class Presentation_accueil
 			$encode="SET NAMES 'utf8';";
 			$raw_data = $DB_temp->select($encode);
 			$query = "UPDATE presentation 
-					SET TextAccueil = '".html_entity_decode($_POST['presentation'], ENT_QUOTES, 'UTF-8')."';";
+					SET TextAccueil = '".htmlentities($_POST['presentation'], ENT_QUOTES, 'UTF-8')."';";
 			$DB_temp->insert($query);
 			redirect($_SERVER['REQUEST_URI']."/../index.php?presentation_edit=1");
 		}

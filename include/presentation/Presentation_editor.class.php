@@ -8,7 +8,7 @@ class Presentation_editor
 		if (isset($_POST['presentation'])) {
 			$DB_temp = new Database;
 			$query = "UPDATE presentation 
-					SET textpresentation = '".$_POST['presentation']."';";
+					SET textPresentation = '".$_POST['presentation']."';";
 			echo $_POST['presentation'];
 			$DB_temp->insert($query);
 			redirect($_SERVER['REQUEST_URI']."/../index.php?presentation_edit=1");
