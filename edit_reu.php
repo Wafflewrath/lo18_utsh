@@ -27,7 +27,7 @@
 			elseif (isset($_GET['reudelete']))
 			{
 				$news = new Reu_adapter();
-				redirect($_SERVER['REQUEST_URI']."/../index.php?reudelete=1");
+				header('Location: index.php?ck=0.1&reudelete=1'); //cache killer pour obfuscation du sid
 				die();
 			}
 			else
