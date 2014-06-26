@@ -2621,7 +2621,8 @@ function redirect($url, $return = false, $disable_cd_check = false)
 	}
 
 	// Behave as per HTTP/1.1 spec for others
-	header('Location: ' . $url);
+	// header('Location: ' . $url);
+	die('<meta http-equiv="refresh" content="0;URL='.$url.'">');
 	exit;
 }
 
