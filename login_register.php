@@ -27,8 +27,8 @@
 		}
 		else
 		{
-			header('Location: index.php?ck=0.1'); //cache killer pour obfuscation du sid
-			die();
+			// header('Location: index.php?ck=0.1'); //cache killer pour obfuscation du sid
+			die('<meta http-equiv="refresh" content="0;URL=index.php">');
 		}
 	?>
 <?php include('footer.php') ?>

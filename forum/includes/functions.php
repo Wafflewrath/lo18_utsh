@@ -2602,7 +2602,8 @@ function redirect($url, $return = false, $disable_cd_check = false)
 	// Redirect via an HTML form for PITA webservers
 	if (@preg_match('#Microsoft|WebSTAR|Xitami#', getenv('SERVER_SOFTWARE')))
 	{
-		header('Refresh: 0; URL=' . $url);
+		// header('Refresh: 0; URL=' . $url);
+		die('<meta http-equiv="refresh" content="0;URL='.$url.'">');
 
 		echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">';
 		echo '<html xmlns="http://www.w3.org/1999/xhtml" dir="' . $user->lang['DIRECTION'] . '" lang="' . $user->lang['USER_LANG'] . '" xml:lang="' . $user->lang['USER_LANG'] . '">';
