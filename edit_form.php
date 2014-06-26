@@ -24,7 +24,26 @@
 			{
 				$news = new News_adapter();
 			}
-			elseif (isset($_GET['newsdelete']))
+			elseif (isset($_GET['newsdelete']) && !isset($_GET['confirm']))
+			{
+				?>
+				<div class="tuile_container col-lg-12">
+						<div class="lineHeader">
+							<h2>Confirmer la suppression de la news ?</h2>
+						</div>
+						<br />
+						<div class="news_actualite"> 
+							<form action="edit_form.php" method="get" style="margin-bottom:15px;">
+							<input type="hidden" name="newsdelete" value="<?php echo $_GET['newsdelete']; ?>">
+							<input type="hidden" name="confirm" value="true">
+							<input type="submit" value="Supprimer la News" style="margin-left:45%">
+							</form>
+						</div>
+						<br/>
+				</div>
+				<?php
+			}
+			elseif (isset($_GET['newsdelete']) && isset($_GET['confirm']))
 			{
 				$news = new News_adapter();
 				header('Location: index.php?ck=0.1'); //cache killer pour obfuscation du sid
