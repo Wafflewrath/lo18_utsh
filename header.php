@@ -1,15 +1,3 @@
-<?php 
-	define('IN_PHPBB', true);
-	$phpbb_root_path = './forum/'; // changer path par le nom du dossier de votre forum.
-	$phpEx = substr(strrchr(__FILE__, '.'), 1);
-	include($phpbb_root_path . 'common.' .$phpEx);
-	$user->session_begin();
-	session_start();
-	$_SESSION['return_page'] = $_SERVER['REQUEST_URI'];
-    include('include.php');
-    // Classe à utiliser pour les executions et affichages selon les droits sur le site
-	$Privilege_manager = new Privilege($user->data['user_id']);
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +18,18 @@
 	<header>
 		<div class="degrade col-lg-12">
 			<div class="logo" onclick="window.location.href='index.php';"></div>
-
+			<?php 
+				define('IN_PHPBB', true);
+				$phpbb_root_path = './forum/'; // changer path par le nom du dossier de votre forum.
+				$phpEx = substr(strrchr(__FILE__, '.'), 1);
+				include($phpbb_root_path . 'common.' .$phpEx);
+				$user->session_begin();
+				session_start();
+				$_SESSION['return_page'] = $_SERVER['REQUEST_URI'];
+			    include('include.php');
+			    // Classe à utiliser pour les executions et affichages selon les droits sur le site
+				$Privilege_manager = new Privilege($user->data['user_id']);
+			?>
 			<?php
 					if($user->data['is_registered'])
 					{

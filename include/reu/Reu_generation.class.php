@@ -35,7 +35,7 @@ class Reu_generation
 		$value = $value . "]";
 		
 				// 1 : on ouvre le fichier
-		$monfichier = fopen('././jsonTest/json.json', 'r+');
+		$monfichier = fopen('././jsonTest/json.json', 'w');
 
 		// 2 : on fera ici nos opérations sur le fichier...
 		fputs($monfichier, $value);

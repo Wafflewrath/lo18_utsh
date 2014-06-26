@@ -46,7 +46,15 @@ else if (isset($_GET['contactEdit']))
 }
 else if (isset($_GET['ressourceUpload']))
 {
-	echo '<div class="alert alert-success">Votre ressource à bien été envoyée au serveur</div>';
+	echo '<div class="alert alert-success">Votre ressource a bien été envoyée au serveur</div>';
+}
+else if (isset($_GET['reuedit']))
+{
+	echo '<div class="alert alert-success">Votre réunion a bien été modifiée</div>';
+}
+else if (isset($_GET['reudelete']))
+{
+	echo '<div class="alert alert-success">Votre réunion a bien été supprimée</div>';
 }
 ?>
 

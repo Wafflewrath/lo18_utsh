@@ -218,3 +218,5 @@ pip-log.txt
 */cache
 
 forum/cache/
+*.htaccess
+.htaccess
