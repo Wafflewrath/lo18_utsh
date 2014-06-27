@@ -4,7 +4,7 @@ if (isset($_GET['newscreate']))
 {
 	echo '<div class="alert alert-success">Votre news à bien été publiée</div>';
 }
-else if (isset($_GET['newsedit']))
+else if (isset($_GET['newseditsuc']))
 {
 	echo '<div class="alert alert-success">Votre news à bien été éditée</div>';
 }

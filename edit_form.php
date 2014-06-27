@@ -17,7 +17,7 @@
 			elseif (isset($_POST['newsedit_id']))
 			{
 				$news = new News_adapter();
-				redirect($_SERVER['REQUEST_URI']."/../index.php?newsedit=1");
+				redirect($_SERVER['REQUEST_URI']."/../index.php?newseditsuc=1");
 				die();
 			}
 			elseif (isset($_GET['newsedit']))
