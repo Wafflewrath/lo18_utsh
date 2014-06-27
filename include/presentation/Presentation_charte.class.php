@@ -49,7 +49,7 @@ class Presentation_charte
 							<form action="edit_charte.php" method="post">
 							
 								<div class="news_resume form">
-									<textarea id="charte" name="charte" value="' . $value . '" rows="30" cols="150"></textarea>
+									<textarea id="charte" name="charte" value="' . $value . '" rows="30" cols="150">' . $value . '</textarea>
 									
 								</div>
 								

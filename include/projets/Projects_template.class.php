@@ -195,7 +195,7 @@ class Projects_template
 						<input type="text" value="'.$this->nomcomplet[0].'" name="project_title_complet">
 					</div>
 					<div class="news_resume form">
-						<textarea name="project_resume" rows="6" cols="150">'.$this->texte[0].'</textarea>
+						<textarea id="project_resume" name="project_resume" rows="6" cols="150">'.$this->texte[0].'</textarea>
 					</div>
 					<div class="news_resume form">
 						<input type="text" '.$this->url[0].' name="project_link" style="min-width:300px">
@@ -246,6 +246,9 @@ class Projects_template
 					
 				</form>
 			</div>
+			<script type=\"text/javascript\">
+				CKEDITOR.replace( 'project_resume' );
+				</script>'
 			<br/>
 		</div>
 		";

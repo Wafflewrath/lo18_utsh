@@ -49,7 +49,7 @@ class Presentation_editor
 							<form action="presentation_edit.php" method="post">
 							
 								<div class="news_resume form">
-									<textarea id="presentation" name="presentation" value="' . $value . '" rows="30" cols="150"></textarea>
+									<textarea id="presentation" name="presentation" value="' . $value . '" rows="30" cols="150">' . $value . '</textarea>
 									
 								</div>
 								
